@@ -68,6 +68,8 @@ class Wad(object):
         return self.load_texture_lump('TEXTURE1')
 
     def load_texture_lump(self, lump_name):
+        print('Loading textures')
+
         lump = self.read_lump(lump_name)
         textures = []
 
@@ -96,6 +98,8 @@ class Wad(object):
         return textures
 
     def load_patches(self):
+        print('Loading patches')
+
         lump = self.read_lump('PNAMES')
         patches = []
 
@@ -110,6 +114,8 @@ class Wad(object):
         return patches
 
     def load_flats(self):
+        print('Loading flats')
+
         flats = []
         for lump in self.lumps_between_markers('F_START', 'F_END'):
             flats.append(lump.name)
@@ -117,6 +123,8 @@ class Wad(object):
         return flats
 
     def load_animated_lump(self, flats, textures):
+        print('Loading animated lump')
+
         lump = self.read_lump('ANIMATED')
         if not lump:
             return ([], [])
@@ -164,6 +172,8 @@ class Wad(object):
         return (anim_flats, anim_textures)
 
     def load_switches_lump(self):
+        print('Loading switches lump')
+
         lump = self.read_lump('SWITCHES')
         if not lump:
             return []
@@ -180,6 +190,8 @@ class Wad(object):
         return anim_textures
 
     def load_animations(self, flats, textures):
+        print('Loading animations')
+
         anim_flats, anim_textures = self.load_animated_lump(flats, textures)
         anim_textures.extend(self.load_switches_lump())
 
@@ -207,6 +219,8 @@ class Wad(object):
             textures.add(name)
 
     def find_used_textures(self):
+        print('Finding used textures')
+
         textures = set()
 
         for lump in self.get_all_lumps('SIDEDEFS'):
@@ -252,6 +266,8 @@ class UsedTextureSet(object):
         self.used_flats = self.mark_used_animations(self.used_flats, anim_flats)
 
     def find_used_patches(self):
+        print('Finding used patches')
+
         patches = set()
 
         for texture_name in self.used_textures:
@@ -264,6 +280,8 @@ class UsedTextureSet(object):
         return list(patches)
 
     def mark_used_animations(self, textures, animations):
+        print('Marking used animations')
+
         new_textures = set(textures)
 
         for texture in textures:
@@ -308,6 +326,8 @@ class UsedTextureSet(object):
         return lump
 
     def build_textures_lump(self):
+        print('Building textures lump')
+
         #
         # Python sets (used to build self.used_textures) are unordered.
         # Write the new texture lump with the same ordering as the original,
@@ -344,6 +364,8 @@ class UsedTextureSet(object):
         return lump
 
     def build_animated_lump(self):
+        print('Building animated lump')
+
         orig_lump = self.pwad.read_lump('ANIMATED')
 
         lump = b''
@@ -365,6 +387,8 @@ class UsedTextureSet(object):
         return lump + b'\xff'
 
     def build_switches_lump(self):
+        print('Building switches lump')
+
         orig_lump = self.pwad.read_lump('SWITCHES')
 
         lump = b''
