@@ -379,7 +379,7 @@ class UsedTextureSet(object):
 
             lump += entry
 
-        return lump + b'\x00'
+        return lump + (b'\x00' * 20)
 
 class WadWriter(object):
     def __init__(self, pwad, used):
