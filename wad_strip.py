@@ -193,7 +193,26 @@ class Wad(object):
         print('Loading animations')
 
         anim_flats, anim_textures = self.load_animated_lump(flats, textures)
-        anim_textures.extend(self.load_switches_lump())
+
+        #
+        # Switches can be animated. In this case the base on/off textures are
+        # in the SWITCHES lump, and the animation frames are in the ANIMATED
+        # lump. Extend the list of textures for switches to include any
+        # additional animation frames.
+        #
+        switches = []
+        switch_anim_base = self.load_switches_lump()
+
+        print('Finding animated switch textures')
+        for texture_on, texture_off in switch_anim_base:
+            switch_anim = [texture_off, texture_on]
+            for animation in anim_textures:
+                if texture_on in animation or texture_off in animation:
+                    switch_anim.extend(animation)
+
+            switches.append(switch_anim)
+
+        anim_textures.extend(switch_anim)
 
         return (anim_flats, anim_textures)
 
