@@ -167,7 +167,7 @@ class Wad(object):
                     if texture.name == name_last:
                         break
 
-                    anim_textures.append(lump_names)
+                anim_textures.append(lump_names)
 
         return (anim_flats, anim_textures)
 
