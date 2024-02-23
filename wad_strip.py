@@ -212,7 +212,7 @@ class Wad(object):
 
             switches.append(switch_anim)
 
-        anim_textures.extend(switch_anim)
+        anim_textures.extend(switches)
 
         return (anim_flats, anim_textures)
 
