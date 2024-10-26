@@ -285,6 +285,7 @@ class Wad(object):
 
 class UsedTextureSet(object):
     def __init__(self, iwad, pwad):
+        self.iwad = iwad
         self.pwad = pwad
 
         self.textures = iwad.textures + pwad.textures
@@ -444,9 +445,23 @@ class UsedTextureSet(object):
         return lump + (b'\x00' * 20)
 
 class WadWriter(object):
-    def __init__(self, pwad, used):
+    def __init__(self, iwad, pwad, used):
+        self.iwad = iwad
         self.pwad = pwad
         self.used = used
+
+    def identical_lump_in_iwad(self, lump_name):
+        iwad_lump = self.iwad.read_lump(lump_name)
+        pwad_lump = self.pwad.read_lump(lump_name)
+
+        if iwad_lump is None or pwad_lump is None:
+            return False
+
+        # Don't remove markers
+        if len(iwad_lump) == 0:
+            return False
+
+        return iwad_lump == pwad_lump
 
     def write(self, filename):
         fd = open(filename, 'wb')
@@ -458,6 +473,8 @@ class WadWriter(object):
             if lump.name.startswith('_') or lump.name.startswith('\\'):
                 continue
             if lump.name in removable:
+                continue
+            if self.identical_lump_in_iwad(lump.name):
                 continue
 
             lumps.append(lump)
@@ -494,5 +511,5 @@ if __name__ == '__main__':
     pwad = Wad(sys.argv[2])
     outfile = sys.argv[3]
 
-    writer = WadWriter(pwad, UsedTextureSet(iwad, pwad))
+    writer = WadWriter(iwad, pwad, UsedTextureSet(iwad, pwad))
     writer.write(outfile)
