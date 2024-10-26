@@ -374,7 +374,7 @@ class UsedTextureSet(object):
         #
         used_textures = []
         for texture in self.textures:
-            if texture.name in self.used_textures:
+            if texture.name in self.used_textures and texture.name not in used_textures:
                 used_textures.append(texture.name)
 
         lump = struct.pack('<I', len(used_textures))
