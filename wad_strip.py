@@ -64,6 +64,23 @@ class Wad(object):
 
         return self.read_lump_data(lump)
 
+    def find_umapinfo_textures(self):
+        textures = set()
+
+        umapinfo = self.read_lump('UMAPINFO')
+        if umapinfo:
+            print('Loading umapinfo textures')
+            umapinfo = umapinfo.decode('ascii')
+            for line in umapinfo.split('\n'):
+                if line.lstrip().lower().startswith('skytexture'):
+                    try:
+                        texture = line.split('"')[1::2][0]
+                        textures.add(texture)
+                    except:
+                        print('Badly formatted umapinfo line: {}'.format(line))
+
+        return list(textures)
+
     def load_textures(self):
         return self.load_texture_lump('TEXTURE1')
 
@@ -274,7 +291,9 @@ class UsedTextureSet(object):
         self.patches = iwad.patches + pwad.patches
         self.flats = iwad.flats + pwad.flats
 
-        self.used_textures = iwad.find_used_textures() + pwad.find_used_textures()
+        self.used_textures = (iwad.find_used_textures() +
+                              pwad.find_used_textures() +
+                              pwad.find_umapinfo_textures())
 
         anim_flats, anim_textures = pwad.load_animations(self.flats, self.textures)
         self.used_textures = self.mark_used_animations(self.used_textures, anim_textures)
