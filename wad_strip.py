@@ -292,8 +292,7 @@ class UsedTextureSet(object):
         self.patches = iwad.patches + pwad.patches
         self.flats = iwad.flats + pwad.flats
 
-        self.used_textures = (iwad.find_used_textures() +
-                              pwad.find_used_textures() +
+        self.used_textures = (pwad.find_used_textures() +
                               pwad.find_umapinfo_textures())
 
         anim_flats, anim_textures = pwad.load_animations(self.flats, self.textures)
@@ -304,17 +303,31 @@ class UsedTextureSet(object):
         self.used_flats = iwad.find_used_flats() + pwad.find_used_flats()
         self.used_flats = self.mark_used_animations(self.used_flats, anim_flats)
 
+    def get_texture_entry(self, texture_name):
+        #
+        # The TEXTUREx lump may have duplicates. The pwad has precedence over
+        # the iwad, but we take the first valid entry from either wad.
+        #
+        pwad_entries = [t for t in self.pwad.textures if t.name == texture_name]
+        if len(pwad_entries) > 0:
+            return pwad_entries[0]
+
+        iwad_entries = [t for t in self.iwad.textures if t.name == texture_name]
+        if len(iwad_entries) > 0:
+            return iwad_entries[0]
+
+        return None
+
     def find_used_patches(self):
         print('Finding used patches')
 
         patches = set()
-
         for texture_name in self.used_textures:
-            for texture in self.textures:
-                if texture.name == texture_name:
-                    for map_patch in texture.patches:
-                        patches.add(map_patch.name)
-                    break
+            # Textures like colormaps may not have an entry and can be skipped.
+            texture = self.get_texture_entry(texture_name)
+            if texture is not None:
+                for map_patch in texture.patches:
+                    patches.add(map_patch.name)
 
         return list(patches)
 
@@ -329,13 +342,6 @@ class UsedTextureSet(object):
                     new_textures.update(animation)
 
         return list(new_textures)
-
-    def get_texture(self, name):
-        for texture in self.textures:
-            if texture.name == name:
-                return texture
-
-        return None
 
     def get_used_patch_index(self, name):
         for i, patch in enumerate(self.used_patches):
@@ -358,6 +364,11 @@ class UsedTextureSet(object):
         return unused_patches + unused_flats
 
     def build_pnames_lump(self):
+        # The iwad pnames are always included first
+        iwad_patches = self.iwad.load_patches()
+        pwad_patches = [p for p in self.used_patches if p not in iwad_patches]
+        self.used_patches = iwad_patches + pwad_patches
+
         lump = struct.pack('<I', len(self.used_patches))
         for patch in self.used_patches:
             lump += struct.pack('<8s', patch.encode())
@@ -367,31 +378,55 @@ class UsedTextureSet(object):
     def build_textures_lump(self):
         print('Building textures lump')
 
+        # The iwad textures are always included first
+        textures = self.iwad.load_textures()
+
+        # The pwad may change the patches for an iwad texture
+        # Only update entries which are used in the pwad
+        for i, texture in enumerate(textures):
+            if texture.name in self.used_textures:
+                entry = self.get_texture_entry(texture.name)
+                if entry:
+                    textures[i] = entry
+
         #
         # Python sets (used to build self.used_textures) are unordered.
         # Write the new texture lump with the same ordering as the original,
         # just with unused textures removed. Animated textures will break
         # if their ordering is incorrect.
         #
-        used_textures = []
-        for texture in self.textures:
-            if texture.name in self.used_textures and texture.name not in used_textures:
-                used_textures.append(texture.name)
+        visited = []
+        for entry in self.pwad.textures:
+            if entry in textures:
+                continue
+            if entry.name not in self.used_textures:
+                continue
+            if entry.name in visited:
+                continue
 
-        lump = struct.pack('<I', len(used_textures))
+            textures.append(entry)
+            visited.append(entry.name)
+
+        #
+        # Build the TEXTUREx lump
+        #
+        lump = struct.pack('<I', len(textures))
 
         offset_table = []
-        offset = 4 + (4 * len(used_textures))
+        offset = 4 + (4 * len(textures))
 
         data = b''
-        for texture_name in used_textures:
+        for texture in textures:
             offset_table.append(offset)
 
-            texture = self.get_texture(texture_name)
             data += struct.pack('<8sIHHIH', texture.name.encode(), texture.masked, texture.width, texture.height, texture.columndir, len(texture.patches))
 
             for map_patch in texture.patches:
                 patch_index = self.get_used_patch_index(map_patch.name)
+                if patch_index == -1:
+                    print('Bad patch {} for texture {}'.format(map_patch.name, texture.name))
+                    sys.exit(1)
+
                 data += struct.pack('<HHHHH', map_patch.x, map_patch.y, patch_index, map_patch.stepdir, map_patch.colormap)
 
             offset += 22 + (10 * len(texture.patches))
