@@ -140,16 +140,44 @@ class Wad(object):
 
         return flats
 
-    def load_animated_lump(self, flats, textures):
-        print('Loading animated lump')
+    def load_animdefs(self):
+        # From p_spec.c
+        default_animdefs = [
+            (0, 'NUKAGE3',	'NUKAGE1'),
+            (0, 'FWATER4',	'FWATER1'),
+            (0, 'SWATER4',	'SWATER1'),
+            (0, 'LAVA4',	'LAVA1'),
+            (0, 'BLOOD3',	'BLOOD1'),
+
+            # DOOM II flat animations
+            (0, 'RROCK08',	'RROCK05'),
+            (0, 'SLIME04',	'SLIME01'),
+            (0, 'SLIME08',	'SLIME05'),
+            (0, 'SLIME12',	'SLIME09'),
+
+            # Textures
+            (1,	'BLODGR4',	'BLODGR1'),
+            (1,	'SLADRIP3',	'SLADRIP1'),
+
+            (1,	'BLODRIP4',	'BLODRIP1'),
+            (1,	'FIREWALL',	'FIREWALA'),
+            (1,	'GSTFONT3',	'GSTFONT1'),
+            (1,	'FIRELAVA',	'FIRELAV3'),
+            (1,	'FIREMAG3',	'FIREMAG1'),
+            (1,	'FIREBLU2',	'FIREBLU1'),
+            (1,	'ROCKRED3',	'ROCKRED1'),
+
+            (1,	'BFALL4',	'BFALL1'),
+            (1,	'SFALL4',	'SFALL1'),
+            (1,	'WFALL4',	'WFALL1'),
+            (1,	'DBRAIN4',	'DBRAIN1'),
+            ]
 
         lump = self.read_lump('ANIMATED')
         if not lump:
-            return ([], [])
+            return default_animdefs
 
-        anim_flats = []
-        anim_textures = []
-
+        table = []
         for offset in range(0, len(lump), 23):
             if len(lump) - offset < 23:
                 break
@@ -161,6 +189,15 @@ class Wad(object):
             name_first = sanitize_lump_name(name_first)
             name_last = sanitize_lump_name(name_last)
 
+            table.append((kind, name_last, name_first))
+
+        return table
+
+    def load_animated_lump(self, flats, textures):
+        anim_flats = []
+        anim_textures = []
+
+        for kind, name_last, name_first in self.load_animdefs():
             if kind == 0:
                 do_append = False
                 lump_names = []
