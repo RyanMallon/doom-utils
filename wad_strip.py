@@ -13,7 +13,8 @@ Texture = namedtuple('Texture', 'name masked width height columndir patches')
 MapPatch = namedtuple('MapPatch', 'name x y stepdir colormap')
 
 def sanitize_lump_name(name):
-    return name.decode('ascii').rstrip('\x00').upper()
+    name = name.split(b'\x00')[0]
+    return name.decode('ascii').upper()
 
 class Wad(object):
     def __init__(self, filename):
