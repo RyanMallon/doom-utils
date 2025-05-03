@@ -603,10 +603,13 @@ class WadWriter(object):
 
         fd.write(struct.pack('<4sII', b'PWAD', len(lumps), 12))
 
+        # PNAMES must be built before TEXTUREx, but keep the original lump order
+        pnames_blob = self.used.build_pnames_lump()
+
         lump_blobs = []
         for lump in lumps:
             if lump.name == 'PNAMES':
-                blob = self.used.build_pnames_lump()
+                blob = pnames_blob
             elif lump.name == 'TEXTURE1':
                 blob = self.used.build_textures_lump()
             elif lump.name == 'ANIMATED':
