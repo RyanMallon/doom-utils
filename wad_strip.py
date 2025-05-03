@@ -70,7 +70,7 @@ class Wad(object):
         umapinfo = self.read_lump('UMAPINFO')
         if umapinfo:
             print('Loading umapinfo textures')
-            umapinfo = umapinfo.decode('ascii')
+            umapinfo = umapinfo.decode('ascii', errors='ignore')
             for line in umapinfo.split('\n'):
                 if line.lstrip().lower().startswith('skytexture'):
                     try:
