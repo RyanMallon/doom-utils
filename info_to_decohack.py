@@ -23,6 +23,8 @@ state_names = [
     'missile',
     'refire',
 
+    'crash',	# Heretic
+
     'pain',
     'death',
     'xdeath',
@@ -34,10 +36,10 @@ def parse_state_line(line):
     exp  = r'\s*\{([A-Z]{3}_[A-Z0-9]{4}),\s*'	# Sprite
     exp += r'([-0-9]+),\s*'			# Frame
     exp += r'([-0-9]+),\s*'			# Tics
-    exp += r'\{([A-Za-z0-9_]+)\},\s*'		# Action
+    exp += r'\{?([A-Za-z0-9_]+)\}?,\s*'		# Action
     exp += r'([A-Za-z0-9_]+),\s*'		# Next state
     exp += r'([0-9]+),\s*'			# Misc 1
-    exp += r'([0-9]+)\},?\s*'			# Misc 2
+    exp += r'([0-9]+)\s*\},?\s*'		# Misc 2
     exp += r'// (.*)$'				# Comment
 
     m = re.match(exp, line)
@@ -58,6 +60,8 @@ def parse_state_line(line):
 
         return (name, State(sprite, frame, tics, action, nextstate, misc1, misc2))
 
+    print('Bad state:')
+    print(line)
     raise Exception('Bad state')
 
 def parse_states(lines):
@@ -68,7 +72,7 @@ def parse_states(lines):
         if done:
             break
 
-        if line.startswith('state_t\tstates'):
+        if re.search(r'^state_t\s+states', line):
             for state_line in lines[i + 1:]:
                 if state_line.startswith('};'):
                     done = True
