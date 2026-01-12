@@ -31,7 +31,14 @@ state_names = [
     ]
 
 def parse_state_line(line):
-    exp = r' *\{([A-Z]{3}_[A-Z0-9]{4}),([-0-9]+),([-0-9]+),\{([A-Za-z0-9_]+)\},([A-Za-z0-9_]+),([0-9]+),([0-9]+)\},?.*[ \t]*// ([A-Z0-9_]+)'
+    exp  = r'\s*\{([A-Z]{3}_[A-Z0-9]{4}),\s*'	# Sprite
+    exp += r'([-0-9]+),\s*'			# Frame
+    exp += r'([-0-9]+),\s*'			# Tics
+    exp += r'\{([A-Za-z0-9_]+)\},\s*'		# Action
+    exp += r'([A-Za-z0-9_]+),\s*'		# Next state
+    exp += r'([0-9]+),\s*'			# Misc 1
+    exp += r'([0-9]+)\},?\s*'			# Misc 2
+    exp += r'// (.*)$'				# Comment
 
     m = re.match(exp, line)
     if m:
@@ -250,10 +257,7 @@ def mobj_props(mobj):
     for name in prop_names:
         try:
             v = mobj.props[name]
-            suffix = '*FRACUNIT'
-            if v.endswith(suffix):
-                v = v[:-len(suffix)]
-
+            v = re.sub(r'\s*\*\s*FRACUNIT$', '', v)
             props.append((name, v))
         except:
             pass
@@ -274,9 +278,7 @@ def mobj_sounds(mobj):
         try:
             v = mobj.props[sound]
             if v != 'sfx_None' and v != '0':
-                prefix = 'sfx_'
-                if v.startswith(prefix):
-                    v = v[len(prefix):]
+                v = re.sub(r'^sfx_', '', v)
                 props.append((sound, '"{}"'.format(v)))
         except:
             pass
@@ -287,6 +289,7 @@ def mobj_flags(mobj):
     flags = []
     try:
         flags = mobj.props['flags'].split('|')
+        flags = [f.strip() for f in flags]
         if '0' in flags:
             flags.remove('0')
     except:
