@@ -21,7 +21,7 @@ state_names = [
     'see',
     'run',
 
-    'meele',
+    'melee',
     'missile',
     'refire',
 
@@ -212,6 +212,7 @@ def build_state_machine(mobj, state_name, states):
     items = []
 
     state = get_first_state(mobj, state_name)
+
     while state is not None:
         items.append(state)
         try:
@@ -366,6 +367,10 @@ def mobj_to_decohack(mobj, states):
         prev_item = None
 
         print('\t\t{}:'.format(state_name))
+
+        # Many mobjs have combined melee/missile states
+        if state_name == 'melee' and get_first_state(mobj, 'melee') == get_first_state(mobj, 'missile'):
+            continue
 
         for m in merge_states(items):
             print('\t\t\t{}'.format(merged_state_to_decohack(m)))

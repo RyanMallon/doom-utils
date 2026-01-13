@@ -4742,6 +4742,11 @@ thing MT_ZSHRUB1
 		spawn:
 			SHB1 A -1
 			stop
+		melee:
+			SHB1 B+ 7
+			SHB1 C+ 6 A_Scream
+			SHB1 D+ 5
+			stop
 		death:
 			SHB1 A 1 A_TreeDeath
 			goto spawn
@@ -4770,6 +4775,12 @@ thing MT_ZSHRUB2
 	{
 		spawn:
 			SHB2 A -1
+			stop
+		melee:
+			SHB2 B+ 7
+			SHB2 C+ 6 A_Scream
+			SHB2 D+ 5 A_Explode
+			SHB2 E+ 5
 			stop
 		death:
 			SHB2 A 1 A_TreeDeath
@@ -5112,6 +5123,18 @@ thing MT_ZXMAS_TREE
 	{
 		spawn:
 			XMAS A -1
+			stop
+		melee:
+			XMAS B+ 6
+			XMAS C+ 6 A_Scream
+			XMAS D+ 5
+			XMAS E+ 5 A_Explode
+			XMAS F+ 5
+			XMAS G+ 4
+			XMAS H 5
+			XMAS I 4 A_NoBlocking
+			XMAS J 4
+			XMAS K -1
 			stop
 		death:
 			XMAS A 4 A_TreeDeath
@@ -7396,6 +7419,10 @@ thing MT_PIG
 		see:
 			PIGY ABCD 3 A_PigChase
 			loop
+		melee:
+			PIGY A 5 A_FaceTarget
+			PIGY A 10 A_PigAttack
+			goto see
 		pain:
 			PIGY D 4 A_PigPain
 			goto see
@@ -7445,6 +7472,11 @@ thing MT_CENTAUR
 		see:
 			CENT ABCD 4 A_Chase
 			loop
+		melee:
+			CENT H 5 A_FaceTarget
+			CENT I 4 A_FaceTarget
+			CENT J 7 A_CentaurAttack
+			goto see
 		pain:
 			CENT G 6 A_Pain
 			CENT G 6 A_SetReflective
@@ -7512,6 +7544,11 @@ thing MT_CENTAURLEADER
 		see:
 			CENT ABCD 4 A_Chase
 			loop
+		melee:
+			CENT H 5 A_FaceTarget
+			CENT I 4 A_FaceTarget
+			CENT J 7 A_CentaurAttack
+			goto see
 		missile:
 			CENT E 10 A_FaceTarget
 			CENT F+ 8 A_CentaurAttack2
@@ -7678,6 +7715,11 @@ thing MT_DEMON
 		see:
 			DEMN ABCD 4 A_Chase
 			loop
+		melee:
+			DEMN E 6 A_FaceTarget
+			DEMN F 8 A_FaceTarget
+			DEMN G 6 A_DemonAttack1
+			goto see
 		missile:
 			DEMN E 5 A_FaceTarget
 			DEMN F 6 A_FaceTarget
@@ -7926,6 +7968,11 @@ thing MT_DEMON2
 		see:
 			DEM2 ABCD 4 A_Chase
 			loop
+		melee:
+			DEM2 E 6 A_FaceTarget
+			DEM2 F 8 A_FaceTarget
+			DEM2 G 6 A_DemonAttack1
+			goto see
 		missile:
 			DEM2 E 5 A_FaceTarget
 			DEM2 F 6 A_FaceTarget
@@ -8180,6 +8227,10 @@ thing MT_WRAITHB
 			WRTH A 2 A_FaceTarget
 			WRTH BB 2 A_WraithRaise
 			goto run
+		melee:
+			WRTH E 6 A_FaceTarget
+			WRTH F 6 A_WraithFX3
+			WRTH G 6 A_WraithMelee
 		missile:
 			WRTH E 6 A_FaceTarget
 			WRTH F 6
@@ -8250,6 +8301,11 @@ thing MT_WRAITH
 		see:
 			WRTH ABCD 4 A_WraithChase
 			loop
+		melee:
+			WRTH E 6 A_FaceTarget
+			WRTH F 6 A_WraithFX3
+			WRTH G 6 A_WraithMelee
+			goto see
 		missile:
 			WRTH E 6 A_FaceTarget
 			WRTH F 6
@@ -8474,6 +8530,11 @@ thing MT_MINOTAUR
 		see:
 			MNTR ABCD 5 A_MinotaurChase
 			loop
+		melee:
+			MNTR G 10 A_FaceTarget
+			MNTR H 7 A_FaceTarget
+			MNTR I 12 A_MinotaurAtk1
+			goto see
 		missile:
 			MNTR G 10 A_MinotaurDecide
 			MNTR J 4 A_FaceTarget
@@ -8676,6 +8737,20 @@ thing MT_SERPENT
 			SSPT HH 1 A_SerpentChase
 			SSPT H 2 A_SerpentHumpDecide
 			loop
+		melee:
+			SSPT A 1 A_UnHideThing
+			SSPT A 1 A_SerpentBirthScream
+			SSPT B 3 A_SetShootable
+			SSPT C 3
+			SSPT D 4 A_SerpentCheckForAttack
+			SSDV ABC 4
+			SSDV D 4 A_UnSetShootable
+			SSDV E 3 A_SerpentDiveSound
+			SSDV F 3
+			SSDV GH 4
+			SSDV I 3
+			SSDV J 3 A_SerpentHide
+			goto see
 		pain:
 			SSPT L 5
 			SSPT L 5 A_Pain
@@ -8739,6 +8814,20 @@ thing MT_SERPENTLEADER
 			SSPT HH 1 A_SerpentChase
 			SSPT H 2 A_SerpentHumpDecide
 			loop
+		melee:
+			SSPT A 1 A_UnHideThing
+			SSPT A 1 A_SerpentBirthScream
+			SSPT B 3 A_SetShootable
+			SSPT C 3
+			SSPT D 4 A_SerpentCheckForAttack
+			SSDV ABC 4
+			SSDV D 4 A_UnSetShootable
+			SSDV E 3 A_SerpentDiveSound
+			SSDV F 3
+			SSDV GH 4
+			SSDV I 3
+			SSDV J 3 A_SerpentHide
+			goto see
 		pain:
 			SSPT L 5
 			SSPT L 5 A_Pain
@@ -9691,6 +9780,10 @@ thing MT_ETTIN
 		see:
 			ETTN ABCD 5 A_Chase
 			loop
+		melee:
+			ETTN EF 6 A_FaceTarget
+			ETTN G 8 A_EttinAttack
+			goto see
 		pain:
 			ETTN H 7 A_Pain
 			goto see
@@ -10310,6 +10403,7 @@ thing MT_FIGHTER_BOSS
 		see:
 			PLAY ABCD 4 A_FastChase
 			loop
+		melee:
 		missile:
 			PLAY E 8 A_FaceTarget
 			PLAY F 8 A_FighterAttack
@@ -10368,6 +10462,7 @@ thing MT_CLERIC_BOSS
 		see:
 			CLER ABCD 4 A_FastChase
 			loop
+		melee:
 		missile:
 			CLER EF 8 A_FaceTarget
 			CLER G 10 A_ClericAttack
@@ -10426,6 +10521,7 @@ thing MT_MAGE_BOSS
 		see:
 			MAGE ABCD 4 A_FastChase
 			loop
+		melee:
 		missile:
 			MAGE E 8 A_FaceTarget
 			MAGE F+ 8 A_MageAttack
@@ -11139,6 +11235,11 @@ thing MT_DEMON_MASH
 		see:
 			DEMN ABCD 4 A_Chase
 			loop
+		melee:
+			DEMN E 6 A_FaceTarget
+			DEMN F 8 A_FaceTarget
+			DEMN G 6 A_DemonAttack1
+			goto see
 		missile:
 			DEMN E 5 A_FaceTarget
 			DEMN F 6 A_FaceTarget
@@ -11188,6 +11289,11 @@ thing MT_DEMON2_MASH
 		see:
 			DEM2 ABCD 4 A_Chase
 			loop
+		melee:
+			DEM2 E 6 A_FaceTarget
+			DEM2 F 8 A_FaceTarget
+			DEM2 G 6 A_DemonAttack1
+			goto see
 		missile:
 			DEM2 E 5 A_FaceTarget
 			DEM2 F 6 A_FaceTarget
@@ -11237,6 +11343,10 @@ thing MT_ETTIN_MASH
 		see:
 			ETTN ABCD 5 A_Chase
 			loop
+		melee:
+			ETTN EF 6 A_FaceTarget
+			ETTN G 8 A_EttinAttack
+			goto see
 		pain:
 			ETTN H 7 A_Pain
 			goto see
@@ -11280,6 +11390,11 @@ thing MT_CENTAUR_MASH
 		see:
 			CENT ABCD 4 A_Chase
 			loop
+		melee:
+			CENT H 5 A_FaceTarget
+			CENT I 4 A_FaceTarget
+			CENT J 7 A_CentaurAttack
+			goto see
 		pain:
 			CENT G 6 A_Pain
 			CENT G 6 A_SetReflective

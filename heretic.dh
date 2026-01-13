@@ -2685,6 +2685,10 @@ thing MT_CHICKEN
 		see:
 			CHKN AB 3 A_ChicChase
 			loop
+		melee:
+			CHKN A 8 A_FaceTarget
+			CHKN C 10 A_ChicAttack
+			goto see
 		pain:
 			CHKN D 5 A_Feathers
 			CHKN C 5 A_ChicPain
@@ -2763,6 +2767,11 @@ thing MT_MUMMY
 		see:
 			MUMM ABCD 4 A_Chase
 			loop
+		melee:
+			MUMM E 6 A_FaceTarget
+			MUMM F 6 A_MummyAttack
+			MUMM G 6 A_FaceTarget
+			goto see
 		pain:
 			MUMM H 4
 			MUMM H 4 A_Pain
@@ -2811,6 +2820,11 @@ thing MT_MUMMYLEADER
 		see:
 			MUMM ABCD 4 A_Chase
 			loop
+		melee:
+			MUMM E 6 A_FaceTarget
+			MUMM F 6 A_MummyAttack
+			MUMM G 6 A_FaceTarget
+			goto see
 		missile:
 			MUMM X 5 A_FaceTarget
 			MUMM Y+ 5 A_FaceTarget
@@ -2868,6 +2882,11 @@ thing MT_MUMMYGHOST
 		see:
 			MUMM ABCD 4 A_Chase
 			loop
+		melee:
+			MUMM E 6 A_FaceTarget
+			MUMM F 6 A_MummyAttack
+			MUMM G 6 A_FaceTarget
+			goto see
 		pain:
 			MUMM H 4
 			MUMM H 4 A_Pain
@@ -2917,6 +2936,11 @@ thing MT_MUMMYLEADERGHOST
 		see:
 			MUMM ABCD 4 A_Chase
 			loop
+		melee:
+			MUMM E 6 A_FaceTarget
+			MUMM F 6 A_MummyAttack
+			MUMM G 6 A_FaceTarget
+			goto see
 		missile:
 			MUMM X 5 A_FaceTarget
 			MUMM Y+ 5 A_FaceTarget
@@ -3492,6 +3516,11 @@ thing MT_CLINK
 		see:
 			CLNK ABCD 3 A_Chase
 			loop
+		melee:
+			CLNK E 5 A_FaceTarget
+			CLNK F 4 A_FaceTarget
+			CLNK G 7 A_ClinkAttack
+			goto see
 		pain:
 			CLNK H 3
 			CLNK H 3 A_Pain
@@ -3635,6 +3664,10 @@ thing MT_IMP
 		see:
 			IMPX AABBCCBB 3 A_Chase
 			loop
+		melee:
+			IMPX DE 6 A_FaceTarget
+			IMPX F 6 A_ImpMeAttack
+			goto see
 		missile:
 			IMPX A 10 A_FaceTarget
 			IMPX B 6 A_ImpMsAttack
@@ -3825,6 +3858,7 @@ thing MT_KNIGHT
 		see:
 			KNIG ABCD 4 A_Chase
 			loop
+		melee:
 		missile:
 			KNIG E 10 A_FaceTarget
 			KNIG F 8 A_FaceTarget
@@ -3881,6 +3915,7 @@ thing MT_KNIGHTGHOST
 		see:
 			KNIG ABCD 4 A_Chase
 			loop
+		melee:
 		missile:
 			KNIG E 10 A_FaceTarget
 			KNIG F 8 A_FaceTarget
@@ -4257,6 +4292,11 @@ thing MT_MINOTAUR
 		see:
 			MNTR ABCD 5 A_Chase
 			loop
+		melee:
+			MNTR V 10 A_FaceTarget
+			MNTR W 7 A_FaceTarget
+			MNTR X 12 A_MinotaurAtk1
+			goto see
 		missile:
 			MNTR V 10 A_MinotaurDecide
 			MNTR Y 4 A_FaceTarget
