@@ -1,0 +1,4604 @@
+thing MT_MISC0
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			PTN1 ABC 3
+			loop
+	}
+}
+
+thing MT_ITEMSHIELD1
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			SHLD A -1
+			stop
+	}
+}
+
+thing MT_ITEMSHIELD2
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			SHD2 A -1
+			stop
+	}
+}
+
+thing MT_MISC1
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			BAGH A -1
+			stop
+	}
+}
+
+thing MT_MISC2
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			SPMP A -1
+			stop
+	}
+}
+
+thing MT_ARTIINVISIBILITY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_SHADOW
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			INVS A+ 350
+			loop
+	}
+}
+
+thing MT_MISC3
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			PTN2 ABC 4
+			loop
+	}
+}
+
+thing MT_ARTIFLY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			SOAR ABCB 5
+			loop
+	}
+}
+
+thing MT_ARTIINVULNERABILITY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			INVU ABCD 3
+			loop
+	}
+}
+
+thing MT_ARTITOMEOFPOWER
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			PWBK A 350
+			loop
+	}
+}
+
+thing MT_ARTIEGG
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			EGGC ABCB 6
+			loop
+	}
+}
+
+thing MT_EGGFX
+{
+	speed		18
+	radius		8
+	height		8
+	damage		1
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			EGGM ABCDE 4
+			loop
+		death:
+			FX01 EFGH+ 3
+			stop
+	}
+}
+
+thing MT_ARTISUPERHEAL
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			SPHL A 350
+			loop
+	}
+}
+
+thing MT_MISC4
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			TRCH ABC+ 3
+			loop
+	}
+}
+
+thing MT_MISC5
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			FBMB E 350
+			loop
+	}
+}
+
+thing MT_FIREBOMB
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"phohit"
+
+	clear flags
+	+MF_NOGRAVITY
+	+MF_SHADOW
+
+	states
+	{
+		spawn:
+			FBMB ABCD 10
+			FBMB E 6 A_Scream
+			XPL1 A+ 4 A_Explode
+			XPL1 BCDEF+ 4
+			stop
+	}
+}
+
+thing MT_ARTITELEPORT
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_COUNTITEM
+	+MF2_FLOATBOB
+
+	states
+	{
+		spawn:
+			ATLP ABCB 4
+			loop
+	}
+}
+
+thing MT_POD
+{
+	speed		0
+	radius		16
+	height		54
+	damage		0
+	reactiontime	8
+	painchance	255
+	mass		100
+
+	deathsound	"podexp"
+
+	clear flags
+	+MF_SOLID
+	+MF_NOBLOOD
+	+MF_SHOOTABLE
+	+MF_DROPOFF
+	+MF2_WINDTHRUST
+	+MF2_PUSHABLE
+	+MF2_SLIDE
+	+MF2_PASSMOBJ
+	+MF2_TELESTOMP
+
+	states
+	{
+		spawn:
+			PPOD A 10
+			loop
+		pain:
+			PPOD B 14 A_PodPain
+			goto spawn
+		death:
+			PPOD C+ 5 A_RemovePod
+			PPOD D+ 5 A_Scream
+			PPOD E+ 5 A_Explode
+			PPOD F+ 10
+			ACLO E 1050 A_FreeTargMobj
+			stop
+	}
+}
+
+thing MT_PODGOO
+{
+	speed		0
+	radius		2
+	height		4
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_NOTELEPORT
+	+MF2_LOGRAV
+	+MF2_CANNOTPUSH
+
+	states
+	{
+		spawn:
+			PPOD GH 8
+			loop
+		death:
+			PPOD G 10
+			stop
+	}
+}
+
+thing MT_PODGENERATOR
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOSECTOR
+
+	states
+	{
+		spawn:
+			AMG1 A 35 A_MakePod
+			loop
+	}
+}
+
+thing MT_SPLASH
+{
+	speed		0
+	radius		2
+	height		4
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_NOTELEPORT
+	+MF2_LOGRAV
+	+MF2_CANNOTPUSH
+
+	states
+	{
+		spawn:
+			SPSH ABC 8
+			SPSH D 16
+			stop
+		death:
+			SPSH D 10
+			stop
+	}
+}
+
+thing MT_SPLASHBASE
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+
+	states
+	{
+		spawn:
+			SPSH EFGHIJK 5
+			stop
+	}
+}
+
+thing MT_LAVASPLASH
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+
+	states
+	{
+		spawn:
+			LVAS ABCDEF+ 5
+			stop
+	}
+}
+
+thing MT_LAVASMOKE
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_SHADOW
+
+	states
+	{
+		spawn:
+			LVAS GHIJK+ 5
+			stop
+	}
+}
+
+thing MT_SLUDGECHUNK
+{
+	speed		0
+	radius		2
+	height		4
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_NOTELEPORT
+	+MF2_LOGRAV
+	+MF2_CANNOTPUSH
+
+	states
+	{
+		spawn:
+			SLDG ABCD 8
+			stop
+		death:
+			SLDG D 6
+			stop
+	}
+}
+
+thing MT_SLUDGESPLASH
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+
+	states
+	{
+		spawn:
+			SLDG EFGH 5
+			stop
+	}
+}
+
+thing MT_SKULLHANG70
+{
+	speed		0
+	radius		20
+	height		70
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			SKH1 A -1
+			stop
+	}
+}
+
+thing MT_SKULLHANG60
+{
+	speed		0
+	radius		20
+	height		60
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			SKH2 A -1
+			stop
+	}
+}
+
+thing MT_SKULLHANG45
+{
+	speed		0
+	radius		20
+	height		45
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			SKH3 A -1
+			stop
+	}
+}
+
+thing MT_SKULLHANG35
+{
+	speed		0
+	radius		20
+	height		35
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			SKH4 A -1
+			stop
+	}
+}
+
+thing MT_CHANDELIER
+{
+	speed		0
+	radius		20
+	height		60
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			CHDL ABC 4
+			loop
+	}
+}
+
+thing MT_SERPTORCH
+{
+	speed		0
+	radius		12
+	height		54
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			SRTC ABC 4
+			loop
+	}
+}
+
+thing MT_SMALLPILLAR
+{
+	speed		0
+	radius		16
+	height		34
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			SMPL A -1
+			stop
+	}
+}
+
+thing MT_STALAGMITESMALL
+{
+	speed		0
+	radius		8
+	height		32
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			STGS A -1
+			stop
+	}
+}
+
+thing MT_STALAGMITELARGE
+{
+	speed		0
+	radius		12
+	height		64
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			STGL A -1
+			stop
+	}
+}
+
+thing MT_STALACTITESMALL
+{
+	speed		0
+	radius		8
+	height		36
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			STCS A -1
+			stop
+	}
+}
+
+thing MT_STALACTITELARGE
+{
+	speed		0
+	radius		12
+	height		68
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			STCL A -1
+			stop
+	}
+}
+
+thing MT_MISC6
+{
+	speed		0
+	radius		16
+	height		44
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			KFR1 ABCDEFGH+ 3
+			loop
+	}
+}
+
+thing MT_BARREL
+{
+	speed		0
+	radius		12
+	height		32
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			BARL A -1
+			stop
+	}
+}
+
+thing MT_MISC7
+{
+	speed		0
+	radius		14
+	height		128
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			BRPL A -1
+			stop
+	}
+}
+
+thing MT_MISC8
+{
+	speed		0
+	radius		20
+	height		23
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			MOS1 A -1
+			stop
+	}
+}
+
+thing MT_MISC9
+{
+	speed		0
+	radius		20
+	height		27
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			MOS2 A -1
+			stop
+	}
+}
+
+thing MT_MISC10
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			WTRH ABC+ 6
+			loop
+	}
+}
+
+thing MT_MISC11
+{
+	speed		0
+	radius		8
+	height		104
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+	+MF_SPAWNCEILING
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			HCOR A -1
+			stop
+	}
+}
+
+thing MT_KEYGIZMOBLUE
+{
+	speed		0
+	radius		16
+	height		50
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			KGZ1 A 1
+			KGZ1 A 1 A_InitKeyGizmo
+			KGZ1 A -1
+			stop
+	}
+}
+
+thing MT_KEYGIZMOGREEN
+{
+	speed		0
+	radius		16
+	height		50
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			KGZ1 A 1
+			KGZ1 A 1 A_InitKeyGizmo
+			KGZ1 A -1
+			stop
+	}
+}
+
+thing MT_KEYGIZMOYELLOW
+{
+	speed		0
+	radius		16
+	height		50
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			KGZ1 A 1
+			KGZ1 A 1 A_InitKeyGizmo
+			KGZ1 A -1
+			stop
+	}
+}
+
+thing MT_KEYGIZMOFLOAT
+{
+	speed		0
+	radius		16
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			KGZB A 1
+			loop
+	}
+}
+
+thing MT_MISC12
+{
+	speed		0
+	radius		12
+	height		20
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SOLID
+
+	states
+	{
+		spawn:
+			VLCO A 350
+	}
+}
+
+thing MT_VOLCANOBLAST
+{
+	speed		2
+	radius		8
+	height		8
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"volhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_LOGRAV
+	+MF2_NOTELEPORT
+	+MF2_FIREDAMAGE
+
+	states
+	{
+		spawn:
+			VFBL AB 4 A_BeastPuff
+			loop
+		death:
+			XPL1 A 4 A_VolcBallImpact
+			XPL1 BCDEF 4
+			stop
+	}
+}
+
+thing MT_VOLCANOTBLAST
+{
+	speed		2
+	radius		8
+	height		6
+	damage		1
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_LOGRAV
+	+MF2_NOTELEPORT
+	+MF2_FIREDAMAGE
+
+	states
+	{
+		spawn:
+			VTFB AB 4
+			loop
+		death:
+			SFFI CBABCDE 4
+			stop
+	}
+}
+
+thing MT_TELEGLITGEN
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_NOSECTOR
+
+	states
+	{
+		spawn:
+			TGLT A 8 A_SpawnTeleGlitter
+			loop
+	}
+}
+
+thing MT_TELEGLITGEN2
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_NOSECTOR
+
+	states
+	{
+		spawn:
+			TGLT F 8 A_SpawnTeleGlitter2
+			loop
+	}
+}
+
+thing MT_TELEGLITTER
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_MISSILE
+
+	states
+	{
+		spawn:
+			TGLT A+ 2
+			TGLT B+ 2 A_AccTeleGlitter
+			TGLT C+ 2
+			TGLT D+ 2 A_AccTeleGlitter
+			TGLT E+ 2
+			loop
+	}
+}
+
+thing MT_TELEGLITTER2
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_MISSILE
+
+	states
+	{
+		spawn:
+			TGLT F+ 2
+			TGLT G+ 2 A_AccTeleGlitter
+			TGLT H+ 2
+			TGLT I+ 2 A_AccTeleGlitter
+			TGLT J+ 2
+			loop
+	}
+}
+
+thing MT_TFOG
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			TELE ABCDEFGHGFEDC+ 6
+			stop
+	}
+}
+
+thing MT_TELEPORTMAN
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOSECTOR
+
+	states
+	{
+	}
+}
+
+thing MT_STAFFPUFF
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	attacksound	"stfhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			PUF3 A+ 4
+			PUF3 BCD 4
+			stop
+	}
+}
+
+thing MT_STAFFPUFF2
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	attacksound	"stfpow"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			PUF4 ABCDEF+ 4
+			stop
+	}
+}
+
+thing MT_BEAKPUFF
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	attacksound	"chicatk"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			PUF3 A+ 4
+			PUF3 BCD 4
+			stop
+	}
+}
+
+thing MT_MISC13
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			WGNT A -1
+			stop
+	}
+}
+
+thing MT_GAUNTLETPUFF1
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_SHADOW
+
+	states
+	{
+		spawn:
+			PUF1 ABCD+ 4
+			stop
+	}
+}
+
+thing MT_GAUNTLETPUFF2
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_SHADOW
+
+	states
+	{
+		spawn:
+			PUF1 EFGH+ 4
+			stop
+	}
+}
+
+thing MT_MISC14
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			WBLS A -1
+			stop
+	}
+}
+
+thing MT_BLASTERFX1
+{
+	speed		184
+	radius		12
+	height		8
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"blshit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			ACLO E 200
+			loop
+		death:
+			FX18 A+ 3 A_SpawnRippers
+			FX18 B+ 3
+			FX18 CDEFG+ 4
+			stop
+	}
+}
+
+thing MT_BLASTERSMOKE
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_SHADOW
+	+MF2_NOTELEPORT
+	+MF2_CANNOTPUSH
+
+	states
+	{
+		spawn:
+			FX18 HIJKL 4
+			stop
+	}
+}
+
+thing MT_RIPPER
+{
+	speed		14
+	radius		8
+	height		6
+	damage		1
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"hrnhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+	+MF2_RIP
+
+	states
+	{
+		spawn:
+			FX18 M 4
+			FX18 N 5
+			loop
+		death:
+			FX18 OPQRS+ 4
+			stop
+	}
+}
+
+thing MT_BLASTERPUFF1
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			FX17 ABCDE+ 4
+			stop
+	}
+}
+
+thing MT_BLASTERPUFF2
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			FX17 FG+ 3
+			FX17 HIJKL+ 4
+			stop
+	}
+}
+
+thing MT_WMACE
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			WMCE A -1
+			stop
+	}
+}
+
+thing MT_MACEFX1
+{
+	speed		20
+	radius		8
+	height		6
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	seesound	"lobsht"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_FLOORBOUNCE
+	+MF2_THRUGHOST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX02 AB 4 A_MacePL1Check
+			loop
+		death:
+			FX02 F+ 4 A_MaceBallImpact
+			FX02 GHIJ+ 4
+			stop
+	}
+}
+
+thing MT_MACEFX2
+{
+	speed		10
+	radius		8
+	height		6
+	damage		6
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_LOGRAV
+	+MF2_FLOORBOUNCE
+	+MF2_THRUGHOST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX02 CD 4
+			loop
+		death:
+			FX02 F+ 4 A_MaceBallImpact2
+			FX02 GHIJ+ 4
+			stop
+	}
+}
+
+thing MT_MACEFX3
+{
+	speed		7
+	radius		8
+	height		6
+	damage		4
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_LOGRAV
+	+MF2_FLOORBOUNCE
+	+MF2_THRUGHOST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX02 AB 4
+			loop
+		death:
+			FX02 F+ 4 A_MaceBallImpact
+			FX02 GHIJ+ 4
+			stop
+	}
+}
+
+thing MT_MACEFX4
+{
+	speed		7
+	radius		8
+	height		6
+	damage		18
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_LOGRAV
+	+MF2_FLOORBOUNCE
+	+MF2_THRUGHOST
+	+MF2_TELESTOMP
+
+	states
+	{
+		spawn:
+			FX02 E 99
+			loop
+		death:
+			FX02 C+ 4 A_DeathBallImpact
+			FX02 GHIJ+ 4
+			stop
+	}
+}
+
+thing MT_WSKULLROD
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			WSKL A -1
+			stop
+	}
+}
+
+thing MT_HORNRODFX1
+{
+	speed		22
+	radius		12
+	height		8
+	damage		3
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	seesound	"hrnsht"
+	deathsound	"hrnhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_WINDTHRUST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX00 AB+ 6
+			loop
+		death:
+			FX00 HI+ 5
+			FX00 JK+ 4
+			FX00 LM+ 3
+			stop
+	}
+}
+
+thing MT_HORNRODFX2
+{
+	speed		22
+	radius		12
+	height		8
+	damage		10
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	seesound	"hrnsht"
+	deathsound	"ramphit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX00 C+ 3
+			FX00 D+ 3 A_SkullRodPL2Seek
+			FX00 E+ 3
+			FX00 F+ 3 A_SkullRodPL2Seek
+			loop
+		death:
+			FX00 H+ 5 A_AddPlayerRain
+			FX00 I+ 5
+			FX00 J+ 4
+			FX00 KLM+ 3
+			FX00 G 1 A_HideInCeiling
+	}
+}
+
+thing MT_RAINPLR1
+{
+	speed		12
+	radius		5
+	height		12
+	damage		5
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX20 A+ -1
+			stop
+		death:
+			FX20 B+ 4 A_RainImpact
+			FX20 CDEF+ 4
+			stop
+	}
+}
+
+thing MT_RAINPLR2
+{
+	speed		12
+	radius		5
+	height		12
+	damage		5
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX21 A+ -1
+			stop
+		death:
+			FX21 B+ 4 A_RainImpact
+			FX21 CDEF+ 4
+			stop
+	}
+}
+
+thing MT_RAINPLR3
+{
+	speed		12
+	radius		5
+	height		12
+	damage		5
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX22 A+ -1
+			stop
+		death:
+			FX22 B+ 4 A_RainImpact
+			FX22 CDEF+ 4
+			stop
+	}
+}
+
+thing MT_RAINPLR4
+{
+	speed		12
+	radius		5
+	height		12
+	damage		5
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX23 A+ -1
+			stop
+		death:
+			FX23 B+ 4 A_RainImpact
+			FX23 CDEF+ 4
+			stop
+	}
+}
+
+thing MT_GOLDWANDFX1
+{
+	speed		22
+	radius		10
+	height		6
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"gldhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX01 AB+ 6
+			loop
+		death:
+			FX01 EFGH+ 3
+			stop
+	}
+}
+
+thing MT_GOLDWANDFX2
+{
+	speed		18
+	radius		10
+	height		6
+	damage		1
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX01 CD+ 6
+			loop
+		death:
+			FX01 EFGH+ 3
+			stop
+	}
+}
+
+thing MT_GOLDWANDPUFF1
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			PUF2 ABCDE+ 3
+			stop
+	}
+}
+
+thing MT_GOLDWANDPUFF2
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			FX01 EFGH+ 3
+			stop
+	}
+}
+
+thing MT_WPHOENIXROD
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			WPHX A -1
+			stop
+	}
+}
+
+thing MT_PHOENIXFX1
+{
+	speed		20
+	radius		11
+	height		8
+	damage		20
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	seesound	"phosht"
+	deathsound	"phohit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_THRUGHOST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX04 A+ 4 A_PhoenixPuff
+			loop
+		death:
+			FX08 A+ 6 A_Explode
+			FX08 BC+ 5
+			FX08 DEFGH+ 4
+			stop
+	}
+}
+
+thing MT_PHOENIXFX_REMOVED
+{
+	speed		0
+	radius		2
+	height		4
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX08 I+ 8
+			loop
+		death:
+			FX08 K+ 8
+			stop
+	}
+}
+
+thing MT_PHOENIXPUFF
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_SHADOW
+	+MF2_NOTELEPORT
+	+MF2_CANNOTPUSH
+
+	states
+	{
+		spawn:
+			FX04 BCDEF 4
+			stop
+	}
+}
+
+thing MT_PHOENIXFX2
+{
+	speed		10
+	radius		6
+	height		8
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+	+MF2_FIREDAMAGE
+
+	states
+	{
+		spawn:
+			FX09 ABABA+ 2
+			FX09 B+ 2 A_FlameEnd
+			FX09 CDEF+ 2
+			stop
+		death:
+			FX09 G+ 3
+			FX09 H+ 3 A_FloatPuff
+			FX09 I+ 4
+			FX09 JK+ 5
+			stop
+	}
+}
+
+thing MT_MISC15
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			WBOW A -1
+			stop
+	}
+}
+
+thing MT_CRBOWFX1
+{
+	speed		30
+	radius		11
+	height		8
+	damage		10
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	seesound	"bowsht"
+	deathsound	"hrnhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX03 B+ 1
+			loop
+		death:
+			FX03 HIJ+ 8
+			stop
+	}
+}
+
+thing MT_CRBOWFX2
+{
+	speed		32
+	radius		11
+	height		8
+	damage		6
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	seesound	"bowsht"
+	deathsound	"hrnhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX03 B+ 1 A_BoltSpark
+			loop
+		death:
+			FX03 HIJ+ 8
+			stop
+	}
+}
+
+thing MT_CRBOWFX3
+{
+	speed		20
+	radius		11
+	height		8
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"hrnhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_WINDTHRUST
+	+MF2_THRUGHOST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX03 A+ 1
+			loop
+		death:
+			FX03 CDE+ 8
+			stop
+	}
+}
+
+thing MT_CRBOWFX4
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF2_LOGRAV
+
+	states
+	{
+		spawn:
+			FX03 FG+ 8
+			stop
+	}
+}
+
+thing MT_BLOOD
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+
+	states
+	{
+		spawn:
+			BLOD CBA 8
+			stop
+	}
+}
+
+thing MT_BLOODSPLATTER
+{
+	speed		0
+	radius		2
+	height		4
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_NOTELEPORT
+	+MF2_CANNOTPUSH
+
+	states
+	{
+		spawn:
+			BLOD CBA 8
+			stop
+		death:
+			BLOD A 6
+			stop
+	}
+}
+
+thing MT_PLAYER
+{
+	speed		0
+	radius		16
+	height		56
+	damage		0
+	reactiontime	0
+	painchance	255
+	mass		100
+
+	painsound	"plrpai"
+	deathsound	"plrdth"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_DROPOFF
+	+MF_PICKUP
+	+MF_NOTDMATCH
+	+MF2_WINDTHRUST
+	+MF2_FOOTCLIP
+	+MF2_SLIDE
+	+MF2_PASSMOBJ
+	+MF2_TELESTOMP
+
+	states
+	{
+		spawn:
+			PLAY A -1
+			stop
+		see:
+			PLAY ABCD 4
+			loop
+		missile:
+			PLAY E 12
+			goto spawn
+		pain:
+			PLAY G 4
+			PLAY G 4 A_Pain
+			goto spawn
+		death:
+			PLAY H 6
+			PLAY I 6 A_Scream
+			PLAY JK 6
+			PLAY L 6 A_NoBlocking
+			PLAY MNO 6
+			PLAY P -1 A_AddPlayerCorpse
+			stop
+		xdeath:
+			PLAY Q 5 A_Scream
+			PLAY R 5 A_SkullPop
+			PLAY S 5 A_NoBlocking
+			PLAY TUVWX 5
+			PLAY Y -1 A_AddPlayerCorpse
+			stop
+	}
+}
+
+thing MT_BLOODYSKULL
+{
+	speed		0
+	radius		4
+	height		4
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_DROPOFF
+	+MF2_LOGRAV
+	+MF2_CANNOTPUSH
+
+	states
+	{
+		spawn:
+			BSKL ABCDE 5 A_CheckSkullFloor
+			loop
+	}
+}
+
+thing MT_CHICPLAYER
+{
+	speed		0
+	radius		16
+	height		24
+	damage		0
+	reactiontime	0
+	painchance	255
+	mass		100
+
+	painsound	"chicpai"
+	deathsound	"chicdth"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_DROPOFF
+	+MF_NOTDMATCH
+	+MF2_WINDTHRUST
+	+MF2_SLIDE
+	+MF2_PASSMOBJ
+	+MF2_FOOTCLIP
+	+MF2_LOGRAV
+	+MF2_TELESTOMP
+
+	states
+	{
+		spawn:
+			CHKN A -1
+			stop
+		see:
+			CHKN ABAB 3
+			loop
+		missile:
+			CHKN C 12
+			goto spawn
+		pain:
+			CHKN D 4 A_Feathers
+			CHKN C 4 A_Pain
+			goto spawn
+		death:
+			CHKN E 6 A_Scream
+			CHKN F 6 A_Feathers
+			CHKN G 6
+			CHKN H 6 A_NoBlocking
+			CHKN IJK 6
+			CHKN L -1
+			stop
+	}
+}
+
+thing MT_CHICKEN
+{
+	speed		4
+	radius		9
+	height		22
+	damage		0
+	reactiontime	8
+	painchance	200
+	mass		40
+
+	seesound	"chicpai"
+	attacksound	"chicatk"
+	painsound	"chicpai"
+	deathsound	"chicdth"
+	activesound	"chicact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF_DROPOFF
+	+MF2_WINDTHRUST
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			CHKN AB 10 A_ChicLook
+			loop
+		see:
+			CHKN AB 3 A_ChicChase
+			loop
+		pain:
+			CHKN D 5 A_Feathers
+			CHKN C 5 A_ChicPain
+			goto see
+		death:
+			CHKN E 6 A_Scream
+			CHKN F 6 A_Feathers
+			CHKN G 6
+			CHKN H 6 A_NoBlocking
+			CHKN IJK 6
+			CHKN L -1
+			stop
+	}
+}
+
+thing MT_FEATHER
+{
+	speed		0
+	radius		2
+	height		4
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF2_NOTELEPORT
+	+MF2_LOGRAV
+	+MF2_CANNOTPUSH
+	+MF2_WINDTHRUST
+
+	states
+	{
+		spawn:
+			CHKN MNOPQPON 3
+			loop
+		death:
+			CHKN N 6
+			stop
+	}
+}
+
+thing MT_MUMMY
+{
+	speed		12
+	radius		22
+	height		62
+	damage		0
+	reactiontime	8
+	painchance	128
+	mass		75
+
+	seesound	"mumsit"
+	attacksound	"mumat1"
+	painsound	"mumpai"
+	deathsound	"mumdth"
+	activesound	"mumact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			MUMM AB 10 A_Look
+			loop
+		see:
+			MUMM ABCD 4 A_Chase
+			loop
+		pain:
+			MUMM H 4
+			MUMM H 4 A_Pain
+			goto see
+		death:
+			MUMM I 5
+			MUMM J 5 A_Scream
+			MUMM K 5 A_MummySoul
+			MUMM L 5
+			MUMM M 5 A_NoBlocking
+			MUMM NO 5
+			MUMM P -1
+			stop
+	}
+}
+
+thing MT_MUMMYLEADER
+{
+	speed		12
+	radius		22
+	height		62
+	damage		0
+	reactiontime	8
+	painchance	64
+	mass		75
+
+	seesound	"mumsit"
+	attacksound	"mumat1"
+	painsound	"mumpai"
+	deathsound	"mumdth"
+	activesound	"mumact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			MUMM AB 10 A_Look
+			loop
+		see:
+			MUMM ABCD 4 A_Chase
+			loop
+		missile:
+			MUMM X 5 A_FaceTarget
+			MUMM Y+ 5 A_FaceTarget
+			MUMM X 5 A_FaceTarget
+			MUMM Y+ 5 A_FaceTarget
+			MUMM X 5 A_FaceTarget
+			MUMM Y+ 15 A_MummyAttack2
+			goto see
+		pain:
+			MUMM H 4
+			MUMM H 4 A_Pain
+			goto see
+		death:
+			MUMM I 5
+			MUMM J 5 A_Scream
+			MUMM K 5 A_MummySoul
+			MUMM L 5
+			MUMM M 5 A_NoBlocking
+			MUMM NO 5
+			MUMM P -1
+			stop
+	}
+}
+
+thing MT_MUMMYGHOST
+{
+	speed		12
+	radius		22
+	height		62
+	damage		0
+	reactiontime	8
+	painchance	128
+	mass		75
+
+	seesound	"mumsit"
+	attacksound	"mumat1"
+	painsound	"mumpai"
+	deathsound	"mumdth"
+	activesound	"mumact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF_SHADOW
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			MUMM AB 10 A_Look
+			loop
+		see:
+			MUMM ABCD 4 A_Chase
+			loop
+		pain:
+			MUMM H 4
+			MUMM H 4 A_Pain
+			goto see
+		death:
+			MUMM I 5
+			MUMM J 5 A_Scream
+			MUMM K 5 A_MummySoul
+			MUMM L 5
+			MUMM M 5 A_NoBlocking
+			MUMM NO 5
+			MUMM P -1
+			stop
+	}
+}
+
+thing MT_MUMMYLEADERGHOST
+{
+	speed		12
+	radius		22
+	height		62
+	damage		0
+	reactiontime	8
+	painchance	64
+	mass		75
+
+	seesound	"mumsit"
+	attacksound	"mumat1"
+	painsound	"mumpai"
+	deathsound	"mumdth"
+	activesound	"mumact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF_SHADOW
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			MUMM AB 10 A_Look
+			loop
+		see:
+			MUMM ABCD 4 A_Chase
+			loop
+		missile:
+			MUMM X 5 A_FaceTarget
+			MUMM Y+ 5 A_FaceTarget
+			MUMM X 5 A_FaceTarget
+			MUMM Y+ 5 A_FaceTarget
+			MUMM X 5 A_FaceTarget
+			MUMM Y+ 15 A_MummyAttack2
+			goto see
+		pain:
+			MUMM H 4
+			MUMM H 4 A_Pain
+			goto see
+		death:
+			MUMM I 5
+			MUMM J 5 A_Scream
+			MUMM K 5 A_MummySoul
+			MUMM L 5
+			MUMM M 5 A_NoBlocking
+			MUMM NO 5
+			MUMM P -1
+			stop
+	}
+}
+
+thing MT_MUMMYSOUL
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+
+	states
+	{
+		spawn:
+			MUMM QRS 5
+			MUMM T 9
+			MUMM UVW 5
+			stop
+	}
+}
+
+thing MT_MUMMYFX1
+{
+	speed		9
+	radius		8
+	height		14
+	damage		4
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX15 A+ 5 A_ContMobjSound
+			FX15 B+ 5 A_MummyFX1Seek
+			FX15 C+ 5
+			FX15 B+ 5 A_MummyFX1Seek
+			loop
+		death:
+			FX15 DEFG+ 5
+			stop
+	}
+}
+
+thing MT_BEAST
+{
+	speed		14
+	radius		32
+	height		74
+	damage		0
+	reactiontime	8
+	painchance	100
+	mass		200
+
+	seesound	"bstsit"
+	attacksound	"bstatk"
+	painsound	"bstpai"
+	deathsound	"bstdth"
+	activesound	"bstact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			BEAS AB 10 A_Look
+			loop
+		see:
+			BEAS ABCDEF 3 A_Chase
+			loop
+		missile:
+			BEAS H 10 A_FaceTarget
+			BEAS I 10 A_BeastAttack
+			goto see
+		pain:
+			BEAS G 3
+			BEAS G 3 A_Pain
+			goto see
+		death:
+			BEAS R 6
+			BEAS S 6 A_Scream
+			BEAS TUV 6
+			BEAS W 6 A_NoBlocking
+			BEAS XY 6
+			BEAS Z -1
+			stop
+		xdeath:
+			BEAS J 5
+			BEAS K 6 A_Scream
+			BEAS L 5
+			BEAS M 6
+			BEAS N 5
+			BEAS O 6 A_NoBlocking
+			BEAS P 5
+			BEAS Q -1
+			stop
+	}
+}
+
+thing MT_BEASTBALL
+{
+	speed		12
+	radius		9
+	height		8
+	damage		4
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_WINDTHRUST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FRB1 AABBCC 2 A_BeastPuff
+			loop
+		death:
+			FRB1 DEFGH 4
+			stop
+	}
+}
+
+thing MT_BURNBALL
+{
+	speed		10
+	radius		6
+	height		8
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_MISSILE
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FRB1 ABCDEFGH 4
+			stop
+		death:
+			FRB1 DEFGH 4
+			stop
+	}
+}
+
+thing MT_BURNBALLFB
+{
+	speed		10
+	radius		6
+	height		8
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_MISSILE
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FRB1 ABCDEFGH+ 4
+			stop
+		death:
+			FRB1 DEFGH 4
+			stop
+	}
+}
+
+thing MT_PUFFY
+{
+	speed		10
+	radius		6
+	height		8
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF_MISSILE
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FRB1 DEFGH 4
+			stop
+		death:
+			FRB1 DEFGH 4
+			stop
+	}
+}
+
+thing MT_SNAKE
+{
+	speed		10
+	radius		22
+	height		70
+	damage		0
+	reactiontime	8
+	painchance	48
+	mass		100
+
+	seesound	"snksit"
+	attacksound	"snkatk"
+	painsound	"snkpai"
+	deathsound	"snkdth"
+	activesound	"snkact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			SNKE AB 10 A_Look
+			loop
+		see:
+			SNKE ABCD 4 A_Chase
+			loop
+		missile:
+			SNKE FF 5 A_FaceTarget
+			SNKE FFF 4 A_SnakeAttack
+			SNKE FFF 5 A_FaceTarget
+			SNKE F 4 A_SnakeAttack2
+			goto see
+		pain:
+			SNKE E 3
+			SNKE E 3 A_Pain
+			goto see
+		death:
+			SNKE G 5
+			SNKE H 5 A_Scream
+			SNKE IJKL 5
+			SNKE M 5 A_NoBlocking
+			SNKE NO 5
+			SNKE P -1
+			stop
+	}
+}
+
+thing MT_SNAKEPRO_A
+{
+	speed		14
+	radius		12
+	height		8
+	damage		1
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_WINDTHRUST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			SNFX ABCD+ 5
+			loop
+		death:
+			SNFX EF+ 5
+			SNFX G+ 4
+			SNFX HI+ 3
+			stop
+	}
+}
+
+thing MT_SNAKEPRO_B
+{
+	speed		14
+	radius		12
+	height		8
+	damage		3
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			SNFX JK+ 6
+			loop
+		death:
+			SNFX LM+ 5
+			SNFX N+ 4
+			SNFX O+ 3
+			stop
+	}
+}
+
+thing MT_HEAD
+{
+	speed		6
+	radius		40
+	height		72
+	damage		0
+	reactiontime	8
+	painchance	32
+	mass		325
+
+	seesound	"hedsit"
+	attacksound	"hedat1"
+	painsound	"hedpai"
+	deathsound	"heddth"
+	activesound	"hedact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF_NOBLOOD
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			HEAD A 10 A_Look
+			loop
+		see:
+			HEAD A 4 A_Chase
+			loop
+		missile:
+			HEAD A 5 A_FaceTarget
+			HEAD B 20 A_HeadAttack
+			goto see
+		pain:
+			HEAD A 4
+			HEAD A 4 A_Pain
+			goto see
+		death:
+			HEAD C 7
+			HEAD D 7 A_Scream
+			HEAD EF 7
+			HEAD G 7 A_NoBlocking
+			HEAD H 7
+			HEAD I -1 A_BossDeath
+			stop
+	}
+}
+
+thing MT_HEADFX1
+{
+	speed		13
+	radius		12
+	height		6
+	damage		1
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+	+MF2_THRUGHOST
+
+	states
+	{
+		spawn:
+			FX05 ABC 6
+			loop
+		death:
+			FX05 D 5 A_HeadIceImpact
+			FX05 EFG 5
+			stop
+	}
+}
+
+thing MT_HEADFX2
+{
+	speed		8
+	radius		12
+	height		6
+	damage		3
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX05 HIJ 6
+			loop
+		death:
+			FX05 DEFG 5
+			stop
+	}
+}
+
+thing MT_HEADFX3
+{
+	speed		10
+	radius		14
+	height		12
+	damage		5
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_WINDTHRUST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX06 ABC 4 A_HeadFireGrow
+			loop
+		death:
+			FX06 DEFG 5
+			stop
+	}
+}
+
+thing MT_WHIRLWIND
+{
+	speed		10
+	radius		16
+	height		74
+	damage		1
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF_SHADOW
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX07 DEFG 3
+		death:
+			FX07 GFED 4
+			stop
+	}
+}
+
+thing MT_CLINK
+{
+	speed		14
+	radius		20
+	height		64
+	damage		0
+	reactiontime	8
+	painchance	32
+	mass		75
+
+	seesound	"clksit"
+	attacksound	"clkatk"
+	painsound	"clkpai"
+	deathsound	"clkdth"
+	activesound	"clkact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF_NOBLOOD
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			CLNK AB 10 A_Look
+			loop
+		see:
+			CLNK ABCD 3 A_Chase
+			loop
+		pain:
+			CLNK H 3
+			CLNK H 3 A_Pain
+			goto see
+		death:
+			CLNK IJ 6
+			CLNK K 5 A_Scream
+			CLNK L 5 A_NoBlocking
+			CLNK MN 5
+			CLNK O -1
+			stop
+	}
+}
+
+thing MT_WIZARD
+{
+	speed		12
+	radius		16
+	height		68
+	damage		0
+	reactiontime	8
+	painchance	64
+	mass		100
+
+	seesound	"wizsit"
+	attacksound	"wizatk"
+	painsound	"wizpai"
+	deathsound	"wizdth"
+	activesound	"wizact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF_FLOAT
+	+MF_NOGRAVITY
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			WZRD AB 10 A_Look
+			loop
+		see:
+			WZRD A 3 A_Chase
+			WZRD A 4 A_Chase
+			WZRD A 3 A_Chase
+			WZRD A 4 A_Chase
+			WZRD B 3 A_Chase
+			WZRD B 4 A_Chase
+			WZRD B 3 A_Chase
+			WZRD B 4 A_Chase
+			loop
+		missile:
+			WZRD C 4 A_WizAtk1
+			WZRD C 4 A_WizAtk2
+			WZRD C 4 A_WizAtk1
+			WZRD C 4 A_WizAtk2
+			WZRD C 4 A_WizAtk1
+			WZRD C 4 A_WizAtk2
+			WZRD C 4 A_WizAtk1
+			WZRD C 4 A_WizAtk2
+			WZRD D 12 A_WizAtk3
+			goto see
+		pain:
+			WZRD E 3 A_GhostOff
+			WZRD E 3 A_Pain
+			goto see
+		death:
+			WZRD F 6 A_GhostOff
+			WZRD G 6 A_Scream
+			WZRD HI 6
+			WZRD J 6 A_NoBlocking
+			WZRD KL 6
+			WZRD M -1
+			stop
+	}
+}
+
+thing MT_WIZFX1
+{
+	speed		18
+	radius		10
+	height		6
+	damage		3
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX11 AB+ 6
+			loop
+		death:
+			FX11 CDEFG+ 5
+			stop
+	}
+}
+
+thing MT_IMP
+{
+	speed		10
+	radius		16
+	height		36
+	damage		0
+	reactiontime	8
+	painchance	200
+	mass		50
+
+	seesound	"impsit"
+	attacksound	"impat1"
+	painsound	"imppai"
+	deathsound	"impdth"
+	activesound	"impact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_FLOAT
+	+MF_NOGRAVITY
+	+MF_COUNTKILL
+	+MF2_SPAWNFLOAT
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			IMPX ABCB 10 A_Look
+			loop
+		see:
+			IMPX AABBCCBB 3 A_Chase
+			loop
+		missile:
+			IMPX A 10 A_FaceTarget
+			IMPX B 6 A_ImpMsAttack
+		refire:
+			IMPX CBAB 6
+			goto refire
+		crash:
+			IMPX I 7 A_ImpExplode
+			IMPX J 7 A_Scream
+			IMPX K 7
+			IMPX L -1
+			stop
+		pain:
+			IMPX G 3
+			IMPX G 3 A_Pain
+			goto see
+		death:
+			IMPX G 4 A_ImpDeath
+		xdeath:
+			IMPX S 5 A_ImpXDeath1
+			IMPX TU 5
+			IMPX V 5 A_ImpXDeath2
+	}
+}
+
+thing MT_IMPLEADER
+{
+	speed		10
+	radius		16
+	height		36
+	damage		0
+	reactiontime	8
+	painchance	200
+	mass		50
+
+	seesound	"impsit"
+	attacksound	"impat2"
+	painsound	"imppai"
+	deathsound	"impdth"
+	activesound	"impact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_FLOAT
+	+MF_NOGRAVITY
+	+MF_COUNTKILL
+	+MF2_SPAWNFLOAT
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			IMPX ABCB 10 A_Look
+			loop
+		see:
+			IMPX AABBCCBB 3 A_Chase
+			loop
+		missile:
+			IMPX DE 6 A_FaceTarget
+			IMPX F 6 A_ImpMsAttack2
+			goto see
+		crash:
+			IMPX I 7 A_ImpExplode
+			IMPX J 7 A_Scream
+			IMPX K 7
+			IMPX L -1
+			stop
+		pain:
+			IMPX G 3
+			IMPX G 3 A_Pain
+			goto see
+		death:
+			IMPX G 4 A_ImpDeath
+		xdeath:
+			IMPX S 5 A_ImpXDeath1
+			IMPX TU 5
+			IMPX V 5 A_ImpXDeath2
+	}
+}
+
+thing MT_IMPCHUNK1
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+
+	states
+	{
+		spawn:
+			IMPX M 5
+			IMPX NO 700
+			stop
+	}
+}
+
+thing MT_IMPCHUNK2
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+
+	states
+	{
+		spawn:
+			IMPX P 5
+			IMPX QR 700
+			stop
+	}
+}
+
+thing MT_IMPBALL
+{
+	speed		10
+	radius		8
+	height		8
+	damage		1
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_WINDTHRUST
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX10 ABC+ 6
+			loop
+		death:
+			FX10 DEFG+ 5
+			stop
+	}
+}
+
+thing MT_KNIGHT
+{
+	speed		12
+	radius		24
+	height		78
+	damage		0
+	reactiontime	8
+	painchance	100
+	mass		150
+
+	seesound	"kgtsit"
+	attacksound	"kgtatk"
+	painsound	"kgtpai"
+	deathsound	"kgtdth"
+	activesound	"kgtact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			KNIG AB 10 A_Look
+			loop
+		see:
+			KNIG ABCD 4 A_Chase
+			loop
+		missile:
+			KNIG E 10 A_FaceTarget
+			KNIG F 8 A_FaceTarget
+			KNIG G 8 A_KnightAttack
+			KNIG E 10 A_FaceTarget
+			KNIG F 8 A_FaceTarget
+			KNIG G 8 A_KnightAttack
+			goto see
+		pain:
+			KNIG H 3
+			KNIG H 3 A_Pain
+			goto see
+		death:
+			KNIG I 6
+			KNIG J 6 A_Scream
+			KNIG K 6
+			KNIG L 6 A_NoBlocking
+			KNIG MN 6
+			KNIG O -1
+			stop
+	}
+}
+
+thing MT_KNIGHTGHOST
+{
+	speed		12
+	radius		24
+	height		78
+	damage		0
+	reactiontime	8
+	painchance	100
+	mass		150
+
+	seesound	"kgtsit"
+	attacksound	"kgtatk"
+	painsound	"kgtpai"
+	deathsound	"kgtdth"
+	activesound	"kgtact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF_SHADOW
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+
+	states
+	{
+		spawn:
+			KNIG AB 10 A_Look
+			loop
+		see:
+			KNIG ABCD 4 A_Chase
+			loop
+		missile:
+			KNIG E 10 A_FaceTarget
+			KNIG F 8 A_FaceTarget
+			KNIG G 8 A_KnightAttack
+			KNIG E 10 A_FaceTarget
+			KNIG F 8 A_FaceTarget
+			KNIG G 8 A_KnightAttack
+			goto see
+		pain:
+			KNIG H 3
+			KNIG H 3 A_Pain
+			goto see
+		death:
+			KNIG I 6
+			KNIG J 6 A_Scream
+			KNIG K 6
+			KNIG L 6 A_NoBlocking
+			KNIG MN 6
+			KNIG O -1
+			stop
+	}
+}
+
+thing MT_KNIGHTAXE
+{
+	speed		9
+	radius		10
+	height		8
+	damage		2
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"hrnhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_WINDTHRUST
+	+MF2_NOTELEPORT
+	+MF2_THRUGHOST
+
+	states
+	{
+		spawn:
+			SPAX A+ 3 A_ContMobjSound
+			SPAX BC+ 3
+			loop
+		death:
+			SPAX DEF+ 6
+			stop
+	}
+}
+
+thing MT_REDAXE
+{
+	speed		9
+	radius		10
+	height		8
+	damage		7
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"hrnhit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+	+MF2_THRUGHOST
+
+	states
+	{
+		spawn:
+			RAXE AB+ 5 A_DripBlood
+			loop
+		death:
+			RAXE CDE+ 6
+			stop
+	}
+}
+
+thing MT_SORCERER1
+{
+	speed		16
+	radius		28
+	height		100
+	damage		0
+	reactiontime	8
+	painchance	56
+	mass		800
+
+	seesound	"sbtsit"
+	attacksound	"sbtatk"
+	painsound	"sbtpai"
+	deathsound	"sbtdth"
+	activesound	"sbtact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+	+MF2_BOSS
+
+	states
+	{
+		spawn:
+			SRCR AB 10 A_Look
+			loop
+		see:
+			SRCR ABCD 5 A_Sor1Chase
+			loop
+		missile:
+			SRCR Q 7 A_FaceTarget
+			SRCR R 6 A_FaceTarget
+			SRCR S 10 A_Srcr1Attack
+			goto see
+		pain:
+			SRCR Q 6 A_Sor1Pain
+			goto see
+		death:
+			SRCR E 7
+			SRCR F 7 A_Scream
+			SRCR G 7
+			SRCR HIJK 6
+			SRCR L 25 A_SorZap
+			SRCR MN 5
+			SRCR O 4
+			SRCR L 20 A_SorZap
+			SRCR MN 5
+			SRCR O 4
+			SRCR L 12
+			SRCR P -1 A_SorcererRise
+			stop
+	}
+}
+
+thing MT_SRCRFX1
+{
+	speed		20
+	radius		10
+	height		10
+	damage		10
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+	+MF2_FIREDAMAGE
+
+	states
+	{
+		spawn:
+			FX14 ABC+ 6
+			loop
+		death:
+			FX14 DEFGH+ 5
+			stop
+	}
+}
+
+thing MT_SORCERER2
+{
+	speed		14
+	radius		16
+	height		70
+	damage		0
+	reactiontime	8
+	painchance	32
+	mass		300
+
+	seesound	"sorsit"
+	attacksound	"soratk"
+	painsound	"sorpai"
+	activesound	"soract"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF_DROPOFF
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+	+MF2_BOSS
+
+	states
+	{
+		spawn:
+			SOR2 MN 10 A_Look
+			loop
+		see:
+			SOR2 MNOP 4 A_Chase
+			loop
+		missile:
+			SOR2 R 9 A_Srcr2Decide
+			SOR2 S 9 A_FaceTarget
+			SOR2 T 20 A_Srcr2Attack
+			goto see
+		pain:
+			SOR2 Q 3
+			SOR2 Q 6 A_Pain
+			goto see
+		death:
+			SDTH A 8 A_Sor2DthInit
+			SDTH B 8
+			SDTH C 8 A_SorDSph
+			SDTH DE 7
+			SDTH F 7 A_Sor2DthLoop
+			SDTH G 6 A_SorDExp
+			SDTH H 6
+			SDTH I 18
+			SDTH J 6 A_NoBlocking
+			SDTH K 6 A_SorDBon
+			SDTH LMN 6
+			SDTH O -1 A_BossDeath
+			stop
+	}
+}
+
+thing MT_SOR2FX1
+{
+	speed		20
+	radius		10
+	height		6
+	damage		1
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX16 ABC+ 3 A_BlueSpark
+			loop
+		death:
+			FX16 G+ 5 A_Explode
+			FX16 HIJKL+ 5
+			stop
+	}
+}
+
+thing MT_SOR2FXSPARK
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+	+MF2_CANNOTPUSH
+
+	states
+	{
+		spawn:
+			FX16 DEF+ 12
+			stop
+	}
+}
+
+thing MT_SOR2FX2
+{
+	speed		6
+	radius		10
+	height		6
+	damage		10
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+
+	states
+	{
+		spawn:
+			FX11 A+ 35
+		death:
+			FX11 CDEFG+ 5
+			stop
+	}
+}
+
+thing MT_SOR2TELEFADE
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+
+	states
+	{
+		spawn:
+			SOR2 G 8
+			SOR2 HIJKL 6
+			stop
+	}
+}
+
+thing MT_MINOTAUR
+{
+	speed		16
+	radius		28
+	height		100
+	damage		7
+	reactiontime	8
+	painchance	25
+	mass		800
+
+	seesound	"minsit"
+	attacksound	"minat1"
+	painsound	"minpai"
+	deathsound	"mindth"
+	activesound	"minact"
+
+	clear flags
+	+MF_SOLID
+	+MF_SHOOTABLE
+	+MF_COUNTKILL
+	+MF_DROPOFF
+	+MF2_FOOTCLIP
+	+MF2_PASSMOBJ
+	+MF2_BOSS
+
+	states
+	{
+		spawn:
+			MNTR AB 10 A_Look
+			loop
+		see:
+			MNTR ABCD 5 A_Chase
+			loop
+		missile:
+			MNTR V 10 A_MinotaurDecide
+			MNTR Y 4 A_FaceTarget
+			MNTR Z 9 A_MinotaurAtk2
+			goto see
+		pain:
+			MNTR E 3
+			MNTR E 6 A_Pain
+			goto see
+		death:
+			MNTR F 6
+			MNTR G 5
+			MNTR H 6 A_Scream
+			MNTR I 5
+			MNTR J 6
+			MNTR K 5
+			MNTR L 6
+			MNTR M 5 A_NoBlocking
+			MNTR N 6
+			MNTR O 5
+			MNTR P 6
+			MNTR Q 5
+			MNTR R 6
+			MNTR S 5
+			MNTR T -1 A_BossDeath
+			stop
+	}
+}
+
+thing MT_MNTRFX1
+{
+	speed		20
+	radius		10
+	height		6
+	damage		3
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+	+MF2_FIREDAMAGE
+
+	states
+	{
+		spawn:
+			FX12 AB+ 6
+			loop
+		death:
+			FX12 CDEFGH+ 5
+			stop
+	}
+}
+
+thing MT_MNTRFX2
+{
+	speed		14
+	radius		5
+	height		12
+	damage		4
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"phohit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+	+MF2_FIREDAMAGE
+
+	states
+	{
+		spawn:
+			FX13 A 2 A_MntrFloorFire
+			loop
+		death:
+			FX13 I+ 4 A_Explode
+			FX13 JKLM+ 4
+			stop
+	}
+}
+
+thing MT_MNTRFX3
+{
+	speed		0
+	radius		8
+	height		16
+	damage		4
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	deathsound	"phohit"
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_MISSILE
+	+MF_DROPOFF
+	+MF_NOGRAVITY
+	+MF2_NOTELEPORT
+	+MF2_FIREDAMAGE
+
+	states
+	{
+		spawn:
+			FX13 DC+ 4
+			FX13 BCDE+ 5
+			FX13 FGH+ 4
+			stop
+		death:
+			FX13 I+ 4 A_Explode
+			FX13 JKLM+ 4
+			stop
+	}
+}
+
+thing MT_AKYY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_NOTDMATCH
+
+	states
+	{
+		spawn:
+			AKYY ABCDEFGHIJ+ 3
+			loop
+	}
+}
+
+thing MT_BKYY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_NOTDMATCH
+
+	states
+	{
+		spawn:
+			BKYY ABCDEFGHIJ+ 3
+			loop
+	}
+}
+
+thing MT_CKEY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+	+MF_NOTDMATCH
+
+	states
+	{
+		spawn:
+			CKYY ABCDEFGHI+ 3
+			loop
+	}
+}
+
+thing MT_AMGWNDWIMPY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMG1 A -1
+			stop
+	}
+}
+
+thing MT_AMGWNDHEFTY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMG2 ABC 4
+			loop
+	}
+}
+
+thing MT_AMMACEWIMPY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMM1 A -1
+			stop
+	}
+}
+
+thing MT_AMMACEHEFTY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMM2 A -1
+			stop
+	}
+}
+
+thing MT_AMCBOWWIMPY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMC1 A -1
+			stop
+	}
+}
+
+thing MT_AMCBOWHEFTY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMC2 ABC 5
+			loop
+	}
+}
+
+thing MT_AMSKRDWIMPY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMS1 AB 5
+			loop
+	}
+}
+
+thing MT_AMSKRDHEFTY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMS2 AB 5
+			loop
+	}
+}
+
+thing MT_AMPHRDWIMPY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMP1 ABC 4
+			loop
+	}
+}
+
+thing MT_AMPHRDHEFTY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMP2 ABC 4
+			loop
+	}
+}
+
+thing MT_AMBLSRWIMPY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMB1 ABC 4
+			loop
+	}
+}
+
+thing MT_AMBLSRHEFTY
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_SPECIAL
+
+	states
+	{
+		spawn:
+			AMB2 ABC 4
+			loop
+	}
+}
+
+thing MT_SOUNDWIND
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOSECTOR
+
+	states
+	{
+		spawn:
+			AMG1 A 100 A_ESound
+			loop
+	}
+}
+
+thing MT_SOUNDWATERFALL
+{
+	speed		0
+	radius		20
+	height		16
+	damage		0
+	reactiontime	8
+	painchance	0
+	mass		100
+
+	clear flags
+	+MF_NOBLOCKMAP
+	+MF_NOSECTOR
+
+	states
+	{
+		spawn:
+			AMG1 A 85 A_ESound
+			loop
+	}
+}
+
