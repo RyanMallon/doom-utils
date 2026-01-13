@@ -1,6 +1,8 @@
 #
 # Script to dump Doom's info.c out as Decohack
 #
+# Currently supports Doom, Heretic and Hexen. Use chocolate-doom source for info.c files.
+#
 #   python3 info_to_decohack.py <path_to_info> [mobj name]
 #
 # Run with no mobj name to dump all mobjs
@@ -23,7 +25,7 @@ state_names = [
     'missile',
     'refire',
 
-    'crash',	# Heretic
+    'crash',	# Heretic/Hexen
 
     'pain',
     'death',
@@ -38,8 +40,8 @@ def parse_state_line(line):
     exp += r'([-0-9]+),\s*'			# Tics
     exp += r'\{?([A-Za-z0-9_]+)\}?,\s*'		# Action
     exp += r'([A-Za-z0-9_]+),\s*'		# Next state
-    exp += r'([0-9]+),\s*'			# Misc 1
-    exp += r'([0-9]+)\s*\},?\s*'		# Misc 2
+    exp += r'([-0-9]+),\s*'			# Misc 1
+    exp += r'([-0-9]+)\s*\},?\s*'		# Misc 2
     exp += r'// (.*)$'				# Comment
 
     m = re.match(exp, line)
@@ -262,6 +264,9 @@ def mobj_props(mobj):
         try:
             v = mobj.props[name]
             v = re.sub(r'\s*\*\s*FRACUNIT$', '', v)
+            if v == 'FRACUNIT':
+                v = '1'
+
             props.append((name, v))
         except:
             pass
@@ -277,11 +282,17 @@ def mobj_sounds(mobj):
         'activesound',
         ]
 
+    no_sound = [
+        '0',
+        'sfx_None',
+        'SFX_NONE',
+        ]
+
     props = []
     for sound in sound_names:
         try:
             v = mobj.props[sound]
-            if v != 'sfx_None' and v != '0':
+            if v not in no_sound:
                 v = re.sub(r'^sfx_', '', v)
                 props.append((sound, '"{}"'.format(v)))
         except:
@@ -293,6 +304,9 @@ def mobj_flags(mobj):
     flags = []
     try:
         flags = mobj.props['flags'].split('|')
+        if 'flags2' in mobj.props:
+            flags.extend(mobj.props['flags2'].split('|'))
+
         flags = [f.strip() for f in flags]
         if '0' in flags:
             flags.remove('0')
