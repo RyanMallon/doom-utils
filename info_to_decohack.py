@@ -151,10 +151,10 @@ def merged_state_to_decohack(merged):
     for m in merged:
         string += '{}'.format(chr(ord('A') + (m.frame & 0x7fff)))
 
-    if state.frame & 0x8000:
-        string += '+'
-
     string += ' {}'.format(state.tics)
+
+    if state.frame & 0x8000:
+        string += ' bright'
 
     if state.action:
         string += ' {}'.format(state.action)

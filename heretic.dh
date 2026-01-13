@@ -135,7 +135,7 @@ thing MT_ARTIINVISIBILITY
 	states
 	{
 		spawn:
-			INVS A+ 350
+			INVS A 350 bright
 			loop
 	}
 }
@@ -284,7 +284,7 @@ thing MT_EGGFX
 			EGGM ABCDE 4
 			loop
 		death:
-			FX01 EFGH+ 3
+			FX01 EFGH 3 bright
 			stop
 	}
 }
@@ -332,7 +332,7 @@ thing MT_MISC4
 	states
 	{
 		spawn:
-			TRCH ABC+ 3
+			TRCH ABC 3 bright
 			loop
 	}
 }
@@ -383,8 +383,8 @@ thing MT_FIREBOMB
 		spawn:
 			FBMB ABCD 10
 			FBMB E 6 A_Scream
-			XPL1 A+ 4 A_Explode
-			XPL1 BCDEF+ 4
+			XPL1 A 4 bright A_Explode
+			XPL1 BCDEF 4 bright
 			stop
 	}
 }
@@ -446,10 +446,10 @@ thing MT_POD
 			PPOD B 14 A_PodPain
 			goto spawn
 		death:
-			PPOD C+ 5 A_RemovePod
-			PPOD D+ 5 A_Scream
-			PPOD E+ 5 A_Explode
-			PPOD F+ 10
+			PPOD C 5 bright A_RemovePod
+			PPOD D 5 bright A_Scream
+			PPOD E 5 bright A_Explode
+			PPOD F 10 bright
 			ACLO E 1050 A_FreeTargMobj
 			stop
 	}
@@ -578,7 +578,7 @@ thing MT_LAVASPLASH
 	states
 	{
 		spawn:
-			LVAS ABCDEF+ 5
+			LVAS ABCDEF 5 bright
 			stop
 	}
 }
@@ -602,7 +602,7 @@ thing MT_LAVASMOKE
 	states
 	{
 		spawn:
-			LVAS GHIJK+ 5
+			LVAS GHIJK 5 bright
 			stop
 	}
 }
@@ -927,7 +927,7 @@ thing MT_MISC6
 	states
 	{
 		spawn:
-			KFR1 ABCDEFGH+ 3
+			KFR1 ABCDEFGH 3 bright
 			loop
 	}
 }
@@ -1039,7 +1039,7 @@ thing MT_MISC10
 	states
 	{
 		spawn:
-			WTRH ABC+ 6
+			WTRH ABC 6 bright
 			loop
 	}
 }
@@ -1314,11 +1314,11 @@ thing MT_TELEGLITTER
 	states
 	{
 		spawn:
-			TGLT A+ 2
-			TGLT B+ 2 A_AccTeleGlitter
-			TGLT C+ 2
-			TGLT D+ 2 A_AccTeleGlitter
-			TGLT E+ 2
+			TGLT A 2 bright
+			TGLT B 2 bright A_AccTeleGlitter
+			TGLT C 2 bright
+			TGLT D 2 bright A_AccTeleGlitter
+			TGLT E 2 bright
 			loop
 	}
 }
@@ -1342,11 +1342,11 @@ thing MT_TELEGLITTER2
 	states
 	{
 		spawn:
-			TGLT F+ 2
-			TGLT G+ 2 A_AccTeleGlitter
-			TGLT H+ 2
-			TGLT I+ 2 A_AccTeleGlitter
-			TGLT J+ 2
+			TGLT F 2 bright
+			TGLT G 2 bright A_AccTeleGlitter
+			TGLT H 2 bright
+			TGLT I 2 bright A_AccTeleGlitter
+			TGLT J 2 bright
 			loop
 	}
 }
@@ -1369,7 +1369,7 @@ thing MT_TFOG
 	states
 	{
 		spawn:
-			TELE ABCDEFGHGFEDC+ 6
+			TELE ABCDEFGHGFEDC 6 bright
 			stop
 	}
 }
@@ -1414,7 +1414,7 @@ thing MT_STAFFPUFF
 	states
 	{
 		spawn:
-			PUF3 A+ 4
+			PUF3 A 4 bright
 			PUF3 BCD 4
 			stop
 	}
@@ -1440,7 +1440,7 @@ thing MT_STAFFPUFF2
 	states
 	{
 		spawn:
-			PUF4 ABCDEF+ 4
+			PUF4 ABCDEF 4 bright
 			stop
 	}
 }
@@ -1465,7 +1465,7 @@ thing MT_BEAKPUFF
 	states
 	{
 		spawn:
-			PUF3 A+ 4
+			PUF3 A 4 bright
 			PUF3 BCD 4
 			stop
 	}
@@ -1512,7 +1512,7 @@ thing MT_GAUNTLETPUFF1
 	states
 	{
 		spawn:
-			PUF1 ABCD+ 4
+			PUF1 ABCD 4 bright
 			stop
 	}
 }
@@ -1536,7 +1536,7 @@ thing MT_GAUNTLETPUFF2
 	states
 	{
 		spawn:
-			PUF1 EFGH+ 4
+			PUF1 EFGH 4 bright
 			stop
 	}
 }
@@ -1589,9 +1589,9 @@ thing MT_BLASTERFX1
 			ACLO E 200
 			loop
 		death:
-			FX18 A+ 3 A_SpawnRippers
-			FX18 B+ 3
-			FX18 CDEFG+ 4
+			FX18 A 3 bright A_SpawnRippers
+			FX18 B 3 bright
+			FX18 CDEFG 4 bright
 			stop
 	}
 }
@@ -1650,7 +1650,7 @@ thing MT_RIPPER
 			FX18 N 5
 			loop
 		death:
-			FX18 OPQRS+ 4
+			FX18 OPQRS 4 bright
 			stop
 	}
 }
@@ -1673,7 +1673,7 @@ thing MT_BLASTERPUFF1
 	states
 	{
 		spawn:
-			FX17 ABCDE+ 4
+			FX17 ABCDE 4 bright
 			stop
 	}
 }
@@ -1696,8 +1696,8 @@ thing MT_BLASTERPUFF2
 	states
 	{
 		spawn:
-			FX17 FG+ 3
-			FX17 HIJKL+ 4
+			FX17 FG 3 bright
+			FX17 HIJKL 4 bright
 			stop
 	}
 }
@@ -1752,8 +1752,8 @@ thing MT_MACEFX1
 			FX02 AB 4 A_MacePL1Check
 			loop
 		death:
-			FX02 F+ 4 A_MaceBallImpact
-			FX02 GHIJ+ 4
+			FX02 F 4 bright A_MaceBallImpact
+			FX02 GHIJ 4 bright
 			stop
 	}
 }
@@ -1784,8 +1784,8 @@ thing MT_MACEFX2
 			FX02 CD 4
 			loop
 		death:
-			FX02 F+ 4 A_MaceBallImpact2
-			FX02 GHIJ+ 4
+			FX02 F 4 bright A_MaceBallImpact2
+			FX02 GHIJ 4 bright
 			stop
 	}
 }
@@ -1816,8 +1816,8 @@ thing MT_MACEFX3
 			FX02 AB 4
 			loop
 		death:
-			FX02 F+ 4 A_MaceBallImpact
-			FX02 GHIJ+ 4
+			FX02 F 4 bright A_MaceBallImpact
+			FX02 GHIJ 4 bright
 			stop
 	}
 }
@@ -1848,8 +1848,8 @@ thing MT_MACEFX4
 			FX02 E 99
 			loop
 		death:
-			FX02 C+ 4 A_DeathBallImpact
-			FX02 GHIJ+ 4
+			FX02 C 4 bright A_DeathBallImpact
+			FX02 GHIJ 4 bright
 			stop
 	}
 }
@@ -1901,12 +1901,12 @@ thing MT_HORNRODFX1
 	states
 	{
 		spawn:
-			FX00 AB+ 6
+			FX00 AB 6 bright
 			loop
 		death:
-			FX00 HI+ 5
-			FX00 JK+ 4
-			FX00 LM+ 3
+			FX00 HI 5 bright
+			FX00 JK 4 bright
+			FX00 LM 3 bright
 			stop
 	}
 }
@@ -1935,16 +1935,16 @@ thing MT_HORNRODFX2
 	states
 	{
 		spawn:
-			FX00 C+ 3
-			FX00 D+ 3 A_SkullRodPL2Seek
-			FX00 E+ 3
-			FX00 F+ 3 A_SkullRodPL2Seek
+			FX00 C 3 bright
+			FX00 D 3 bright A_SkullRodPL2Seek
+			FX00 E 3 bright
+			FX00 F 3 bright A_SkullRodPL2Seek
 			loop
 		death:
-			FX00 H+ 5 A_AddPlayerRain
-			FX00 I+ 5
-			FX00 J+ 4
-			FX00 KLM+ 3
+			FX00 H 5 bright A_AddPlayerRain
+			FX00 I 5 bright
+			FX00 J 4 bright
+			FX00 KLM 3 bright
 			FX00 G 1 A_HideInCeiling
 	}
 }
@@ -1970,11 +1970,11 @@ thing MT_RAINPLR1
 	states
 	{
 		spawn:
-			FX20 A+ -1
+			FX20 A -1 bright
 			stop
 		death:
-			FX20 B+ 4 A_RainImpact
-			FX20 CDEF+ 4
+			FX20 B 4 bright A_RainImpact
+			FX20 CDEF 4 bright
 			stop
 	}
 }
@@ -2000,11 +2000,11 @@ thing MT_RAINPLR2
 	states
 	{
 		spawn:
-			FX21 A+ -1
+			FX21 A -1 bright
 			stop
 		death:
-			FX21 B+ 4 A_RainImpact
-			FX21 CDEF+ 4
+			FX21 B 4 bright A_RainImpact
+			FX21 CDEF 4 bright
 			stop
 	}
 }
@@ -2030,11 +2030,11 @@ thing MT_RAINPLR3
 	states
 	{
 		spawn:
-			FX22 A+ -1
+			FX22 A -1 bright
 			stop
 		death:
-			FX22 B+ 4 A_RainImpact
-			FX22 CDEF+ 4
+			FX22 B 4 bright A_RainImpact
+			FX22 CDEF 4 bright
 			stop
 	}
 }
@@ -2060,11 +2060,11 @@ thing MT_RAINPLR4
 	states
 	{
 		spawn:
-			FX23 A+ -1
+			FX23 A -1 bright
 			stop
 		death:
-			FX23 B+ 4 A_RainImpact
-			FX23 CDEF+ 4
+			FX23 B 4 bright A_RainImpact
+			FX23 CDEF 4 bright
 			stop
 	}
 }
@@ -2092,10 +2092,10 @@ thing MT_GOLDWANDFX1
 	states
 	{
 		spawn:
-			FX01 AB+ 6
+			FX01 AB 6 bright
 			loop
 		death:
-			FX01 EFGH+ 3
+			FX01 EFGH 3 bright
 			stop
 	}
 }
@@ -2121,10 +2121,10 @@ thing MT_GOLDWANDFX2
 	states
 	{
 		spawn:
-			FX01 CD+ 6
+			FX01 CD 6 bright
 			loop
 		death:
-			FX01 EFGH+ 3
+			FX01 EFGH 3 bright
 			stop
 	}
 }
@@ -2147,7 +2147,7 @@ thing MT_GOLDWANDPUFF1
 	states
 	{
 		spawn:
-			PUF2 ABCDE+ 3
+			PUF2 ABCDE 3 bright
 			stop
 	}
 }
@@ -2170,7 +2170,7 @@ thing MT_GOLDWANDPUFF2
 	states
 	{
 		spawn:
-			FX01 EFGH+ 3
+			FX01 EFGH 3 bright
 			stop
 	}
 }
@@ -2222,12 +2222,12 @@ thing MT_PHOENIXFX1
 	states
 	{
 		spawn:
-			FX04 A+ 4 A_PhoenixPuff
+			FX04 A 4 bright A_PhoenixPuff
 			loop
 		death:
-			FX08 A+ 6 A_Explode
-			FX08 BC+ 5
-			FX08 DEFGH+ 4
+			FX08 A 6 bright A_Explode
+			FX08 BC 5 bright
+			FX08 DEFGH 4 bright
 			stop
 	}
 }
@@ -2253,10 +2253,10 @@ thing MT_PHOENIXFX_REMOVED
 	states
 	{
 		spawn:
-			FX08 I+ 8
+			FX08 I 8 bright
 			loop
 		death:
-			FX08 K+ 8
+			FX08 K 8 bright
 			stop
 	}
 }
@@ -2309,15 +2309,15 @@ thing MT_PHOENIXFX2
 	states
 	{
 		spawn:
-			FX09 ABABA+ 2
-			FX09 B+ 2 A_FlameEnd
-			FX09 CDEF+ 2
+			FX09 ABABA 2 bright
+			FX09 B 2 bright A_FlameEnd
+			FX09 CDEF 2 bright
 			stop
 		death:
-			FX09 G+ 3
-			FX09 H+ 3 A_FloatPuff
-			FX09 I+ 4
-			FX09 JK+ 5
+			FX09 G 3 bright
+			FX09 H 3 bright A_FloatPuff
+			FX09 I 4 bright
+			FX09 JK 5 bright
 			stop
 	}
 }
@@ -2368,10 +2368,10 @@ thing MT_CRBOWFX1
 	states
 	{
 		spawn:
-			FX03 B+ 1
+			FX03 B 1 bright
 			loop
 		death:
-			FX03 HIJ+ 8
+			FX03 HIJ 8 bright
 			stop
 	}
 }
@@ -2400,10 +2400,10 @@ thing MT_CRBOWFX2
 	states
 	{
 		spawn:
-			FX03 B+ 1 A_BoltSpark
+			FX03 B 1 bright A_BoltSpark
 			loop
 		death:
-			FX03 HIJ+ 8
+			FX03 HIJ 8 bright
 			stop
 	}
 }
@@ -2433,10 +2433,10 @@ thing MT_CRBOWFX3
 	states
 	{
 		spawn:
-			FX03 A+ 1
+			FX03 A 1 bright
 			loop
 		death:
-			FX03 CDE+ 8
+			FX03 CDE 8 bright
 			stop
 	}
 }
@@ -2459,7 +2459,7 @@ thing MT_CRBOWFX4
 	states
 	{
 		spawn:
-			FX03 FG+ 8
+			FX03 FG 8 bright
 			stop
 	}
 }
@@ -2827,11 +2827,11 @@ thing MT_MUMMYLEADER
 			goto see
 		missile:
 			MUMM X 5 A_FaceTarget
-			MUMM Y+ 5 A_FaceTarget
+			MUMM Y 5 bright A_FaceTarget
 			MUMM X 5 A_FaceTarget
-			MUMM Y+ 5 A_FaceTarget
+			MUMM Y 5 bright A_FaceTarget
 			MUMM X 5 A_FaceTarget
-			MUMM Y+ 15 A_MummyAttack2
+			MUMM Y 15 bright A_MummyAttack2
 			goto see
 		pain:
 			MUMM H 4
@@ -2943,11 +2943,11 @@ thing MT_MUMMYLEADERGHOST
 			goto see
 		missile:
 			MUMM X 5 A_FaceTarget
-			MUMM Y+ 5 A_FaceTarget
+			MUMM Y 5 bright A_FaceTarget
 			MUMM X 5 A_FaceTarget
-			MUMM Y+ 5 A_FaceTarget
+			MUMM Y 5 bright A_FaceTarget
 			MUMM X 5 A_FaceTarget
-			MUMM Y+ 15 A_MummyAttack2
+			MUMM Y 15 bright A_MummyAttack2
 			goto see
 		pain:
 			MUMM H 4
@@ -3011,13 +3011,13 @@ thing MT_MUMMYFX1
 	states
 	{
 		spawn:
-			FX15 A+ 5 A_ContMobjSound
-			FX15 B+ 5 A_MummyFX1Seek
-			FX15 C+ 5
-			FX15 B+ 5 A_MummyFX1Seek
+			FX15 A 5 bright A_ContMobjSound
+			FX15 B 5 bright A_MummyFX1Seek
+			FX15 C 5 bright
+			FX15 B 5 bright A_MummyFX1Seek
 			loop
 		death:
-			FX15 DEFG+ 5
+			FX15 DEFG 5 bright
 			stop
 	}
 }
@@ -3161,7 +3161,7 @@ thing MT_BURNBALLFB
 	states
 	{
 		spawn:
-			FRB1 ABCDEFGH+ 4
+			FRB1 ABCDEFGH 4 bright
 			stop
 		death:
 			FRB1 DEFGH 4
@@ -3272,12 +3272,12 @@ thing MT_SNAKEPRO_A
 	states
 	{
 		spawn:
-			SNFX ABCD+ 5
+			SNFX ABCD 5 bright
 			loop
 		death:
-			SNFX EF+ 5
-			SNFX G+ 4
-			SNFX HI+ 3
+			SNFX EF 5 bright
+			SNFX G 4 bright
+			SNFX HI 3 bright
 			stop
 	}
 }
@@ -3303,12 +3303,12 @@ thing MT_SNAKEPRO_B
 	states
 	{
 		spawn:
-			SNFX JK+ 6
+			SNFX JK 6 bright
 			loop
 		death:
-			SNFX LM+ 5
-			SNFX N+ 4
-			SNFX O+ 3
+			SNFX LM 5 bright
+			SNFX N 4 bright
+			SNFX O 3 bright
 			stop
 	}
 }
@@ -3622,10 +3622,10 @@ thing MT_WIZFX1
 	states
 	{
 		spawn:
-			FX11 AB+ 6
+			FX11 AB 6 bright
 			loop
 		death:
-			FX11 CDEFG+ 5
+			FX11 CDEFG 5 bright
 			stop
 	}
 }
@@ -3818,10 +3818,10 @@ thing MT_IMPBALL
 	states
 	{
 		spawn:
-			FX10 ABC+ 6
+			FX10 ABC 6 bright
 			loop
 		death:
-			FX10 DEFG+ 5
+			FX10 DEFG 5 bright
 			stop
 	}
 }
@@ -3964,11 +3964,11 @@ thing MT_KNIGHTAXE
 	states
 	{
 		spawn:
-			SPAX A+ 3 A_ContMobjSound
-			SPAX BC+ 3
+			SPAX A 3 bright A_ContMobjSound
+			SPAX BC 3 bright
 			loop
 		death:
-			SPAX DEF+ 6
+			SPAX DEF 6 bright
 			stop
 	}
 }
@@ -3997,10 +3997,10 @@ thing MT_REDAXE
 	states
 	{
 		spawn:
-			RAXE AB+ 5 A_DripBlood
+			RAXE AB 5 bright A_DripBlood
 			loop
 		death:
-			RAXE CDE+ 6
+			RAXE CDE 6 bright
 			stop
 	}
 }
@@ -4085,10 +4085,10 @@ thing MT_SRCRFX1
 	states
 	{
 		spawn:
-			FX14 ABC+ 6
+			FX14 ABC 6 bright
 			loop
 		death:
-			FX14 DEFGH+ 5
+			FX14 DEFGH 5 bright
 			stop
 	}
 }
@@ -4173,11 +4173,11 @@ thing MT_SOR2FX1
 	states
 	{
 		spawn:
-			FX16 ABC+ 3 A_BlueSpark
+			FX16 ABC 3 bright A_BlueSpark
 			loop
 		death:
-			FX16 G+ 5 A_Explode
-			FX16 HIJKL+ 5
+			FX16 G 5 bright A_Explode
+			FX16 HIJKL 5 bright
 			stop
 	}
 }
@@ -4202,7 +4202,7 @@ thing MT_SOR2FXSPARK
 	states
 	{
 		spawn:
-			FX16 DEF+ 12
+			FX16 DEF 12 bright
 			stop
 	}
 }
@@ -4228,9 +4228,9 @@ thing MT_SOR2FX2
 	states
 	{
 		spawn:
-			FX11 A+ 35
+			FX11 A 35 bright
 		death:
-			FX11 CDEFG+ 5
+			FX11 CDEFG 5 bright
 			stop
 	}
 }
@@ -4348,10 +4348,10 @@ thing MT_MNTRFX1
 	states
 	{
 		spawn:
-			FX12 AB+ 6
+			FX12 AB 6 bright
 			loop
 		death:
-			FX12 CDEFGH+ 5
+			FX12 CDEFGH 5 bright
 			stop
 	}
 }
@@ -4383,8 +4383,8 @@ thing MT_MNTRFX2
 			FX13 A 2 A_MntrFloorFire
 			loop
 		death:
-			FX13 I+ 4 A_Explode
-			FX13 JKLM+ 4
+			FX13 I 4 bright A_Explode
+			FX13 JKLM 4 bright
 			stop
 	}
 }
@@ -4413,13 +4413,13 @@ thing MT_MNTRFX3
 	states
 	{
 		spawn:
-			FX13 DC+ 4
-			FX13 BCDE+ 5
-			FX13 FGH+ 4
+			FX13 DC 4 bright
+			FX13 BCDE 5 bright
+			FX13 FGH 4 bright
 			stop
 		death:
-			FX13 I+ 4 A_Explode
-			FX13 JKLM+ 4
+			FX13 I 4 bright A_Explode
+			FX13 JKLM 4 bright
 			stop
 	}
 }
@@ -4442,7 +4442,7 @@ thing MT_AKYY
 	states
 	{
 		spawn:
-			AKYY ABCDEFGHIJ+ 3
+			AKYY ABCDEFGHIJ 3 bright
 			loop
 	}
 }
@@ -4465,7 +4465,7 @@ thing MT_BKYY
 	states
 	{
 		spawn:
-			BKYY ABCDEFGHIJ+ 3
+			BKYY ABCDEFGHIJ 3 bright
 			loop
 	}
 }
@@ -4488,7 +4488,7 @@ thing MT_CKEY
 	states
 	{
 		spawn:
-			CKYY ABCDEFGHI+ 3
+			CKYY ABCDEFGHI 3 bright
 			loop
 	}
 }
