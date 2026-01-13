@@ -1,5 +1,6 @@
 thing MT_MISC0
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -22,6 +23,7 @@ thing MT_MISC0
 
 thing MT_ITEMSHIELD1
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -44,6 +46,7 @@ thing MT_ITEMSHIELD1
 
 thing MT_ITEMSHIELD2
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -66,6 +69,7 @@ thing MT_ITEMSHIELD2
 
 thing MT_MISC1
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -89,6 +93,7 @@ thing MT_MISC1
 
 thing MT_MISC2
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -112,6 +117,7 @@ thing MT_MISC2
 
 thing MT_ARTIINVISIBILITY
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -136,6 +142,7 @@ thing MT_ARTIINVISIBILITY
 
 thing MT_MISC3
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -159,6 +166,7 @@ thing MT_MISC3
 
 thing MT_ARTIFLY
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -182,6 +190,7 @@ thing MT_ARTIFLY
 
 thing MT_ARTIINVULNERABILITY
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -205,6 +214,7 @@ thing MT_ARTIINVULNERABILITY
 
 thing MT_ARTITOMEOFPOWER
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -228,6 +238,7 @@ thing MT_ARTITOMEOFPOWER
 
 thing MT_ARTIEGG
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -251,6 +262,7 @@ thing MT_ARTIEGG
 
 thing MT_EGGFX
 {
+	health		1000
 	speed		18
 	radius		8
 	height		8
@@ -279,6 +291,7 @@ thing MT_EGGFX
 
 thing MT_ARTISUPERHEAL
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -302,6 +315,7 @@ thing MT_ARTISUPERHEAL
 
 thing MT_MISC4
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -325,6 +339,7 @@ thing MT_MISC4
 
 thing MT_MISC5
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -348,6 +363,7 @@ thing MT_MISC5
 
 thing MT_FIREBOMB
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -375,6 +391,7 @@ thing MT_FIREBOMB
 
 thing MT_ARTITELEPORT
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -398,6 +415,7 @@ thing MT_ARTITELEPORT
 
 thing MT_POD
 {
+	health		45
 	speed		0
 	radius		16
 	height		54
@@ -439,6 +457,7 @@ thing MT_POD
 
 thing MT_PODGOO
 {
+	health		1000
 	speed		0
 	radius		2
 	height		4
@@ -468,6 +487,7 @@ thing MT_PODGOO
 
 thing MT_PODGENERATOR
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -490,6 +510,7 @@ thing MT_PODGENERATOR
 
 thing MT_SPLASH
 {
+	health		1000
 	speed		0
 	radius		2
 	height		4
@@ -520,6 +541,7 @@ thing MT_SPLASH
 
 thing MT_SPLASHBASE
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -541,6 +563,7 @@ thing MT_SPLASHBASE
 
 thing MT_LAVASPLASH
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -562,6 +585,7 @@ thing MT_LAVASPLASH
 
 thing MT_LAVASMOKE
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -585,6 +609,7 @@ thing MT_LAVASMOKE
 
 thing MT_SLUDGECHUNK
 {
+	health		1000
 	speed		0
 	radius		2
 	height		4
@@ -614,6 +639,7 @@ thing MT_SLUDGECHUNK
 
 thing MT_SLUDGESPLASH
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -635,6 +661,7 @@ thing MT_SLUDGESPLASH
 
 thing MT_SKULLHANG70
 {
+	health		1000
 	speed		0
 	radius		20
 	height		70
@@ -657,6 +684,7 @@ thing MT_SKULLHANG70
 
 thing MT_SKULLHANG60
 {
+	health		1000
 	speed		0
 	radius		20
 	height		60
@@ -679,6 +707,7 @@ thing MT_SKULLHANG60
 
 thing MT_SKULLHANG45
 {
+	health		1000
 	speed		0
 	radius		20
 	height		45
@@ -701,6 +730,7 @@ thing MT_SKULLHANG45
 
 thing MT_SKULLHANG35
 {
+	health		1000
 	speed		0
 	radius		20
 	height		35
@@ -723,6 +753,7 @@ thing MT_SKULLHANG35
 
 thing MT_CHANDELIER
 {
+	health		1000
 	speed		0
 	radius		20
 	height		60
@@ -745,6 +776,7 @@ thing MT_CHANDELIER
 
 thing MT_SERPTORCH
 {
+	health		1000
 	speed		0
 	radius		12
 	height		54
@@ -766,6 +798,7 @@ thing MT_SERPTORCH
 
 thing MT_SMALLPILLAR
 {
+	health		1000
 	speed		0
 	radius		16
 	height		34
@@ -787,6 +820,7 @@ thing MT_SMALLPILLAR
 
 thing MT_STALAGMITESMALL
 {
+	health		1000
 	speed		0
 	radius		8
 	height		32
@@ -808,6 +842,7 @@ thing MT_STALAGMITESMALL
 
 thing MT_STALAGMITELARGE
 {
+	health		1000
 	speed		0
 	radius		12
 	height		64
@@ -829,6 +864,7 @@ thing MT_STALAGMITELARGE
 
 thing MT_STALACTITESMALL
 {
+	health		1000
 	speed		0
 	radius		8
 	height		36
@@ -852,6 +888,7 @@ thing MT_STALACTITESMALL
 
 thing MT_STALACTITELARGE
 {
+	health		1000
 	speed		0
 	radius		12
 	height		68
@@ -875,6 +912,7 @@ thing MT_STALACTITELARGE
 
 thing MT_MISC6
 {
+	health		1000
 	speed		0
 	radius		16
 	height		44
@@ -896,6 +934,7 @@ thing MT_MISC6
 
 thing MT_BARREL
 {
+	health		1000
 	speed		0
 	radius		12
 	height		32
@@ -917,6 +956,7 @@ thing MT_BARREL
 
 thing MT_MISC7
 {
+	health		1000
 	speed		0
 	radius		14
 	height		128
@@ -938,6 +978,7 @@ thing MT_MISC7
 
 thing MT_MISC8
 {
+	health		1000
 	speed		0
 	radius		20
 	height		23
@@ -960,6 +1001,7 @@ thing MT_MISC8
 
 thing MT_MISC9
 {
+	health		1000
 	speed		0
 	radius		20
 	height		27
@@ -982,6 +1024,7 @@ thing MT_MISC9
 
 thing MT_MISC10
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1003,6 +1046,7 @@ thing MT_MISC10
 
 thing MT_MISC11
 {
+	health		1000
 	speed		0
 	radius		8
 	height		104
@@ -1026,6 +1070,7 @@ thing MT_MISC11
 
 thing MT_KEYGIZMOBLUE
 {
+	health		1000
 	speed		0
 	radius		16
 	height		50
@@ -1049,6 +1094,7 @@ thing MT_KEYGIZMOBLUE
 
 thing MT_KEYGIZMOGREEN
 {
+	health		1000
 	speed		0
 	radius		16
 	height		50
@@ -1072,6 +1118,7 @@ thing MT_KEYGIZMOGREEN
 
 thing MT_KEYGIZMOYELLOW
 {
+	health		1000
 	speed		0
 	radius		16
 	height		50
@@ -1095,6 +1142,7 @@ thing MT_KEYGIZMOYELLOW
 
 thing MT_KEYGIZMOFLOAT
 {
+	health		1000
 	speed		0
 	radius		16
 	height		16
@@ -1117,6 +1165,7 @@ thing MT_KEYGIZMOFLOAT
 
 thing MT_MISC12
 {
+	health		1000
 	speed		0
 	radius		12
 	height		20
@@ -1137,6 +1186,7 @@ thing MT_MISC12
 
 thing MT_VOLCANOBLAST
 {
+	health		1000
 	speed		2
 	radius		8
 	height		8
@@ -1169,6 +1219,7 @@ thing MT_VOLCANOBLAST
 
 thing MT_VOLCANOTBLAST
 {
+	health		1000
 	speed		2
 	radius		8
 	height		6
@@ -1198,6 +1249,7 @@ thing MT_VOLCANOTBLAST
 
 thing MT_TELEGLITGEN
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1221,6 +1273,7 @@ thing MT_TELEGLITGEN
 
 thing MT_TELEGLITGEN2
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1244,6 +1297,7 @@ thing MT_TELEGLITGEN2
 
 thing MT_TELEGLITTER
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1271,6 +1325,7 @@ thing MT_TELEGLITTER
 
 thing MT_TELEGLITTER2
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1298,6 +1353,7 @@ thing MT_TELEGLITTER2
 
 thing MT_TFOG
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1320,6 +1376,7 @@ thing MT_TFOG
 
 thing MT_TELEPORTMAN
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1339,6 +1396,7 @@ thing MT_TELEPORTMAN
 
 thing MT_STAFFPUFF
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1364,6 +1422,7 @@ thing MT_STAFFPUFF
 
 thing MT_STAFFPUFF2
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1388,6 +1447,7 @@ thing MT_STAFFPUFF2
 
 thing MT_BEAKPUFF
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1413,6 +1473,7 @@ thing MT_BEAKPUFF
 
 thing MT_MISC13
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1434,6 +1495,7 @@ thing MT_MISC13
 
 thing MT_GAUNTLETPUFF1
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1457,6 +1519,7 @@ thing MT_GAUNTLETPUFF1
 
 thing MT_GAUNTLETPUFF2
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1480,6 +1543,7 @@ thing MT_GAUNTLETPUFF2
 
 thing MT_MISC14
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1501,6 +1565,7 @@ thing MT_MISC14
 
 thing MT_BLASTERFX1
 {
+	health		1000
 	speed		184
 	radius		12
 	height		8
@@ -1533,6 +1598,7 @@ thing MT_BLASTERFX1
 
 thing MT_BLASTERSMOKE
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1558,6 +1624,7 @@ thing MT_BLASTERSMOKE
 
 thing MT_RIPPER
 {
+	health		1000
 	speed		14
 	radius		8
 	height		6
@@ -1590,6 +1657,7 @@ thing MT_RIPPER
 
 thing MT_BLASTERPUFF1
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1612,6 +1680,7 @@ thing MT_BLASTERPUFF1
 
 thing MT_BLASTERPUFF2
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1635,6 +1704,7 @@ thing MT_BLASTERPUFF2
 
 thing MT_WMACE
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1656,6 +1726,7 @@ thing MT_WMACE
 
 thing MT_MACEFX1
 {
+	health		1000
 	speed		20
 	radius		8
 	height		6
@@ -1689,6 +1760,7 @@ thing MT_MACEFX1
 
 thing MT_MACEFX2
 {
+	health		1000
 	speed		10
 	radius		8
 	height		6
@@ -1720,6 +1792,7 @@ thing MT_MACEFX2
 
 thing MT_MACEFX3
 {
+	health		1000
 	speed		7
 	radius		8
 	height		6
@@ -1751,6 +1824,7 @@ thing MT_MACEFX3
 
 thing MT_MACEFX4
 {
+	health		1000
 	speed		7
 	radius		8
 	height		6
@@ -1782,6 +1856,7 @@ thing MT_MACEFX4
 
 thing MT_WSKULLROD
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -1803,6 +1878,7 @@ thing MT_WSKULLROD
 
 thing MT_HORNRODFX1
 {
+	health		1000
 	speed		22
 	radius		12
 	height		8
@@ -1837,6 +1913,7 @@ thing MT_HORNRODFX1
 
 thing MT_HORNRODFX2
 {
+	health		4 * 35
 	speed		22
 	radius		12
 	height		8
@@ -1874,6 +1951,7 @@ thing MT_HORNRODFX2
 
 thing MT_RAINPLR1
 {
+	health		1000
 	speed		12
 	radius		5
 	height		12
@@ -1903,6 +1981,7 @@ thing MT_RAINPLR1
 
 thing MT_RAINPLR2
 {
+	health		1000
 	speed		12
 	radius		5
 	height		12
@@ -1932,6 +2011,7 @@ thing MT_RAINPLR2
 
 thing MT_RAINPLR3
 {
+	health		1000
 	speed		12
 	radius		5
 	height		12
@@ -1961,6 +2041,7 @@ thing MT_RAINPLR3
 
 thing MT_RAINPLR4
 {
+	health		1000
 	speed		12
 	radius		5
 	height		12
@@ -1990,6 +2071,7 @@ thing MT_RAINPLR4
 
 thing MT_GOLDWANDFX1
 {
+	health		1000
 	speed		22
 	radius		10
 	height		6
@@ -2020,6 +2102,7 @@ thing MT_GOLDWANDFX1
 
 thing MT_GOLDWANDFX2
 {
+	health		1000
 	speed		18
 	radius		10
 	height		6
@@ -2048,6 +2131,7 @@ thing MT_GOLDWANDFX2
 
 thing MT_GOLDWANDPUFF1
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -2070,6 +2154,7 @@ thing MT_GOLDWANDPUFF1
 
 thing MT_GOLDWANDPUFF2
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -2092,6 +2177,7 @@ thing MT_GOLDWANDPUFF2
 
 thing MT_WPHOENIXROD
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -2113,6 +2199,7 @@ thing MT_WPHOENIXROD
 
 thing MT_PHOENIXFX1
 {
+	health		1000
 	speed		20
 	radius		11
 	height		8
@@ -2147,6 +2234,7 @@ thing MT_PHOENIXFX1
 
 thing MT_PHOENIXFX_REMOVED
 {
+	health		1000
 	speed		0
 	radius		2
 	height		4
@@ -2175,6 +2263,7 @@ thing MT_PHOENIXFX_REMOVED
 
 thing MT_PHOENIXPUFF
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -2200,6 +2289,7 @@ thing MT_PHOENIXPUFF
 
 thing MT_PHOENIXFX2
 {
+	health		1000
 	speed		10
 	radius		6
 	height		8
@@ -2234,6 +2324,7 @@ thing MT_PHOENIXFX2
 
 thing MT_MISC15
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -2255,6 +2346,7 @@ thing MT_MISC15
 
 thing MT_CRBOWFX1
 {
+	health		1000
 	speed		30
 	radius		11
 	height		8
@@ -2286,6 +2378,7 @@ thing MT_CRBOWFX1
 
 thing MT_CRBOWFX2
 {
+	health		1000
 	speed		32
 	radius		11
 	height		8
@@ -2317,6 +2410,7 @@ thing MT_CRBOWFX2
 
 thing MT_CRBOWFX3
 {
+	health		1000
 	speed		20
 	radius		11
 	height		8
@@ -2349,6 +2443,7 @@ thing MT_CRBOWFX3
 
 thing MT_CRBOWFX4
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -2371,6 +2466,7 @@ thing MT_CRBOWFX4
 
 thing MT_BLOOD
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -2392,6 +2488,7 @@ thing MT_BLOOD
 
 thing MT_BLOODSPLATTER
 {
+	health		1000
 	speed		0
 	radius		2
 	height		4
@@ -2420,6 +2517,7 @@ thing MT_BLOODSPLATTER
 
 thing MT_PLAYER
 {
+	health		100
 	speed		0
 	radius		16
 	height		56
@@ -2478,6 +2576,7 @@ thing MT_PLAYER
 
 thing MT_BLOODYSKULL
 {
+	health		1000
 	speed		0
 	radius		4
 	height		4
@@ -2502,6 +2601,7 @@ thing MT_BLOODYSKULL
 
 thing MT_CHICPLAYER
 {
+	health		100
 	speed		0
 	radius		16
 	height		24
@@ -2553,6 +2653,7 @@ thing MT_CHICPLAYER
 
 thing MT_CHICKEN
 {
+	health		10
 	speed		4
 	radius		9
 	height		22
@@ -2601,6 +2702,7 @@ thing MT_CHICKEN
 
 thing MT_FEATHER
 {
+	health		1000
 	speed		0
 	radius		2
 	height		4
@@ -2631,6 +2733,7 @@ thing MT_FEATHER
 
 thing MT_MUMMY
 {
+	health		80
 	speed		12
 	radius		22
 	height		62
@@ -2678,6 +2781,7 @@ thing MT_MUMMY
 
 thing MT_MUMMYLEADER
 {
+	health		100
 	speed		12
 	radius		22
 	height		62
@@ -2733,6 +2837,7 @@ thing MT_MUMMYLEADER
 
 thing MT_MUMMYGHOST
 {
+	health		80
 	speed		12
 	radius		22
 	height		62
@@ -2781,6 +2886,7 @@ thing MT_MUMMYGHOST
 
 thing MT_MUMMYLEADERGHOST
 {
+	health		100
 	speed		12
 	radius		22
 	height		62
@@ -2837,6 +2943,7 @@ thing MT_MUMMYLEADERGHOST
 
 thing MT_MUMMYSOUL
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -2861,6 +2968,7 @@ thing MT_MUMMYSOUL
 
 thing MT_MUMMYFX1
 {
+	health		1000
 	speed		9
 	radius		8
 	height		14
@@ -2892,6 +3000,7 @@ thing MT_MUMMYFX1
 
 thing MT_BEAST
 {
+	health		220
 	speed		14
 	radius		32
 	height		74
@@ -2952,6 +3061,7 @@ thing MT_BEAST
 
 thing MT_BEASTBALL
 {
+	health		1000
 	speed		12
 	radius		9
 	height		8
@@ -2981,6 +3091,7 @@ thing MT_BEASTBALL
 
 thing MT_BURNBALL
 {
+	health		1000
 	speed		10
 	radius		6
 	height		8
@@ -3008,6 +3119,7 @@ thing MT_BURNBALL
 
 thing MT_BURNBALLFB
 {
+	health		1000
 	speed		10
 	radius		6
 	height		8
@@ -3035,6 +3147,7 @@ thing MT_BURNBALLFB
 
 thing MT_PUFFY
 {
+	health		1000
 	speed		10
 	radius		6
 	height		8
@@ -3062,6 +3175,7 @@ thing MT_PUFFY
 
 thing MT_SNAKE
 {
+	health		280
 	speed		10
 	radius		22
 	height		70
@@ -3114,6 +3228,7 @@ thing MT_SNAKE
 
 thing MT_SNAKEPRO_A
 {
+	health		1000
 	speed		14
 	radius		12
 	height		8
@@ -3145,6 +3260,7 @@ thing MT_SNAKEPRO_A
 
 thing MT_SNAKEPRO_B
 {
+	health		1000
 	speed		14
 	radius		12
 	height		8
@@ -3175,6 +3291,7 @@ thing MT_SNAKEPRO_B
 
 thing MT_HEAD
 {
+	health		700
 	speed		6
 	radius		40
 	height		72
@@ -3225,6 +3342,7 @@ thing MT_HEAD
 
 thing MT_HEADFX1
 {
+	health		1000
 	speed		13
 	radius		12
 	height		6
@@ -3255,6 +3373,7 @@ thing MT_HEADFX1
 
 thing MT_HEADFX2
 {
+	health		1000
 	speed		8
 	radius		12
 	height		6
@@ -3283,6 +3402,7 @@ thing MT_HEADFX2
 
 thing MT_HEADFX3
 {
+	health		1000
 	speed		10
 	radius		14
 	height		12
@@ -3312,6 +3432,7 @@ thing MT_HEADFX3
 
 thing MT_WHIRLWIND
 {
+	health		1000
 	speed		10
 	radius		16
 	height		74
@@ -3340,6 +3461,7 @@ thing MT_WHIRLWIND
 
 thing MT_CLINK
 {
+	health		150
 	speed		14
 	radius		20
 	height		64
@@ -3386,6 +3508,7 @@ thing MT_CLINK
 
 thing MT_WIZARD
 {
+	health		180
 	speed		12
 	radius		16
 	height		68
@@ -3451,6 +3574,7 @@ thing MT_WIZARD
 
 thing MT_WIZFX1
 {
+	health		1000
 	speed		18
 	radius		10
 	height		6
@@ -3479,6 +3603,7 @@ thing MT_WIZFX1
 
 thing MT_IMP
 {
+	health		40
 	speed		10
 	radius		16
 	height		36
@@ -3537,6 +3662,7 @@ thing MT_IMP
 
 thing MT_IMPLEADER
 {
+	health		80
 	speed		10
 	radius		16
 	height		36
@@ -3593,6 +3719,7 @@ thing MT_IMPLEADER
 
 thing MT_IMPCHUNK1
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -3615,6 +3742,7 @@ thing MT_IMPCHUNK1
 
 thing MT_IMPCHUNK2
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -3637,6 +3765,7 @@ thing MT_IMPCHUNK2
 
 thing MT_IMPBALL
 {
+	health		1000
 	speed		10
 	radius		8
 	height		8
@@ -3666,6 +3795,7 @@ thing MT_IMPBALL
 
 thing MT_KNIGHT
 {
+	health		200
 	speed		12
 	radius		24
 	height		78
@@ -3720,6 +3850,7 @@ thing MT_KNIGHT
 
 thing MT_KNIGHTGHOST
 {
+	health		200
 	speed		12
 	radius		24
 	height		78
@@ -3775,6 +3906,7 @@ thing MT_KNIGHTGHOST
 
 thing MT_KNIGHTAXE
 {
+	health		1000
 	speed		9
 	radius		10
 	height		8
@@ -3808,6 +3940,7 @@ thing MT_KNIGHTAXE
 
 thing MT_REDAXE
 {
+	health		1000
 	speed		9
 	radius		10
 	height		8
@@ -3839,6 +3972,7 @@ thing MT_REDAXE
 
 thing MT_SORCERER1
 {
+	health		2000
 	speed		16
 	radius		28
 	height		100
@@ -3896,6 +4030,7 @@ thing MT_SORCERER1
 
 thing MT_SRCRFX1
 {
+	health		1000
 	speed		20
 	radius		10
 	height		10
@@ -3925,6 +4060,7 @@ thing MT_SRCRFX1
 
 thing MT_SORCERER2
 {
+	health		3500
 	speed		14
 	radius		16
 	height		70
@@ -3983,6 +4119,7 @@ thing MT_SORCERER2
 
 thing MT_SOR2FX1
 {
+	health		1000
 	speed		20
 	radius		10
 	height		6
@@ -4012,6 +4149,7 @@ thing MT_SOR2FX1
 
 thing MT_SOR2FXSPARK
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -4036,6 +4174,7 @@ thing MT_SOR2FXSPARK
 
 thing MT_SOR2FX2
 {
+	health		1000
 	speed		6
 	radius		10
 	height		6
@@ -4063,6 +4202,7 @@ thing MT_SOR2FX2
 
 thing MT_SOR2TELEFADE
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -4085,6 +4225,7 @@ thing MT_SOR2TELEFADE
 
 thing MT_MINOTAUR
 {
+	health		3000
 	speed		16
 	radius		28
 	height		100
@@ -4147,6 +4288,7 @@ thing MT_MINOTAUR
 
 thing MT_MNTRFX1
 {
+	health		1000
 	speed		20
 	radius		10
 	height		6
@@ -4176,6 +4318,7 @@ thing MT_MNTRFX1
 
 thing MT_MNTRFX2
 {
+	health		1000
 	speed		14
 	radius		5
 	height		12
@@ -4208,6 +4351,7 @@ thing MT_MNTRFX2
 
 thing MT_MNTRFX3
 {
+	health		1000
 	speed		0
 	radius		8
 	height		16
@@ -4242,6 +4386,7 @@ thing MT_MNTRFX3
 
 thing MT_AKYY
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -4264,6 +4409,7 @@ thing MT_AKYY
 
 thing MT_BKYY
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -4286,6 +4432,7 @@ thing MT_BKYY
 
 thing MT_CKEY
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -4308,6 +4455,7 @@ thing MT_CKEY
 
 thing MT_AMGWNDWIMPY
 {
+	health		AMMO_GWND_WIMPY
 	speed		0
 	radius		20
 	height		16
@@ -4329,6 +4477,7 @@ thing MT_AMGWNDWIMPY
 
 thing MT_AMGWNDHEFTY
 {
+	health		AMMO_GWND_HEFTY
 	speed		0
 	radius		20
 	height		16
@@ -4350,6 +4499,7 @@ thing MT_AMGWNDHEFTY
 
 thing MT_AMMACEWIMPY
 {
+	health		AMMO_MACE_WIMPY
 	speed		0
 	radius		20
 	height		16
@@ -4371,6 +4521,7 @@ thing MT_AMMACEWIMPY
 
 thing MT_AMMACEHEFTY
 {
+	health		AMMO_MACE_HEFTY
 	speed		0
 	radius		20
 	height		16
@@ -4392,6 +4543,7 @@ thing MT_AMMACEHEFTY
 
 thing MT_AMCBOWWIMPY
 {
+	health		AMMO_CBOW_WIMPY
 	speed		0
 	radius		20
 	height		16
@@ -4413,6 +4565,7 @@ thing MT_AMCBOWWIMPY
 
 thing MT_AMCBOWHEFTY
 {
+	health		AMMO_CBOW_HEFTY
 	speed		0
 	radius		20
 	height		16
@@ -4434,6 +4587,7 @@ thing MT_AMCBOWHEFTY
 
 thing MT_AMSKRDWIMPY
 {
+	health		AMMO_SKRD_WIMPY
 	speed		0
 	radius		20
 	height		16
@@ -4455,6 +4609,7 @@ thing MT_AMSKRDWIMPY
 
 thing MT_AMSKRDHEFTY
 {
+	health		AMMO_SKRD_HEFTY
 	speed		0
 	radius		20
 	height		16
@@ -4476,6 +4631,7 @@ thing MT_AMSKRDHEFTY
 
 thing MT_AMPHRDWIMPY
 {
+	health		AMMO_PHRD_WIMPY
 	speed		0
 	radius		20
 	height		16
@@ -4497,6 +4653,7 @@ thing MT_AMPHRDWIMPY
 
 thing MT_AMPHRDHEFTY
 {
+	health		AMMO_PHRD_HEFTY
 	speed		0
 	radius		20
 	height		16
@@ -4518,6 +4675,7 @@ thing MT_AMPHRDHEFTY
 
 thing MT_AMBLSRWIMPY
 {
+	health		AMMO_BLSR_WIMPY
 	speed		0
 	radius		20
 	height		16
@@ -4539,6 +4697,7 @@ thing MT_AMBLSRWIMPY
 
 thing MT_AMBLSRHEFTY
 {
+	health		AMMO_BLSR_HEFTY
 	speed		0
 	radius		20
 	height		16
@@ -4560,6 +4719,7 @@ thing MT_AMBLSRHEFTY
 
 thing MT_SOUNDWIND
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16
@@ -4582,6 +4742,7 @@ thing MT_SOUNDWIND
 
 thing MT_SOUNDWATERFALL
 {
+	health		1000
 	speed		0
 	radius		20
 	height		16

@@ -91,6 +91,9 @@ def parse_mobjinfo_property(line):
         return None
 
     prop_name  = tokens[1].strip()
+    if prop_name == 'spawnhealth':
+        prop_name = 'health'
+
     prop_value = tokens[0].strip()
     if prop_value.endswith(','):
         prop_value = prop_value[:-1]
@@ -309,7 +312,7 @@ def mobj_flags(mobj):
 
         flags = [f.strip() for f in flags]
         flags = [re.sub(r'^MF2?_', '', f) for f in flags]
-        
+
         if '0' in flags:
             flags.remove('0')
     except:
