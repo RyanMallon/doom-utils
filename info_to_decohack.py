@@ -308,6 +308,8 @@ def mobj_flags(mobj):
             flags.extend(mobj.props['flags2'].split('|'))
 
         flags = [f.strip() for f in flags]
+        flags = [re.sub(r'^MF2?_', '', f) for f in flags]
+        
         if '0' in flags:
             flags.remove('0')
     except:

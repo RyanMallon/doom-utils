@@ -9,9 +9,9 @@ thing MT_MAPSPOT
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOSECTOR
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOSECTOR
+	+NOGRAVITY
 
 	states
 	{
@@ -32,7 +32,7 @@ thing MT_MAPSPOTGRAVITY
 	mass		100
 
 	clear flags
-	+MF2_DONTDRAW
+	+DONTDRAW
 
 	states
 	{
@@ -55,12 +55,12 @@ thing MT_FIREBALL1
 	deathsound	"SFX_FIREBALL"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+FIREDAMAGE
 
 	states
 	{
@@ -84,11 +84,11 @@ thing MT_ARROW
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
 
 	states
 	{
@@ -112,11 +112,11 @@ thing MT_DART
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
 
 	states
 	{
@@ -140,11 +140,11 @@ thing MT_POISONDART
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
 
 	states
 	{
@@ -168,12 +168,12 @@ thing MT_RIPPERBALL
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_RIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+RIP
 
 	states
 	{
@@ -206,11 +206,11 @@ thing MT_PROJECTILE_BLADE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
 
 	states
 	{
@@ -236,12 +236,12 @@ thing MT_ICESHARD
 	deathsound	"SFX_MAGE_SHARDS_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_ICEDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+ICEDAMAGE
 
 	states
 	{
@@ -265,7 +265,7 @@ thing MT_FLAME_SMALL_TEMP
 	mass		100
 
 	clear flags
-	+MF2_NOTELEPORT
+	+NOTELEPORT
 
 	states
 	{
@@ -290,7 +290,7 @@ thing MT_FLAME_LARGE_TEMP
 	mass		100
 
 	clear flags
-	+MF2_NOTELEPORT
+	+NOTELEPORT
 
 	states
 	{
@@ -313,8 +313,8 @@ thing MT_FLAME_SMALL
 	mass		100
 
 	clear flags
-	+MF2_NOTELEPORT
-	+MF2_DONTDRAW
+	+NOTELEPORT
+	+DONTDRAW
 
 	states
 	{
@@ -335,8 +335,8 @@ thing MT_FLAME_LARGE
 	mass		100
 
 	clear flags
-	+MF2_NOTELEPORT
-	+MF2_DONTDRAW
+	+NOTELEPORT
+	+DONTDRAW
 
 	states
 	{
@@ -358,8 +358,8 @@ thing MT_HEALINGBOTTLE
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -380,8 +380,8 @@ thing MT_HEALTHFLASK
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -402,8 +402,8 @@ thing MT_ARTIFLY
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -424,8 +424,8 @@ thing MT_ARTIINVULNERABILITY
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -446,8 +446,8 @@ thing MT_SUMMONMAULATOR
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -468,10 +468,10 @@ thing MT_SUMMON_FX
 	mass		100
 
 	clear flags
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOBLOCKMAP
-	+MF2_NOTELEPORT
+	+MISSILE
+	+DROPOFF
+	+NOBLOCKMAP
+	+NOTELEPORT
 
 	states
 	{
@@ -496,9 +496,9 @@ thing MT_THRUSTFLOOR_UP
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+SOLID
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -519,9 +519,9 @@ thing MT_THRUSTFLOOR_DOWN
 	mass		100
 
 	clear flags
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
-	+MF2_DONTDRAW
+	+NOTELEPORT
+	+FLOORCLIP
+	+DONTDRAW
 
 	states
 	{
@@ -542,8 +542,8 @@ thing MT_TELEPORTOTHER
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -564,11 +564,11 @@ thing MT_TELOTHER_FX1
 	mass		100
 
 	clear flags
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_NOBLOCKMAP
-	+MF2_NOTELEPORT
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+NOTELEPORT
 
 	states
 	{
@@ -592,11 +592,11 @@ thing MT_TELOTHER_FX2
 	mass		100
 
 	clear flags
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_NOBLOCKMAP
-	+MF2_NOTELEPORT
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+NOTELEPORT
 
 	states
 	{
@@ -621,11 +621,11 @@ thing MT_TELOTHER_FX3
 	mass		100
 
 	clear flags
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_NOBLOCKMAP
-	+MF2_NOTELEPORT
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+NOTELEPORT
 
 	states
 	{
@@ -650,11 +650,11 @@ thing MT_TELOTHER_FX4
 	mass		100
 
 	clear flags
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_NOBLOCKMAP
-	+MF2_NOTELEPORT
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+NOTELEPORT
 
 	states
 	{
@@ -679,11 +679,11 @@ thing MT_TELOTHER_FX5
 	mass		100
 
 	clear flags
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_NOBLOCKMAP
-	+MF2_NOTELEPORT
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+NOTELEPORT
 
 	states
 	{
@@ -708,10 +708,10 @@ thing MT_DIRT1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -735,10 +735,10 @@ thing MT_DIRT2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -762,10 +762,10 @@ thing MT_DIRT3
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -789,11 +789,11 @@ thing MT_DIRT4
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
+	+LOGRAV
 
 	states
 	{
@@ -817,11 +817,11 @@ thing MT_DIRT5
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
+	+LOGRAV
 
 	states
 	{
@@ -845,11 +845,11 @@ thing MT_DIRT6
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
+	+LOGRAV
 
 	states
 	{
@@ -873,8 +873,8 @@ thing MT_DIRTCLUMP
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOTELEPORT
 
 	states
 	{
@@ -895,10 +895,10 @@ thing MT_ROCK1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -922,10 +922,10 @@ thing MT_ROCK2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -949,10 +949,10 @@ thing MT_ROCK3
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -976,10 +976,10 @@ thing MT_FOGSPAWNER
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOSECTOR
-	+MF2_DONTDRAW
-	+MF2_FLOATBOB
+	+NOBLOCKMAP
+	+NOSECTOR
+	+DONTDRAW
+	+FLOATBOB
 
 	states
 	{
@@ -1000,12 +1000,12 @@ thing MT_FOGPATCHS
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_FLOAT
-	+MF_NOGRAVITY
-	+MF_SHADOW
-	+MF_NOCLIP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+FLOAT
+	+NOGRAVITY
+	+SHADOW
+	+NOCLIP
+	+NOTELEPORT
 
 	states
 	{
@@ -1029,12 +1029,12 @@ thing MT_FOGPATCHM
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_FLOAT
-	+MF_NOGRAVITY
-	+MF_SHADOW
-	+MF_NOCLIP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+FLOAT
+	+NOGRAVITY
+	+SHADOW
+	+NOCLIP
+	+NOTELEPORT
 
 	states
 	{
@@ -1058,12 +1058,12 @@ thing MT_FOGPATCHL
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_FLOAT
-	+MF_NOGRAVITY
-	+MF_SHADOW
-	+MF_NOCLIP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+FLOAT
+	+NOGRAVITY
+	+SHADOW
+	+NOCLIP
+	+NOTELEPORT
 
 	states
 	{
@@ -1088,9 +1088,9 @@ thing MT_QUAKE_FOCUS
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOSECTOR
-	+MF2_DONTDRAW
+	+NOBLOCKMAP
+	+NOSECTOR
+	+DONTDRAW
 
 	states
 	{
@@ -1113,12 +1113,12 @@ thing MT_SGSHARD1
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1142,12 +1142,12 @@ thing MT_SGSHARD2
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1171,12 +1171,12 @@ thing MT_SGSHARD3
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1200,12 +1200,12 @@ thing MT_SGSHARD4
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1229,12 +1229,12 @@ thing MT_SGSHARD5
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1258,12 +1258,12 @@ thing MT_SGSHARD6
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1287,12 +1287,12 @@ thing MT_SGSHARD7
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1316,12 +1316,12 @@ thing MT_SGSHARD8
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1345,12 +1345,12 @@ thing MT_SGSHARD9
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1374,12 +1374,12 @@ thing MT_SGSHARD0
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -1403,8 +1403,8 @@ thing MT_ARTIEGG
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -1425,11 +1425,11 @@ thing MT_EGGFX
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
 
 	states
 	{
@@ -1453,8 +1453,8 @@ thing MT_ARTISUPERHEAL
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -1475,7 +1475,7 @@ thing MT_ZWINGEDSTATUENOSKULL
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -1496,7 +1496,7 @@ thing MT_ZGEMPEDESTAL
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -1517,8 +1517,8 @@ thing MT_ARTIPUZZSKULL
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1539,8 +1539,8 @@ thing MT_ARTIPUZZGEMBIG
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1561,8 +1561,8 @@ thing MT_ARTIPUZZGEMRED
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1583,8 +1583,8 @@ thing MT_ARTIPUZZGEMGREEN1
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1605,8 +1605,8 @@ thing MT_ARTIPUZZGEMGREEN2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1627,8 +1627,8 @@ thing MT_ARTIPUZZGEMBLUE1
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1649,8 +1649,8 @@ thing MT_ARTIPUZZGEMBLUE2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1671,8 +1671,8 @@ thing MT_ARTIPUZZBOOK1
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1693,8 +1693,8 @@ thing MT_ARTIPUZZBOOK2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1715,8 +1715,8 @@ thing MT_ARTIPUZZSKULL2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1737,8 +1737,8 @@ thing MT_ARTIPUZZFWEAPON
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1759,8 +1759,8 @@ thing MT_ARTIPUZZCWEAPON
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1781,8 +1781,8 @@ thing MT_ARTIPUZZMWEAPON
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1803,8 +1803,8 @@ thing MT_ARTIPUZZGEAR
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1825,8 +1825,8 @@ thing MT_ARTIPUZZGEAR2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1847,8 +1847,8 @@ thing MT_ARTIPUZZGEAR3
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1869,8 +1869,8 @@ thing MT_ARTIPUZZGEAR4
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -1891,8 +1891,8 @@ thing MT_ARTITORCH
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -1915,9 +1915,9 @@ thing MT_FIREBOMB
 	deathsound	"SFX_FLECHETTE_EXPLODE"
 
 	clear flags
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF2_FIREDAMAGE
+	+NOGRAVITY
+	+ALTSHADOW
+	+FIREDAMAGE
 
 	states
 	{
@@ -1943,8 +1943,8 @@ thing MT_ARTITELEPORT
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -1965,8 +1965,8 @@ thing MT_ARTIPOISONBAG
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -1987,8 +1987,8 @@ thing MT_POISONBAG
 	mass		100
 
 	clear flags
-	+MF_NOGRAVITY
-	+MF_NOBLOCKMAP
+	+NOGRAVITY
+	+NOBLOCKMAP
 
 	states
 	{
@@ -2014,12 +2014,12 @@ thing MT_POISONCLOUD
 	deathsound	"SFX_POISONSHROOM_DEATH"
 
 	clear flags
-	+MF_NOGRAVITY
-	+MF_NOBLOCKMAP
-	+MF_SHADOW
-	+MF_NOCLIP
-	+MF_DROPOFF
-	+MF2_NODMGTHRUST
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+SHADOW
+	+NOCLIP
+	+DROPOFF
+	+NODMGTHRUST
 
 	states
 	{
@@ -2044,11 +2044,11 @@ thing MT_THROWINGBOMB
 	deathsound	"SFX_FLECHETTE_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_FLOORBOUNCE
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+FLOORBOUNCE
+	+FIREDAMAGE
 
 	states
 	{
@@ -2080,8 +2080,8 @@ thing MT_SPEEDBOOTS
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -2102,8 +2102,8 @@ thing MT_BOOSTMANA
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -2124,8 +2124,8 @@ thing MT_BOOSTARMOR
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -2146,8 +2146,8 @@ thing MT_BLASTRADIUS
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -2168,8 +2168,8 @@ thing MT_HEALRADIUS
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -2190,12 +2190,12 @@ thing MT_SPLASH
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
-	+MF2_CANNOTPUSH
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOTELEPORT
+	+LOGRAV
+	+CANNOTPUSH
 
 	states
 	{
@@ -2220,7 +2220,7 @@ thing MT_SPLASHBASE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -2241,7 +2241,7 @@ thing MT_LAVASPLASH
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -2262,9 +2262,9 @@ thing MT_LAVASMOKE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -2285,12 +2285,12 @@ thing MT_SLUDGECHUNK
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
-	+MF2_CANNOTPUSH
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOTELEPORT
+	+LOGRAV
+	+CANNOTPUSH
 
 	states
 	{
@@ -2314,7 +2314,7 @@ thing MT_SLUDGESPLASH
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -2335,7 +2335,7 @@ thing MT_MISC0
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2419,7 +2419,7 @@ thing MT_MISC4
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2440,8 +2440,8 @@ thing MT_MISC5
 	mass		100
 
 	clear flags
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -2462,8 +2462,8 @@ thing MT_MISC6
 	mass		100
 
 	clear flags
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -2484,7 +2484,7 @@ thing MT_MISC7
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2505,7 +2505,7 @@ thing MT_MISC8
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2528,9 +2528,9 @@ thing MT_TREEDESTRUCTIBLE
 	deathsound	"SFX_TREE_BREAK"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
 
 	states
 	{
@@ -2557,7 +2557,7 @@ thing MT_MISC9
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2578,7 +2578,7 @@ thing MT_MISC10
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2599,7 +2599,7 @@ thing MT_MISC11
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2620,7 +2620,7 @@ thing MT_MISC12
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2851,7 +2851,7 @@ thing MT_MISC23
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2872,7 +2872,7 @@ thing MT_MISC24
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2893,7 +2893,7 @@ thing MT_MISC25
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2914,7 +2914,7 @@ thing MT_MISC26
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -2935,9 +2935,9 @@ thing MT_MISC27
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -2958,9 +2958,9 @@ thing MT_MISC28
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -2981,9 +2981,9 @@ thing MT_MISC29
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -3004,8 +3004,8 @@ thing MT_MISC30
 	mass		100
 
 	clear flags
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -3026,8 +3026,8 @@ thing MT_MISC31
 	mass		100
 
 	clear flags
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -3048,7 +3048,7 @@ thing MT_MISC32
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3069,7 +3069,7 @@ thing MT_MISC33
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3111,7 +3111,7 @@ thing MT_MISC35
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3132,7 +3132,7 @@ thing MT_MISC36
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3153,7 +3153,7 @@ thing MT_MISC37
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3174,7 +3174,7 @@ thing MT_MISC38
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3195,7 +3195,7 @@ thing MT_MISC39
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3216,7 +3216,7 @@ thing MT_MISC40
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3237,7 +3237,7 @@ thing MT_MISC41
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3258,9 +3258,9 @@ thing MT_MISC42
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -3281,7 +3281,7 @@ thing MT_MISC43
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3302,7 +3302,7 @@ thing MT_MISC44
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3323,7 +3323,7 @@ thing MT_MISC45
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3344,7 +3344,7 @@ thing MT_MISC46
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3365,7 +3365,7 @@ thing MT_MISC47
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3386,7 +3386,7 @@ thing MT_MISC48
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3407,7 +3407,7 @@ thing MT_MISC49
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3428,7 +3428,7 @@ thing MT_MISC50
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3449,7 +3449,7 @@ thing MT_MISC51
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3470,7 +3470,7 @@ thing MT_MISC52
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3491,7 +3491,7 @@ thing MT_MISC53
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3512,7 +3512,7 @@ thing MT_MISC54
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3533,7 +3533,7 @@ thing MT_MISC55
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3554,7 +3554,7 @@ thing MT_MISC56
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3575,7 +3575,7 @@ thing MT_MISC57
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3599,7 +3599,7 @@ thing MT_MISC58
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3623,7 +3623,7 @@ thing MT_MISC59
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3644,7 +3644,7 @@ thing MT_MISC60
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3665,7 +3665,7 @@ thing MT_MISC61
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3686,9 +3686,9 @@ thing MT_MISC62
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -3709,9 +3709,9 @@ thing MT_MISC63
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -3732,9 +3732,9 @@ thing MT_MISC64
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -3755,9 +3755,9 @@ thing MT_MISC65
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -3778,7 +3778,7 @@ thing MT_MISC66
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3799,7 +3799,7 @@ thing MT_MISC67
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3820,7 +3820,7 @@ thing MT_MISC68
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3841,7 +3841,7 @@ thing MT_MISC69
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3862,7 +3862,7 @@ thing MT_MISC70
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3883,7 +3883,7 @@ thing MT_MISC71
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3904,7 +3904,7 @@ thing MT_MISC72
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -3988,7 +3988,7 @@ thing MT_MISC76
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4009,14 +4009,14 @@ thing MT_POTTERY1
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
-	+MF_DROPOFF
-	+MF2_SLIDE
-	+MF2_PUSHABLE
-	+MF2_TELESTOMP
-	+MF2_PASSMOBJ
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+DROPOFF
+	+SLIDE
+	+PUSHABLE
+	+TELESTOMP
+	+PASSMOBJ
 
 	states
 	{
@@ -4040,14 +4040,14 @@ thing MT_POTTERY2
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
-	+MF_DROPOFF
-	+MF2_SLIDE
-	+MF2_PUSHABLE
-	+MF2_TELESTOMP
-	+MF2_PASSMOBJ
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+DROPOFF
+	+SLIDE
+	+PUSHABLE
+	+TELESTOMP
+	+PASSMOBJ
 
 	states
 	{
@@ -4071,14 +4071,14 @@ thing MT_POTTERY3
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
-	+MF_DROPOFF
-	+MF2_SLIDE
-	+MF2_PUSHABLE
-	+MF2_TELESTOMP
-	+MF2_PASSMOBJ
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+DROPOFF
+	+SLIDE
+	+PUSHABLE
+	+TELESTOMP
+	+PASSMOBJ
 
 	states
 	{
@@ -4102,8 +4102,8 @@ thing MT_POTTERYBIT1
 	mass		100
 
 	clear flags
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -4127,9 +4127,9 @@ thing MT_MISC77
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -4150,9 +4150,9 @@ thing MT_ZLYNCHED_NOHEART
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -4173,9 +4173,9 @@ thing MT_MISC78
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
 
 	states
 	{
@@ -4199,8 +4199,8 @@ thing MT_CORPSEBIT
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF2_TELESTOMP
+	+NOBLOCKMAP
+	+TELESTOMP
 
 	states
 	{
@@ -4223,8 +4223,8 @@ thing MT_CORPSEBLOODDRIP
 	deathsound	"SFX_DRIP"
 
 	clear flags
-	+MF_MISSILE
-	+MF2_LOGRAV
+	+MISSILE
+	+LOGRAV
 
 	states
 	{
@@ -4249,7 +4249,7 @@ thing MT_BLOODPOOL
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -4270,8 +4270,8 @@ thing MT_MISC79
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -4292,9 +4292,9 @@ thing MT_MISC80
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOSECTOR
-	+MF2_DONTDRAW
+	+NOBLOCKMAP
+	+NOSECTOR
+	+DONTDRAW
 
 	states
 	{
@@ -4315,10 +4315,10 @@ thing MT_LEAF1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
+	+NOBLOCKMAP
+	+MISSILE
+	+NOTELEPORT
+	+LOGRAV
 
 	states
 	{
@@ -4350,10 +4350,10 @@ thing MT_LEAF2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
+	+NOBLOCKMAP
+	+MISSILE
+	+NOTELEPORT
+	+LOGRAV
 
 	states
 	{
@@ -4385,7 +4385,7 @@ thing MT_ZTWINEDTORCH
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4406,7 +4406,7 @@ thing MT_ZTWINEDTORCH_UNLIT
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4427,9 +4427,9 @@ thing MT_BRIDGE
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_NOGRAVITY
-	+MF2_DONTDRAW
+	+SOLID
+	+NOGRAVITY
+	+DONTDRAW
 
 	states
 	{
@@ -4452,9 +4452,9 @@ thing MT_BRIDGEBALL
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+NOTELEPORT
 
 	states
 	{
@@ -4474,8 +4474,8 @@ thing MT_ZWALLTORCH
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -4496,8 +4496,8 @@ thing MT_ZWALLTORCH_UNLIT
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -4518,7 +4518,7 @@ thing MT_ZBARREL
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4541,9 +4541,9 @@ thing MT_ZSHRUB1
 	deathsound	"SFX_TREE_EXPLODE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
 
 	states
 	{
@@ -4569,9 +4569,9 @@ thing MT_ZSHRUB2
 	deathsound	"SFX_TREE_EXPLODE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
 
 	states
 	{
@@ -4595,9 +4595,9 @@ thing MT_ZBUCKET
 	mass		100
 
 	clear flags
-	+MF_SOLID
-	+MF_SPAWNCEILING
-	+MF_NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
 
 	states
 	{
@@ -4621,9 +4621,9 @@ thing MT_ZPOISONSHROOM
 	deathsound	"SFX_POISONSHROOM_DEATH"
 
 	clear flags
-	+MF_SHOOTABLE
-	+MF_SOLID
-	+MF_NOBLOOD
+	+SHOOTABLE
+	+SOLID
+	+NOBLOOD
 
 	states
 	{
@@ -4654,7 +4654,7 @@ thing MT_ZFIREBULL
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4675,7 +4675,7 @@ thing MT_ZFIREBULL_UNLIT
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4696,7 +4696,7 @@ thing MT_FIRETHING
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4725,7 +4725,7 @@ thing MT_BRASSTORCH
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4748,9 +4748,9 @@ thing MT_ZSUITOFARMOR
 	deathsound	"SFX_SUITOFARMOR_BREAK"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
 
 	states
 	{
@@ -4797,11 +4797,11 @@ thing MT_ZBELL
 	deathsound	"SFX_BELLRING"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
-	+MF_NOGRAVITY
-	+MF_SPAWNCEILING
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+NOGRAVITY
+	+SPAWNCEILING
 
 	states
 	{
@@ -4855,7 +4855,7 @@ thing MT_ZBLUE_CANDLE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -4876,7 +4876,7 @@ thing MT_ZIRON_MAIDEN
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4899,9 +4899,9 @@ thing MT_ZXMAS_TREE
 	deathsound	"SFX_TREE_EXPLODE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_NOBLOOD
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
 
 	states
 	{
@@ -4925,7 +4925,7 @@ thing MT_ZCAULDRON
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4946,7 +4946,7 @@ thing MT_ZCAULDRON_UNLIT
 	mass		100
 
 	clear flags
-	+MF_SOLID
+	+SOLID
 
 	states
 	{
@@ -4967,9 +4967,9 @@ thing MT_ZCHAINBIT32
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SPAWNCEILING
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SPAWNCEILING
 
 	states
 	{
@@ -4990,9 +4990,9 @@ thing MT_ZCHAINBIT64
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SPAWNCEILING
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SPAWNCEILING
 
 	states
 	{
@@ -5013,9 +5013,9 @@ thing MT_ZCHAINEND_HEART
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SPAWNCEILING
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SPAWNCEILING
 
 	states
 	{
@@ -5036,9 +5036,9 @@ thing MT_ZCHAINEND_HOOK1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SPAWNCEILING
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SPAWNCEILING
 
 	states
 	{
@@ -5059,9 +5059,9 @@ thing MT_ZCHAINEND_HOOK2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SPAWNCEILING
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SPAWNCEILING
 
 	states
 	{
@@ -5082,9 +5082,9 @@ thing MT_ZCHAINEND_SPIKE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SPAWNCEILING
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SPAWNCEILING
 
 	states
 	{
@@ -5105,9 +5105,9 @@ thing MT_ZCHAINEND_SKULL
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SPAWNCEILING
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SPAWNCEILING
 
 	states
 	{
@@ -5128,7 +5128,7 @@ thing MT_TABLE_SHIT1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5149,7 +5149,7 @@ thing MT_TABLE_SHIT2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5170,7 +5170,7 @@ thing MT_TABLE_SHIT3
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5191,7 +5191,7 @@ thing MT_TABLE_SHIT4
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5212,7 +5212,7 @@ thing MT_TABLE_SHIT5
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5233,7 +5233,7 @@ thing MT_TABLE_SHIT6
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5254,7 +5254,7 @@ thing MT_TABLE_SHIT7
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5275,7 +5275,7 @@ thing MT_TABLE_SHIT8
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5296,7 +5296,7 @@ thing MT_TABLE_SHIT9
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5317,7 +5317,7 @@ thing MT_TABLE_SHIT10
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -5338,8 +5338,8 @@ thing MT_TFOG
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -5360,8 +5360,8 @@ thing MT_MISC81
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -5407,8 +5407,8 @@ thing MT_TELEPORTMAN
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOSECTOR
+	+NOBLOCKMAP
+	+NOSECTOR
 
 	states
 	{
@@ -5429,9 +5429,9 @@ thing MT_PUNCHPUFF
 	attacksound	"SFX_FIGHTER_PUNCH_HITWALL"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -5452,7 +5452,7 @@ thing MT_FW_AXE
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -5476,9 +5476,9 @@ thing MT_AXEPUFF
 	attacksound	"SFX_FIGHTER_HAMMER_HITWALL"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -5502,8 +5502,8 @@ thing MT_AXEPUFF_GLOW
 	attacksound	"SFX_FIGHTER_HAMMER_HITWALL"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -5524,11 +5524,11 @@ thing MT_AXEBLOOD
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_CANNOTPUSH
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+DROPOFF
+	+NOTELEPORT
+	+CANNOTPUSH
 
 	states
 	{
@@ -5552,7 +5552,7 @@ thing MT_FW_HAMMER
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -5575,14 +5575,14 @@ thing MT_HAMMER_MISSILE
 	deathsound	"SFX_FIGHTER_HAMMER_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
+	+FIREDAMAGE
 
 	states
 	{
@@ -5615,9 +5615,9 @@ thing MT_HAMMERPUFF
 	attacksound	"SFX_FIGHTER_HAMMER_HITWALL"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -5640,13 +5640,13 @@ thing MT_FSWORD_MISSILE
 	deathsound	"SFX_FIGHTER_SWORD_EXPLODE"
 
 	clear flags
-	+MF_MISSILE
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
+	+MISSILE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+DROPOFF
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
 
 	states
 	{
@@ -5677,9 +5677,9 @@ thing MT_FSWORD_FLAME
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -5700,7 +5700,7 @@ thing MT_CW_SERPSTAFF
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -5723,13 +5723,13 @@ thing MT_CSTAFF_MISSILE
 	deathsound	"SFX_CLERIC_CSTAFF_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
 
 	states
 	{
@@ -5756,9 +5756,9 @@ thing MT_CSTAFFPUFF
 	seesound	"SFX_CLERIC_CSTAFF_HITTHING"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -5779,8 +5779,8 @@ thing MT_CW_FLAME
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -5801,8 +5801,8 @@ thing MT_CFLAMEFLOOR
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -5828,8 +5828,8 @@ thing MT_FLAMEPUFF
 	attacksound	"SFX_CLERIC_FLAME_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -5863,8 +5863,8 @@ thing MT_FLAMEPUFF2
 	attacksound	"SFX_CLERIC_FLAME_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -5903,12 +5903,12 @@ thing MT_CIRCLEFLAME
 	deathsound	"SFX_CLERIC_FLAME_CIRCLE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+FIREDAMAGE
 
 	states
 	{
@@ -5947,15 +5947,15 @@ thing MT_CFLAME_MISSILE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
-	+MF2_DONTDRAW
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
+	+DONTDRAW
+	+FIREDAMAGE
 
 	states
 	{
@@ -6004,16 +6004,16 @@ thing MT_HOLY_FX
 	deathsound	"SFX_SPIRIT_DIE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_SEEKERMISSILE
-	+MF2_RIP
-	+MF2_IMPACT
-	+MF2_PCROSS
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+MISSILE
+	+NOTELEPORT
+	+SEEKERMISSILE
+	+RIP
+	+IMPACT
+	+PCROSS
 
 	states
 	{
@@ -6040,12 +6040,12 @@ thing MT_HOLY_TAIL
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_NOCLIP
-	+MF_ALTSHADOW
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+NOCLIP
+	+ALTSHADOW
+	+NOTELEPORT
 
 	states
 	{
@@ -6066,9 +6066,9 @@ thing MT_HOLY_PUFF
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -6089,11 +6089,11 @@ thing MT_HOLY_MISSILE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -6117,11 +6117,11 @@ thing MT_HOLY_MISSILE_PUFF
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+NOTELEPORT
 
 	states
 	{
@@ -6142,11 +6142,11 @@ thing MT_MWANDPUFF
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_CANNOTPUSH
-	+MF2_NODMGTHRUST
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+NOTELEPORT
+	+CANNOTPUSH
+	+NODMGTHRUST
 
 	states
 	{
@@ -6171,12 +6171,12 @@ thing MT_MWANDSMOKE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
-	+MF2_NOTELEPORT
-	+MF2_CANNOTPUSH
-	+MF2_NODMGTHRUST
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
+	+NOTELEPORT
+	+CANNOTPUSH
+	+NODMGTHRUST
 
 	states
 	{
@@ -6197,16 +6197,16 @@ thing MT_MWAND_MISSILE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_RIP
-	+MF2_IMPACT
-	+MF2_PCROSS
-	+MF2_NODMGTHRUST
-	+MF2_CANNOTPUSH
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+RIP
+	+IMPACT
+	+PCROSS
+	+NODMGTHRUST
+	+CANNOTPUSH
 
 	states
 	{
@@ -6234,8 +6234,8 @@ thing MT_MW_LIGHTNING
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -6256,13 +6256,13 @@ thing MT_LIGHTNING_CEILING
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+MISSILE
+	+DROPOFF
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
 
 	states
 	{
@@ -6296,13 +6296,13 @@ thing MT_LIGHTNING_FLOOR
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+MISSILE
+	+DROPOFF
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
 
 	states
 	{
@@ -6336,10 +6336,10 @@ thing MT_LIGHTNING_ZAP
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_MISSILE
-	+MF_DROPOFF
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+MISSILE
+	+DROPOFF
 
 	states
 	{
@@ -6365,15 +6365,15 @@ thing MT_MSTAFF_FX
 	deathsound	"SFX_MAGE_STAFF_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FIREDAMAGE
-	+MF2_RIP
-	+MF2_IMPACT
-	+MF2_PCROSS
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+FIREDAMAGE
+	+RIP
+	+IMPACT
+	+PCROSS
 
 	states
 	{
@@ -6407,15 +6407,15 @@ thing MT_MSTAFF_FX2
 	deathsound	"SFX_MAGE_STAFF_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FIREDAMAGE
-	+MF2_IMPACT
-	+MF2_PCROSS
-	+MF2_SEEKERMISSILE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+FIREDAMAGE
+	+IMPACT
+	+PCROSS
+	+SEEKERMISSILE
 
 	states
 	{
@@ -6442,8 +6442,8 @@ thing MT_FW_SWORD1
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -6464,8 +6464,8 @@ thing MT_FW_SWORD2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -6486,8 +6486,8 @@ thing MT_FW_SWORD3
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -6508,8 +6508,8 @@ thing MT_CW_HOLY1
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -6530,8 +6530,8 @@ thing MT_CW_HOLY2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -6552,8 +6552,8 @@ thing MT_CW_HOLY3
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -6574,8 +6574,8 @@ thing MT_MW_STAFF1
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -6596,8 +6596,8 @@ thing MT_MW_STAFF2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -6618,8 +6618,8 @@ thing MT_MW_STAFF3
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -6640,9 +6640,9 @@ thing MT_SNOUTPUFF
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -6663,7 +6663,7 @@ thing MT_MW_CONE
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -6686,14 +6686,14 @@ thing MT_SHARDFX1
 	deathsound	"SFX_MAGE_SHARDS_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
-	+MF2_ICEDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
+	+ICEDAMAGE
 
 	states
 	{
@@ -6719,7 +6719,7 @@ thing MT_BLOOD
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
+	+NOBLOCKMAP
 
 	states
 	{
@@ -6740,11 +6740,11 @@ thing MT_BLOODSPLATTER
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_CANNOTPUSH
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOTELEPORT
+	+CANNOTPUSH
 
 	states
 	{
@@ -6768,10 +6768,10 @@ thing MT_GIBS
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
 
 	states
 	{
@@ -6794,17 +6794,17 @@ thing MT_PLAYER_FIGHTER
 	painsound	"SFX_PLAYER_FIGHTER_PAIN"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_DROPOFF
-	+MF_PICKUP
-	+MF_NOTDMATCH
-	+MF2_WINDTHRUST
-	+MF2_FLOORCLIP
-	+MF2_SLIDE
-	+MF2_PASSMOBJ
-	+MF2_TELESTOMP
-	+MF2_PUSHWALL
+	+SOLID
+	+SHOOTABLE
+	+DROPOFF
+	+PICKUP
+	+NOTDMATCH
+	+WINDTHRUST
+	+FLOORCLIP
+	+SLIDE
+	+PASSMOBJ
+	+TELESTOMP
+	+PUSHWALL
 
 	states
 	{
@@ -6850,10 +6850,10 @@ thing MT_BLOODYSKULL
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF2_LOGRAV
-	+MF2_CANNOTPUSH
+	+NOBLOCKMAP
+	+DROPOFF
+	+LOGRAV
+	+CANNOTPUSH
 
 	states
 	{
@@ -6874,9 +6874,9 @@ thing MT_PLAYER_SPEED
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+ALTSHADOW
 
 	states
 	{
@@ -6898,11 +6898,11 @@ thing MT_ICECHUNK
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF2_LOGRAV
-	+MF2_CANNOTPUSH
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+DROPOFF
+	+LOGRAV
+	+CANNOTPUSH
+	+FLOORCLIP
 
 	states
 	{
@@ -6926,17 +6926,17 @@ thing MT_PLAYER_CLERIC
 	painsound	"SFX_PLAYER_CLERIC_PAIN"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_DROPOFF
-	+MF_PICKUP
-	+MF_NOTDMATCH
-	+MF2_WINDTHRUST
-	+MF2_FLOORCLIP
-	+MF2_SLIDE
-	+MF2_PASSMOBJ
-	+MF2_TELESTOMP
-	+MF2_PUSHWALL
+	+SOLID
+	+SHOOTABLE
+	+DROPOFF
+	+PICKUP
+	+NOTDMATCH
+	+WINDTHRUST
+	+FLOORCLIP
+	+SLIDE
+	+PASSMOBJ
+	+TELESTOMP
+	+PUSHWALL
 
 	states
 	{
@@ -6984,17 +6984,17 @@ thing MT_PLAYER_MAGE
 	painsound	"SFX_PLAYER_MAGE_PAIN"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_DROPOFF
-	+MF_PICKUP
-	+MF_NOTDMATCH
-	+MF2_WINDTHRUST
-	+MF2_FLOORCLIP
-	+MF2_SLIDE
-	+MF2_PASSMOBJ
-	+MF2_TELESTOMP
-	+MF2_PUSHWALL
+	+SOLID
+	+SHOOTABLE
+	+DROPOFF
+	+PICKUP
+	+NOTDMATCH
+	+WINDTHRUST
+	+FLOORCLIP
+	+SLIDE
+	+PASSMOBJ
+	+TELESTOMP
+	+PUSHWALL
 
 	states
 	{
@@ -7044,16 +7044,16 @@ thing MT_PIGPLAYER
 	deathsound	"SFX_PIG_DEATH"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_DROPOFF
-	+MF_NOTDMATCH
-	+MF2_WINDTHRUST
-	+MF2_SLIDE
-	+MF2_PASSMOBJ
-	+MF2_FLOORCLIP
-	+MF2_TELESTOMP
-	+MF2_PUSHWALL
+	+SOLID
+	+SHOOTABLE
+	+DROPOFF
+	+NOTDMATCH
+	+WINDTHRUST
+	+SLIDE
+	+PASSMOBJ
+	+FLOORCLIP
+	+TELESTOMP
+	+PUSHWALL
 
 	states
 	{
@@ -7096,14 +7096,14 @@ thing MT_PIG
 	activesound	"SFX_PIG_ACTIVE1"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_WINDTHRUST
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+WINDTHRUST
+	+FLOORCLIP
+	+PASSMOBJ
+	+PUSHWALL
+	+TELESTOMP
 
 	states
 	{
@@ -7144,14 +7144,14 @@ thing MT_CENTAUR
 	activesound	"SFX_CENTAUR_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_MCROSS
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOORCLIP
+	+PASSMOBJ
+	+PUSHWALL
+	+MCROSS
+	+TELESTOMP
 
 	states
 	{
@@ -7210,14 +7210,14 @@ thing MT_CENTAURLEADER
 	activesound	"SFX_CENTAUR_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_MCROSS
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOORCLIP
+	+PASSMOBJ
+	+PUSHWALL
+	+MCROSS
+	+TELESTOMP
 
 	states
 	{
@@ -7278,13 +7278,13 @@ thing MT_CENTAUR_FX
 	deathsound	"SFX_CENTAUR_MISSILE_EXPLODE"
 
 	clear flags
-	+MF_MISSILE
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
+	+MISSILE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+DROPOFF
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
 
 	states
 	{
@@ -7312,9 +7312,9 @@ thing MT_CENTAUR_SHIELD
 	mass		100
 
 	clear flags
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
 
 	states
 	{
@@ -7340,9 +7340,9 @@ thing MT_CENTAUR_SWORD
 	mass		100
 
 	clear flags
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
 
 	states
 	{
@@ -7373,13 +7373,13 @@ thing MT_DEMON
 	activesound	"SFX_DEMON_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_MCROSS
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOORCLIP
+	+PASSMOBJ
+	+MCROSS
+	+TELESTOMP
 
 	states
 	{
@@ -7429,12 +7429,12 @@ thing MT_DEMONCHUNK1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7458,12 +7458,12 @@ thing MT_DEMONCHUNK2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7487,12 +7487,12 @@ thing MT_DEMONCHUNK3
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7516,12 +7516,12 @@ thing MT_DEMONCHUNK4
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7545,12 +7545,12 @@ thing MT_DEMONCHUNK5
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7576,14 +7576,14 @@ thing MT_DEMONFX1
 	deathsound	"SFX_DEMON_MISSILE_EXPLODE"
 
 	clear flags
-	+MF_MISSILE
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
-	+MF2_FIREDAMAGE
+	+MISSILE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+DROPOFF
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
+	+FIREDAMAGE
 
 	states
 	{
@@ -7614,13 +7614,13 @@ thing MT_DEMON2
 	activesound	"SFX_DEMON_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_MCROSS
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOORCLIP
+	+PASSMOBJ
+	+MCROSS
+	+TELESTOMP
 
 	states
 	{
@@ -7670,12 +7670,12 @@ thing MT_DEMON2CHUNK1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7699,12 +7699,12 @@ thing MT_DEMON2CHUNK2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7728,12 +7728,12 @@ thing MT_DEMON2CHUNK3
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7757,12 +7757,12 @@ thing MT_DEMON2CHUNK4
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7786,12 +7786,12 @@ thing MT_DEMON2CHUNK5
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -7817,14 +7817,14 @@ thing MT_DEMON2FX1
 	deathsound	"SFX_DEMON_MISSILE_EXPLODE"
 
 	clear flags
-	+MF_MISSILE
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
-	+MF2_FIREDAMAGE
+	+MISSILE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+DROPOFF
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
+	+FIREDAMAGE
 
 	states
 	{
@@ -7855,15 +7855,15 @@ thing MT_WRAITHB
 	activesound	"SFX_WRAITH_ACTIVE"
 
 	clear flags
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_FLOAT
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_TELESTOMP
-	+MF2_DONTDRAW
+	+DROPOFF
+	+NOGRAVITY
+	+FLOAT
+	+COUNTKILL
+	+FLOORCLIP
+	+PASSMOBJ
+	+PUSHWALL
+	+TELESTOMP
+	+DONTDRAW
 
 	states
 	{
@@ -7927,16 +7927,16 @@ thing MT_WRAITH
 	activesound	"SFX_WRAITH_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_FLOAT
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+DROPOFF
+	+NOGRAVITY
+	+FLOAT
+	+FLOORCLIP
+	+PASSMOBJ
+	+PUSHWALL
+	+TELESTOMP
 
 	states
 	{
@@ -7990,15 +7990,15 @@ thing MT_WRAITHFX1
 	deathsound	"SFX_WRAITH_MISSILE_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
-	+MF2_FLOORCLIP
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
+	+FLOORCLIP
+	+FIREDAMAGE
 
 	states
 	{
@@ -8028,10 +8028,10 @@ thing MT_WRAITHFX2
 	mass		5
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -8054,11 +8054,11 @@ thing MT_WRAITHFX3
 	deathsound	"SFX_DRIP"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -8084,10 +8084,10 @@ thing MT_WRAITHFX4
 	deathsound	"SFX_DRIP"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -8113,10 +8113,10 @@ thing MT_WRAITHFX5
 	deathsound	"SFX_DRIP"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -8146,14 +8146,14 @@ thing MT_MINOTAUR
 	activesound	"SFX_MAULATOR_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_SHADOW
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+SHADOW
+	+FLOORCLIP
+	+PASSMOBJ
+	+PUSHWALL
+	+TELESTOMP
 
 	states
 	{
@@ -8198,12 +8198,12 @@ thing MT_MNTRFX1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+FIREDAMAGE
 
 	states
 	{
@@ -8227,12 +8227,12 @@ thing MT_MNTRFX2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+FIREDAMAGE
 
 	states
 	{
@@ -8257,12 +8257,12 @@ thing MT_MNTRFX3
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+FIREDAMAGE
 
 	states
 	{
@@ -8289,10 +8289,10 @@ thing MT_MNTRSMOKE
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
+	+NOTELEPORT
 
 	states
 	{
@@ -8313,10 +8313,10 @@ thing MT_MNTRSMOKEEXIT
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
+	+NOTELEPORT
 
 	states
 	{
@@ -8342,14 +8342,14 @@ thing MT_SERPENT
 	deathsound	"SFX_SERPENT_DEATH"
 
 	clear flags
-	+MF_SOLID
-	+MF_COUNTKILL
-	+MF_NOBLOOD
-	+MF2_PASSMOBJ
-	+MF2_DONTDRAW
-	+MF2_CANTLEAVEFLOORPIC
-	+MF2_NONSHOOTABLE
-	+MF2_MCROSS
+	+SOLID
+	+COUNTKILL
+	+NOBLOOD
+	+PASSMOBJ
+	+DONTDRAW
+	+CANTLEAVEFLOORPIC
+	+NONSHOOTABLE
+	+MCROSS
 
 	states
 	{
@@ -8404,14 +8404,14 @@ thing MT_SERPENTLEADER
 	deathsound	"SFX_SERPENT_DEATH"
 
 	clear flags
-	+MF_SOLID
-	+MF_COUNTKILL
-	+MF_NOBLOOD
-	+MF2_PASSMOBJ
-	+MF2_DONTDRAW
-	+MF2_CANTLEAVEFLOORPIC
-	+MF2_NONSHOOTABLE
-	+MF2_MCROSS
+	+SOLID
+	+COUNTKILL
+	+NOBLOOD
+	+PASSMOBJ
+	+DONTDRAW
+	+CANTLEAVEFLOORPIC
+	+NONSHOOTABLE
+	+MCROSS
 
 	states
 	{
@@ -8463,11 +8463,11 @@ thing MT_SERPENTFX
 	deathsound	"SFX_SERPENTFX_HIT"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
 
 	states
 	{
@@ -8492,8 +8492,8 @@ thing MT_SERPENT_HEAD
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF2_LOGRAV
+	+NOBLOCKMAP
+	+LOGRAV
 
 	states
 	{
@@ -8514,8 +8514,8 @@ thing MT_SERPENT_GIB1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -8542,8 +8542,8 @@ thing MT_SERPENT_GIB2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -8570,8 +8570,8 @@ thing MT_SERPENT_GIB3
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -8604,15 +8604,15 @@ thing MT_BISHOP
 	activesound	"SFX_BISHOP_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_FLOAT
-	+MF_NOGRAVITY
-	+MF_NOBLOOD
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOAT
+	+NOGRAVITY
+	+NOBLOOD
+	+PASSMOBJ
+	+PUSHWALL
+	+TELESTOMP
 
 	states
 	{
@@ -8665,9 +8665,9 @@ thing MT_BISHOP_PUFF
 	mass		100
 
 	clear flags
-	+MF_SHADOW
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
+	+SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
 
 	states
 	{
@@ -8690,9 +8690,9 @@ thing MT_BISHOPBLUR
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -8714,9 +8714,9 @@ thing MT_BISHOPPAINBLUR
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
 
 	states
 	{
@@ -8739,12 +8739,12 @@ thing MT_BISH_FX
 	deathsound	"SFX_BISHOP_MISSILE_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_SEEKERMISSILE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+SEEKERMISSILE
 
 	states
 	{
@@ -8776,14 +8776,14 @@ thing MT_DRAGON
 	activesound	"SFX_DRAGON_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_FLOAT
-	+MF_NOGRAVITY
-	+MF_NOBLOOD
-	+MF2_PASSMOBJ
-	+MF2_BOSS
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOAT
+	+NOGRAVITY
+	+NOBLOOD
+	+PASSMOBJ
+	+BOSS
 
 	states
 	{
@@ -8823,12 +8823,12 @@ thing MT_DRAGON_FX
 	deathsound	"SFX_DRAGON_FIREBALL_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+FIREDAMAGE
 
 	states
 	{
@@ -8856,10 +8856,10 @@ thing MT_DRAGON_FX2
 	deathsound	"SFX_DRAGON_FIREBALL_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF2_NOTELEPORT
-	+MF2_FIREDAMAGE
-	+MF2_DONTDRAW
+	+NOBLOCKMAP
+	+NOTELEPORT
+	+FIREDAMAGE
+	+DONTDRAW
 
 	states
 	{
@@ -8890,8 +8890,8 @@ thing MT_ARMOR_1
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -8912,8 +8912,8 @@ thing MT_ARMOR_2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -8934,8 +8934,8 @@ thing MT_ARMOR_3
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -8956,8 +8956,8 @@ thing MT_ARMOR_4
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF_NOGRAVITY
+	+SPECIAL
+	+NOGRAVITY
 
 	states
 	{
@@ -8978,8 +8978,8 @@ thing MT_MANA1
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -9000,8 +9000,8 @@ thing MT_MANA2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -9022,8 +9022,8 @@ thing MT_MANA3
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
-	+MF2_FLOATBOB
+	+SPECIAL
+	+FLOATBOB
 
 	states
 	{
@@ -9044,7 +9044,7 @@ thing MT_KEY1
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9065,7 +9065,7 @@ thing MT_KEY2
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9086,7 +9086,7 @@ thing MT_KEY3
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9107,7 +9107,7 @@ thing MT_KEY4
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9128,7 +9128,7 @@ thing MT_KEY5
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9149,7 +9149,7 @@ thing MT_KEY6
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9170,7 +9170,7 @@ thing MT_KEY7
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9191,7 +9191,7 @@ thing MT_KEY8
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9212,7 +9212,7 @@ thing MT_KEY9
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9233,7 +9233,7 @@ thing MT_KEYA
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9254,7 +9254,7 @@ thing MT_KEYB
 	mass		100
 
 	clear flags
-	+MF_SPECIAL
+	+SPECIAL
 
 	states
 	{
@@ -9275,8 +9275,8 @@ thing MT_SOUNDWIND
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOSECTOR
+	+NOBLOCKMAP
+	+NOSECTOR
 
 	states
 	{
@@ -9296,8 +9296,8 @@ thing MT_SOUNDWATERFALL
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOSECTOR
+	+NOBLOCKMAP
+	+NOSECTOR
 
 	states
 	{
@@ -9324,13 +9324,13 @@ thing MT_ETTIN
 	activesound	"SFX_ETTIN_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PUSHWALL
-	+MF2_MCROSS
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOORCLIP
+	+PUSHWALL
+	+MCROSS
+	+TELESTOMP
 
 	states
 	{
@@ -9374,10 +9374,10 @@ thing MT_ETTIN_MACE
 	mass		100
 
 	clear flags
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -9408,18 +9408,18 @@ thing MT_FIREDEMON
 	activesound	"SFX_FIRED_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_FLOAT
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_INVULNERABLE
-	+MF2_MCROSS
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+DROPOFF
+	+NOGRAVITY
+	+FLOAT
+	+FLOORCLIP
+	+PASSMOBJ
+	+PUSHWALL
+	+INVULNERABLE
+	+MCROSS
+	+TELESTOMP
 
 	states
 	{
@@ -9474,10 +9474,10 @@ thing MT_FIREDEMON_SPLOTCH1
 	mass		100
 
 	clear flags
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -9500,10 +9500,10 @@ thing MT_FIREDEMON_SPLOTCH2
 	mass		100
 
 	clear flags
-	+MF_DROPOFF
-	+MF_CORPSE
-	+MF2_NOTELEPORT
-	+MF2_FLOORCLIP
+	+DROPOFF
+	+CORPSE
+	+NOTELEPORT
+	+FLOORCLIP
 
 	states
 	{
@@ -9526,10 +9526,10 @@ thing MT_FIREDEMON_FX1
 	mass		16
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -9556,10 +9556,10 @@ thing MT_FIREDEMON_FX2
 	mass		16
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -9586,10 +9586,10 @@ thing MT_FIREDEMON_FX3
 	mass		16
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -9616,10 +9616,10 @@ thing MT_FIREDEMON_FX4
 	mass		16
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -9646,10 +9646,10 @@ thing MT_FIREDEMON_FX5
 	mass		16
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -9678,15 +9678,15 @@ thing MT_FIREDEMON_FX6
 	deathsound	"SFX_FIRED_MISSILE_HIT"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_IMPACT
-	+MF2_PCROSS
-	+MF2_FLOORCLIP
-	+MF2_FIREDAMAGE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
+	+IMPACT
+	+PCROSS
+	+FLOORCLIP
+	+FIREDAMAGE
 
 	states
 	{
@@ -9714,15 +9714,15 @@ thing MT_ICEGUY
 	activesound	"SFX_ICEGUY_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_NOBLOOD
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_ICEDAMAGE
-	+MF2_MCROSS
-	+MF2_TELESTOMP
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+NOBLOOD
+	+PASSMOBJ
+	+PUSHWALL
+	+ICEDAMAGE
+	+MCROSS
+	+TELESTOMP
 
 	states
 	{
@@ -9761,12 +9761,12 @@ thing MT_ICEGUY_FX
 	deathsound	"SFX_ICEGUY_FX_EXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
-	+MF2_ICEDAMAGE
+	+NOBLOCKMAP
+	+MISSILE
+	+DROPOFF
+	+NOGRAVITY
+	+NOTELEPORT
+	+ICEDAMAGE
 
 	states
 	{
@@ -9793,11 +9793,11 @@ thing MT_ICEFX_PUFF
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_SHADOW
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+SHADOW
+	+DROPOFF
+	+NOTELEPORT
 
 	states
 	{
@@ -9819,12 +9819,12 @@ thing MT_ICEGUY_FX2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
-	+MF2_ICEDAMAGE
+	+NOBLOCKMAP
+	+DROPOFF
+	+MISSILE
+	+NOTELEPORT
+	+LOGRAV
+	+ICEDAMAGE
 
 	states
 	{
@@ -9845,10 +9845,10 @@ thing MT_ICEGUY_BIT
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOTELEPORT
+	+LOGRAV
 
 	states
 	{
@@ -9869,12 +9869,12 @@ thing MT_ICEGUY_WISP1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -9895,12 +9895,12 @@ thing MT_ICEGUY_WISP2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -9924,14 +9924,14 @@ thing MT_FIGHTER_BOSS
 	deathsound	"SFX_PLAYER_FIGHTER_CRAZY_DEATH"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_TELESTOMP
-	+MF2_PUSHWALL
-	+MF2_MCROSS
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOORCLIP
+	+PASSMOBJ
+	+TELESTOMP
+	+PUSHWALL
+	+MCROSS
 
 	states
 	{
@@ -9981,14 +9981,14 @@ thing MT_CLERIC_BOSS
 	deathsound	"SFX_PLAYER_CLERIC_CRAZY_DEATH"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_TELESTOMP
-	+MF2_PUSHWALL
-	+MF2_MCROSS
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOORCLIP
+	+PASSMOBJ
+	+TELESTOMP
+	+PUSHWALL
+	+MCROSS
 
 	states
 	{
@@ -10038,14 +10038,14 @@ thing MT_MAGE_BOSS
 	deathsound	"SFX_PLAYER_MAGE_CRAZY_DEATH"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_TELESTOMP
-	+MF2_PUSHWALL
-	+MF2_MCROSS
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOORCLIP
+	+PASSMOBJ
+	+TELESTOMP
+	+PUSHWALL
+	+MCROSS
 
 	states
 	{
@@ -10097,15 +10097,15 @@ thing MT_SORCBOSS
 	activesound	"SFX_SORCERER_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_NOBLOOD
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_PUSHWALL
-	+MF2_BOSS
-	+MF2_MCROSS
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+NOBLOOD
+	+FLOORCLIP
+	+PASSMOBJ
+	+PUSHWALL
+	+BOSS
+	+MCROSS
 
 	states
 	{
@@ -10150,11 +10150,11 @@ thing MT_SORCBALL1
 	seesound	"SFX_SORCERER_BALLBOUNCE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+MISSILE
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -10184,11 +10184,11 @@ thing MT_SORCBALL2
 	seesound	"SFX_SORCERER_BALLBOUNCE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+MISSILE
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -10218,11 +10218,11 @@ thing MT_SORCBALL3
 	seesound	"SFX_SORCERER_BALLBOUNCE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+MISSILE
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -10252,10 +10252,10 @@ thing MT_SORCFX1
 	seesound	"SFX_SORCERER_BALLBOUNCE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF2_NOTELEPORT
-	+MF2_FLOORBOUNCE
+	+NOBLOCKMAP
+	+MISSILE
+	+NOTELEPORT
+	+FLOORBOUNCE
 
 	states
 	{
@@ -10285,9 +10285,9 @@ thing MT_SORCFX2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+NOTELEPORT
 
 	states
 	{
@@ -10311,10 +10311,10 @@ thing MT_SORCFX2_T1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+ALTSHADOW
+	+NOTELEPORT
 
 	states
 	{
@@ -10337,9 +10337,9 @@ thing MT_SORCFX3
 	seesound	"SFX_SORCERER_BISHOPSPAWN"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+MISSILE
+	+NOTELEPORT
 
 	states
 	{
@@ -10367,10 +10367,10 @@ thing MT_SORCFX3_EXPLOSION
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+ALTSHADOW
+	+NOTELEPORT
 
 	states
 	{
@@ -10393,10 +10393,10 @@ thing MT_SORCFX4
 	deathsound	"SFX_SORCERER_BALLEXPLODE"
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_MISSILE
-	+MF_NOGRAVITY
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+MISSILE
+	+NOGRAVITY
+	+NOTELEPORT
 
 	states
 	{
@@ -10422,10 +10422,10 @@ thing MT_SORCSPARK1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
-	+MF2_LOGRAV
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOTELEPORT
+	+LOGRAV
 
 	states
 	{
@@ -10446,11 +10446,11 @@ thing MT_BLASTEFFECT
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_NOCLIP
-	+MF_ALTSHADOW
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+NOCLIP
+	+ALTSHADOW
+	+NOTELEPORT
 
 	states
 	{
@@ -10473,9 +10473,9 @@ thing MT_WATER_DRIP
 	deathsound	"SFX_DRIP"
 
 	clear flags
-	+MF_MISSILE
-	+MF2_LOGRAV
-	+MF2_NOTELEPORT
+	+MISSILE
+	+LOGRAV
+	+NOTELEPORT
 
 	states
 	{
@@ -10502,14 +10502,14 @@ thing MT_KORAX
 	activesound	"SFX_KORAX_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF2_FLOORCLIP
-	+MF2_PUSHWALL
-	+MF2_MCROSS
-	+MF2_TELESTOMP
-	+MF2_BOSS
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOORCLIP
+	+PUSHWALL
+	+MCROSS
+	+TELESTOMP
+	+BOSS
 
 	states
 	{
@@ -10560,13 +10560,13 @@ thing MT_KORAX_SPIRIT1
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF_MISSILE
-	+MF_NOCLIP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+MISSILE
+	+NOCLIP
+	+NOTELEPORT
 
 	states
 	{
@@ -10587,13 +10587,13 @@ thing MT_KORAX_SPIRIT2
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF_MISSILE
-	+MF_NOCLIP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+MISSILE
+	+NOCLIP
+	+NOTELEPORT
 
 	states
 	{
@@ -10614,13 +10614,13 @@ thing MT_KORAX_SPIRIT3
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF_MISSILE
-	+MF_NOCLIP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+MISSILE
+	+NOCLIP
+	+NOTELEPORT
 
 	states
 	{
@@ -10641,13 +10641,13 @@ thing MT_KORAX_SPIRIT4
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF_MISSILE
-	+MF_NOCLIP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+MISSILE
+	+NOCLIP
+	+NOTELEPORT
 
 	states
 	{
@@ -10668,13 +10668,13 @@ thing MT_KORAX_SPIRIT5
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF_MISSILE
-	+MF_NOCLIP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+MISSILE
+	+NOCLIP
+	+NOTELEPORT
 
 	states
 	{
@@ -10695,13 +10695,13 @@ thing MT_KORAX_SPIRIT6
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_DROPOFF
-	+MF_NOGRAVITY
-	+MF_ALTSHADOW
-	+MF_MISSILE
-	+MF_NOCLIP
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+DROPOFF
+	+NOGRAVITY
+	+ALTSHADOW
+	+MISSILE
+	+NOCLIP
+	+NOTELEPORT
 
 	states
 	{
@@ -10728,16 +10728,16 @@ thing MT_DEMON_MASH
 	activesound	"SFX_DEMON_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_ALTSHADOW
-	+MF_NOBLOOD
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_MCROSS
-	+MF2_PUSHWALL
-	+MF2_BLASTED
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+ALTSHADOW
+	+NOBLOOD
+	+FLOORCLIP
+	+PASSMOBJ
+	+MCROSS
+	+PUSHWALL
+	+BLASTED
 
 	states
 	{
@@ -10776,16 +10776,16 @@ thing MT_DEMON2_MASH
 	activesound	"SFX_DEMON_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_ALTSHADOW
-	+MF_NOBLOOD
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_MCROSS
-	+MF2_PUSHWALL
-	+MF2_BLASTED
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+ALTSHADOW
+	+NOBLOOD
+	+FLOORCLIP
+	+PASSMOBJ
+	+MCROSS
+	+PUSHWALL
+	+BLASTED
 
 	states
 	{
@@ -10824,16 +10824,16 @@ thing MT_ETTIN_MASH
 	activesound	"SFX_ETTIN_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_ALTSHADOW
-	+MF_NOBLOOD
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_MCROSS
-	+MF2_PUSHWALL
-	+MF2_BLASTED
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+ALTSHADOW
+	+NOBLOOD
+	+FLOORCLIP
+	+PASSMOBJ
+	+MCROSS
+	+PUSHWALL
+	+BLASTED
 
 	states
 	{
@@ -10866,16 +10866,16 @@ thing MT_CENTAUR_MASH
 	activesound	"SFX_CENTAUR_ACTIVE"
 
 	clear flags
-	+MF_SOLID
-	+MF_SHOOTABLE
-	+MF_COUNTKILL
-	+MF_ALTSHADOW
-	+MF_NOBLOOD
-	+MF2_FLOORCLIP
-	+MF2_PASSMOBJ
-	+MF2_MCROSS
-	+MF2_PUSHWALL
-	+MF2_BLASTED
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+ALTSHADOW
+	+NOBLOOD
+	+FLOORCLIP
+	+PASSMOBJ
+	+MCROSS
+	+PUSHWALL
+	+BLASTED
 
 	states
 	{
@@ -10905,11 +10905,11 @@ thing MT_KORAX_BOLT
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_MISSILE
-	+MF_DROPOFF
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+MISSILE
+	+DROPOFF
+	+NOTELEPORT
 
 	states
 	{
@@ -10930,10 +10930,10 @@ thing MT_BAT_SPAWNER
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOSECTOR
-	+MF_NOGRAVITY
-	+MF2_DONTDRAW
+	+NOBLOCKMAP
+	+NOSECTOR
+	+NOGRAVITY
+	+DONTDRAW
 
 	states
 	{
@@ -10954,11 +10954,11 @@ thing MT_BAT
 	mass		100
 
 	clear flags
-	+MF_NOBLOCKMAP
-	+MF_NOGRAVITY
-	+MF_MISSILE
-	+MF2_PASSMOBJ
-	+MF2_NOTELEPORT
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+MISSILE
+	+PASSMOBJ
+	+NOTELEPORT
 
 	states
 	{
