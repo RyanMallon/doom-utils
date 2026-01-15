@@ -246,6 +246,7 @@ class DecohackWriter:
         self.unindent('}')
 
     def output_mobj(self, mobj):
+        self.output_spacer()
         self.output('thing {}'.format(mobj.name))
         self.indent('{')
 
