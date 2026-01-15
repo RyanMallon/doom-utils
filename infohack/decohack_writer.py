@@ -3,6 +3,24 @@ import re
 from info import Info, State, MobjInfo, Property
 
 class DecohackWriter:
+    state_names = [
+        'spawn',
+        'see',
+        'run',
+
+        'melee',
+        'missile',
+        'refire',
+
+        'crash',	# Heretic/Hexen
+
+        'pain',
+        'death',
+        'xdeath',
+
+        'raise',
+    ]
+
     def __init__(self, info):
         self.info = info
 
@@ -113,13 +131,13 @@ class DecohackWriter:
         while state is not None:
             items.append(state)
             try:
-                next_state = info.get_state_by_name(state.nextstate)
+                next_state = self.info.get_state_by_name(state.nextstate)
             except:
                 next_state = None
 
             # Has this state looped/jumped to the start of another state
             if next_state is not None:
-                for other_state_name in Info.state_names:
+                for other_state_name in DecohackWriter.state_names:
                     if next_state == self.info.get_mobj_first_state(mobj, other_state_name):
                         goto = other_state_name
                         next_state = None
@@ -191,7 +209,7 @@ class DecohackWriter:
         self.output('states')
         self.indent('{')
 
-        for state_name in Info.state_names:
+        for state_name in DecohackWriter.state_names:
             state_steps = []
             state_loop  = False
 

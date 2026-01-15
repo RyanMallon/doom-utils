@@ -7,24 +7,6 @@ Property = namedtuple('Property', 'name value')
 MobjInfo = namedtuple('MobjInfo', 'name props')
 
 class Info:
-    state_names = [
-        'spawn',
-        'see',
-        'run',
-
-        'melee',
-        'missile',
-        'refire',
-
-        'crash',	# Heretic/Hexen
-
-        'pain',
-        'death',
-        'xdeath',
-
-        'raise',
-    ]
-
     def __init__(self):
         self.states = []
         self.mobjs  = []
