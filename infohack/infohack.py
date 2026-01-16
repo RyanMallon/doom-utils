@@ -1,9 +1,12 @@
 import argparse
 import sys
 
+from dehacked_parser import DehackedParser
 from decohack_writer import DecohackWriter
 from info_parser import InfoParser
 from info import Info
+
+from constants import DoomConstants
 
 if __name__ == '__main__':
     info_filename = sys.argv[1]
@@ -16,18 +19,28 @@ if __name__ == '__main__':
                     help='Dehacked patch file to apply')
     ap.add_argument('-t', '--things', nargs='*', default=[],
                     help='Names of things to output')
+    ap.add_argument('-n', '--no-decohack', action='store_true',
+                    help='Do not output Decohack')
     args = ap.parse_args()
 
-    info = Info()
+    # Parse the info.c to build the initial states, mobjs, etc
+    info = Info(DoomConstants)
     info_parser = InfoParser(args.info_filename)
     info_parser.parse(info)
 
-    writer = DecohackWriter(info)
+    # Optionally apply a dehacked patch
+    if args.deh:
+        dehacked = DehackedParser(open(args.deh, 'r').readlines())
+        dehacked.parse()
+        dehacked.patch(info)
 
-    if len(args.things) == 0:
-        mobj_list = info.mobjs
-    else:
-        mobj_list = [info.get_mobj_by_name(x) for x in args.things]
+    if not args.no_decohack:
+        writer = DecohackWriter(info)
 
-    for mobj in mobj_list:
-        writer.output_mobj(mobj)
+        if len(args.things) == 0:
+            mobj_list = info.mobjs
+        else:
+            mobj_list = [info.get_mobj_by_name(x) for x in args.things]
+
+        for mobj in mobj_list:
+            writer.output_mobj(mobj)

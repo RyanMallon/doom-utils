@@ -1,6 +1,6 @@
 import re
 
-from info import Info, State, MobjInfo, Property
+from info import Info, State, MobjInfo
 
 class DecohackWriter:
     state_names = [

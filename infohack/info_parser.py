@@ -1,6 +1,6 @@
 import re
 
-from info import Info, State, MobjInfo, Property
+from info import Info, State, MobjInfo
 
 class InfoParser:
     def __init__(self, info_filename):
@@ -64,7 +64,7 @@ class InfoParser:
     def parse_mobjinfo_property(self, line):
         tokens = line.split('//')
         if len(tokens) != 2:
-            return None
+            return (None, None)
 
         prop_name  = tokens[1].strip()
         if prop_name == 'spawnhealth':
@@ -76,7 +76,7 @@ class InfoParser:
             if prop_value == 'S_NULL':
                 prop_value = None
 
-        return Property(prop_name, prop_value)
+        return (prop_name, prop_value)
 
     def parse_mobjinfo(self):
         found_start = False
@@ -99,7 +99,7 @@ class InfoParser:
                 if brace != '{' or not mobj_name.startswith('MT_'):
                     continue
 
-                mobj = MobjInfo(mobj_name, {})
+                mobj = MobjInfo(mobj_name, {}, False)
 
             else:
                 # Parsing mobj properties
@@ -109,8 +109,8 @@ class InfoParser:
                     mobj = None
 
                 else:
-                    prop = self.parse_mobjinfo_property(line)
-                    if prop:
-                        mobj.props[prop.name] = prop.value
+                    prop_name, prop_value = self.parse_mobjinfo_property(line)
+                    if prop_name and prop_value:
+                        mobj.props[prop_name] = prop_value
 
         return mobjs
