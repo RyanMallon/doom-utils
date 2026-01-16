@@ -20,6 +20,13 @@ class DehackedParser:
     def fixed_to_int(self, fixed):
         return int(fixed) >> 16
 
+    def dehacked_frame_num_to_state(self, info, deh_frame_num):
+        if deh_frame_num >= len(info.states):
+            # TODO: extended states
+            return None
+
+        return info.states[deh_frame_num]
+
     def get_line(self):
         return self.lines[0].strip()
 
@@ -167,11 +174,9 @@ class DehackedParser:
         #       need to find all things which use this state
 
         for deh_frame_num, deh_frame in self.frames.items():
-            if deh_frame_num >= len(info.states):
-                # TODO: handle extended states
+            state = self.dehacked_frame_num_to_state(info, deh_frame_num)
+            if state is None:
                 continue
-
-            state = info.states[deh_frame_num]
 
             sprite_index = deh_frame.get('Sprite number')
             if sprite_index:
@@ -199,6 +204,16 @@ class DehackedParser:
             if tics:
                 state.tics = int(tics)
 
+    def patch_codeptrs(self, info):
+        for deh_frame_num, deh_codeptr in self.codeptrs.items():
+            state = self.dehacked_frame_num_to_state(info, deh_frame_num)
+            if state is None:
+                continue
+
+            self.log_patch('state', state.name, 'action', state.action, deh_codeptr)
+            state.action = deh_codeptr
+
     def patch(self, info):
         self.patch_things(info)
         self.patch_frames(info)
+        self.patch_codeptrs(info)
