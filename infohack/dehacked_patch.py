@@ -23,7 +23,7 @@ class DehackedPatch:
 
         return self.info.states[deh_frame_num]
 
-    def patch_things(self):
+    def patch_thing_props(self, deh_thing, thing):
         prop_dict = {
             'Hit points'     : ('health',     DehackedPatch.DEH_INT),
             'Missile damage' : ('damage',     DehackedPatch.DEH_INT),
@@ -33,6 +33,19 @@ class DehackedPatch:
             'Height'         : ('height',     DehackedPatch.DEH_FIXED),
         }
 
+        for deh_prop_name, (prop_name, deh_prop_type) in prop_dict.items():
+            prop_value = deh_thing.get(deh_prop_name)
+            if prop_value:
+                # Convert the value to the correct type if needed
+                if deh_prop_type == DehackedPatch.DEH_FIXED:
+                    prop_value = self.fixed_to_int(prop_value)
+
+                self.log_patch('thing', thing.name, prop_name, thing.props[prop_name], prop_value)
+
+                thing.props[prop_name] = prop_value
+                thing.modified = True
+
+    def patch_thing_sounds(self, deh_thing, thing):
         sound_dict = {
             'Action sound'   : 'activesound',
             'Alert sound'    : 'seesound',
@@ -41,6 +54,46 @@ class DehackedPatch:
             'Death sound'    : 'deathsound',
         }
 
+        for deh_sound_prop, sound_prop in sound_dict.items():
+            sound_index = deh_thing.get(deh_sound_prop)
+            if sound_index:
+                # TODO: handle extended sounds
+                sound_name = self.info.constants.sound_names[int(sound_index)]
+
+                self.log_patch('thing', thing.name, sound_prop, thing.props[sound_prop], sound_name)
+                thing.props[sound_prop] = sound_name
+                thing.modified = True
+
+    def patch_thing_flags_int(self, deh_thing, thing, flag_bits):
+        flags = []
+        for i in range(0, 32):
+            flag_val = (1 << i)
+            if flag_bits & flag_val:
+                flag_name = self.info.constants.mobj_flags[flag_val]
+                if not flag_name:
+                    print('Unknown flag {:x} for thing {}'.format(flag_val, thing.name))
+                else:
+                    flags.append(flag_name)
+
+        if len(flags) == 0:
+            return None
+        return '|'.join(flags)
+
+    def patch_thing_flags(self, deh_thing, thing):
+        flag_bits = deh_thing.get('Bits')
+
+        if flag_bits:
+            # Flags can either be an integer or string mneumonics
+            try:
+                new_flags = self.patch_thing_flags_int(deh_thing, thing, int(flag_bits))
+            except:
+                new_flags = flag_bits.replace('+', '|')
+
+            self.log_patch('thing', thing.name, 'flags', thing.props['flags'], new_flags)
+            thing.props['flags'] = new_flags
+            thing.modified = True
+
+    def patch_thing_states(self, deh_thing, thing):
         state_dict = {
             'Initial frame'      : 'spawnstate',
             'First moving frame' : 'seestate',
@@ -52,8 +105,23 @@ class DehackedPatch:
             'Respawn frame'      : 'raisestate',
         }
 
-        # TODO: flags
+        # Dechacked stores states as an index.
+        # Convert to an entry in the info.states array
+        for deh_state_name, state_name in state_dict.items():
+            deh_state_index = deh_thing.get(deh_state_name)
+            if deh_state_index:
+                try:
+                    old_state_name = thing.props[state_name]
+                except:
+                    old_state_name = 'None'
 
+                new_state_name = self.info.states[int(deh_state_index)].name
+                self.log_patch('thing', thing.name, state_name, old_state_name, new_state_name)
+
+                thing.props[state_name] = new_state_name
+                thing.modified = True
+
+    def patch_things(self):
         for deh_thing_num, deh_thing in self.things.items():
             if deh_thing_num >= len(self.info.mobjs):
                 # TODO: handle extended things
@@ -61,45 +129,10 @@ class DehackedPatch:
 
             thing = self.info.mobjs[deh_thing_num - 1]
 
-            # Patch properties
-            for deh_prop_name, (prop_name, deh_prop_type) in prop_dict.items():
-                prop_value = deh_thing.get(deh_prop_name)
-                if prop_value:
-                    # Convert the value to the correct type if needed
-                    if deh_prop_type == DehackedPatch.DEH_FIXED:
-                        prop_value = self.fixed_to_int(prop_value)
-
-                    self.log_patch('thing', thing.name, prop_name, thing.props[prop_name], prop_value)
-
-                    thing.props[prop_name] = prop_value
-                    thing.modified = True
-
-            # Dechacked stores states as an index.
-            # Convert to an entry in the info.states array
-            for deh_state_name, state_name in state_dict.items():
-                deh_state_index = deh_thing.get(deh_state_name)
-                if deh_state_index:
-                    try:
-                        old_state_name = thing.props[state_name]
-                    except:
-                        old_state_name = 'None'
-
-                    new_state_name = self.info.states[int(deh_state_index)].name
-                    self.log_patch('thing', thing.name, state_name, old_state_name, new_state_name)
-
-                    thing.props[state_name] = new_state_name
-                    thing.modified = True
-
-            # Patch sounds
-            for deh_sound_prop, sound_prop in sound_dict.items():
-                sound_index = deh_thing.get(deh_sound_prop)
-                if sound_index:
-                    # TODO: handle extended sounds
-                    sound_name = self.info.constants.sound_names[int(sound_index)]
-
-                    self.log_patch('thing', thing.name, sound_prop, thing.props[sound_prop], sound_name)
-                    thing.props[sound_prop] = sound_name
-                    thing.modified = True
+            self.patch_thing_props(deh_thing, thing)
+            self.patch_thing_sounds(deh_thing, thing)
+            self.patch_thing_flags(deh_thing, thing)
+            self.patch_thing_states(deh_thing, thing)
 
     def patch_frames(self):
         # TODO: mark state/things as modified
