@@ -238,8 +238,8 @@ class DecohackWriter:
                         self.output('loop')
                 elif goto == 'continue':
                     pass
-                else:
-                    self.output('stop')
+            else:
+                self.output('stop')
 
             self.unindent(None)
 

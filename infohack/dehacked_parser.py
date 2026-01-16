@@ -57,12 +57,13 @@ class DehackedParser:
 
             prop = line.split('=')
             prop = [p.strip() for p in prop]
-            if prop[1] == 'NULL':
-                continue
 
             frame_num = int(prop[0].split(' ')[1])
+            if prop[1] == 'NULL':
+                self.patch.codeptrs[frame_num] = None
+            else:
+                self.patch.codeptrs[frame_num] = prop[1]
 
-            self.patch.codeptrs[frame_num] = 'A_{}'.format(prop[1])
 
     def parse(self):
         parsers = {

@@ -64,7 +64,7 @@ class DehackedPatch:
                     self.log_patch('thing', thing.name, prop_name, thing.props[prop_name], prop_value)
 
                     thing.props[prop_name] = prop_value
-                    #thing.modified = True
+                    thing.modified = True
 
             # Dechacked stores states as an index.
             # Convert to an entry in the info.states array
@@ -72,15 +72,15 @@ class DehackedPatch:
                 deh_state_index = deh_thing.get(deh_state_name)
                 if deh_state_index:
                     try:
-                        old_state_name = thing.props[state_name].name
+                        old_state_name = thing.props[state_name]
                     except:
                         old_state_name = 'None'
 
-                    new_state = self.info.states[int(deh_state_index)]
-                    self.log_patch('thing', thing.name, state_name, old_state_name, new_state.name)
+                    new_state_name = self.info.states[int(deh_state_index)].name
+                    self.log_patch('thing', thing.name, state_name, old_state_name, new_state_name)
 
-                    thing.props[state_name] = new_state
-                    #thing.modified = True
+                    thing.props[state_name] = new_state_name
+                    thing.modified = True
 
     def patch_frames(self):
         # TODO: mark state/things as modified
@@ -107,11 +107,11 @@ class DehackedPatch:
                     # TODO: handle extended states
                     continue
 
-                new_nextstate = self.info.states[int(nextframe_index)]
+                new_nextstate_name = self.info.states[int(nextframe_index)].name
 
-                self.log_patch('state', state.name, 'nextstate', state.nextstate, new_nextstate.name)
+                self.log_patch('state', state.name, 'nextstate', state.nextstate, new_nextstate_name)
 
-                state.nextstate = new_nextstate
+                state.nextstate = new_nextstate_name
 
             tics = deh_frame.get('Duration')
             if tics:
@@ -124,7 +124,10 @@ class DehackedPatch:
                 continue
 
             self.log_patch('state', state.name, 'action', state.action, deh_codeptr)
-            state.action = deh_codeptr
+            if deh_codeptr:
+                state.action = 'A_{}'.format(deh_codeptr)
+            else:
+                state.action = None
 
     def patch(self):
         self.patch_things()
