@@ -33,6 +33,14 @@ class DehackedPatch:
             'Height'         : ('height',     DehackedPatch.DEH_FIXED),
         }
 
+        sound_dict = {
+            'Action sound'   : 'activesound',
+            'Alert sound'    : 'seesound',
+            'Attack sound'   : 'attacksound',
+            'Pain sound'     : 'painsound',
+            'Death sound'    : 'deathsound',
+        }
+
         state_dict = {
             'Initial frame'      : 'spawnstate',
             'First moving frame' : 'seestate',
@@ -44,7 +52,7 @@ class DehackedPatch:
             'Respawn frame'      : 'raisestate',
         }
 
-        # TODO: sounds, flags
+        # TODO: flags
 
         for deh_thing_num, deh_thing in self.things.items():
             if deh_thing_num >= len(self.info.mobjs):
@@ -80,6 +88,17 @@ class DehackedPatch:
                     self.log_patch('thing', thing.name, state_name, old_state_name, new_state_name)
 
                     thing.props[state_name] = new_state_name
+                    thing.modified = True
+
+            # Patch sounds
+            for deh_sound_prop, sound_prop in sound_dict.items():
+                sound_index = deh_thing.get(deh_sound_prop)
+                if sound_index:
+                    # TODO: handle extended sounds
+                    sound_name = self.info.constants.sound_names[int(sound_index)]
+
+                    self.log_patch('thing', thing.name, sound_prop, thing.props[sound_prop], sound_name)
+                    thing.props[sound_prop] = sound_name
                     thing.modified = True
 
     def patch_frames(self):
