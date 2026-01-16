@@ -69,9 +69,10 @@ class DecohackWriter:
         for name in prop_names:
             value = mobj.props.get(name)
             if value is not None:
-                value = re.sub(r'\s*\*\s*FRACUNIT$', '', value)
-                if value == 'FRACUNIT':
-                    value = '1'
+                if isinstance(value, str):
+                    value = re.sub(r'\s*\*\s*FRACUNIT$', '', value)
+                    if value == 'FRACUNIT':
+                        value = '1'
 
                 self.output('{} {}'.format(name, value))
 
@@ -115,7 +116,6 @@ class DecohackWriter:
         if '0' in flags:
             flags.remove('0')
 
-        self.output('clear flags')
         for flag in flags:
             self.output('+{}'.format(flag))
 

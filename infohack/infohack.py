@@ -2,6 +2,7 @@ import argparse
 import sys
 
 from dehacked_parser import DehackedParser
+from dehacked_patch import DehackedPatch
 from decohack_writer import DecohackWriter
 from info_parser import InfoParser
 from info import Info
@@ -30,9 +31,10 @@ if __name__ == '__main__':
 
     # Optionally apply a dehacked patch
     if args.deh:
-        dehacked = DehackedParser(open(args.deh, 'r').readlines())
-        dehacked.parse()
-        dehacked.patch(info)
+        deh_patch = DehackedPatch(info)
+        deh_parser = DehackedParser(open(args.deh, 'r').readlines(), deh_patch)
+        deh_parser.parse()
+        deh_patch.patch()
 
     if not args.no_decohack:
         writer = DecohackWriter(info)
