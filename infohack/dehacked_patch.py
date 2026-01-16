@@ -129,6 +129,11 @@ class DehackedPatch:
 
             thing = self.info.mobjs[deh_thing_num - 1]
 
+            # Dehacked can give friendly names to things
+            alias = deh_thing['alias']
+            if alias:
+                thing.alias = alias
+
             self.patch_thing_props(deh_thing, thing)
             self.patch_thing_sounds(deh_thing, thing)
             self.patch_thing_flags(deh_thing, thing)

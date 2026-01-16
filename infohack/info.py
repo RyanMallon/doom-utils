@@ -17,12 +17,9 @@ class State:
 @dataclass
 class MobjInfo:
     name:	str
+    alias:      str
     props:	dict
     modified:	bool
-
-# State = namedtuple('State', 'sprite frame tics action nextstate misc1 misc2 name')
-#Property = namedtuple('Property', 'name value')
-#MobjInfo = namedtuple('MobjInfo', 'name props modified')
 
 class Info:
     def __init__(self, constants):

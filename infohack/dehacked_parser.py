@@ -30,7 +30,7 @@ class DehackedParser:
 
         thing = {}
         thing_num = int(m.group(1))
-        thing['name'] = m.group(2)
+        thing['alias'] = m.group(2)
 
         self.consume_line()
         self.parse_prop_list(thing)

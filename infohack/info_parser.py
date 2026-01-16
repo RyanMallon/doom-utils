@@ -99,7 +99,7 @@ class InfoParser:
                 if brace != '{' or not mobj_name.startswith('MT_'):
                     continue
 
-                mobj = MobjInfo(mobj_name, {}, False)
+                mobj = MobjInfo(mobj_name, None, {}, False)
 
             else:
                 # Parsing mobj properties

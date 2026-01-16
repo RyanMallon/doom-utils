@@ -247,7 +247,12 @@ class DecohackWriter:
 
     def output_mobj(self, mobj):
         self.output_spacer()
-        self.output('thing {}'.format(mobj.name))
+
+        header = 'thing {}'.format(mobj.name)
+        if mobj.alias:
+            header += ' "{}"'.format(mobj.alias)
+
+        self.output(header)
         self.indent('{')
 
         self.output_mobj_props(mobj)
