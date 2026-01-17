@@ -24,29 +24,46 @@ class DehackedParser:
             obj[prop[0]] = prop[1]
 
     def parse_thing(self):
-        m = re.match(r'Thing ([0-9]+) \(([^)]+)\)', self.get_line())
+        line = self.consume_line()
+        m = re.match(r'Thing ([0-9]+) \(([^)]+)\)', line)
         if not m:
-            raise Exception('Bad thing: {}'.format(self.get_line()))
+            raise Exception('Bad thing: {}'.format(line))
 
         thing = {}
         thing_num = int(m.group(1))
         thing['alias'] = m.group(2)
 
-        self.consume_line()
         self.parse_prop_list(thing)
         self.patch.things[thing_num] = thing
 
     def parse_frame(self):
-        m = re.match('Frame ([0-9]+)', self.get_line())
+        line = self.consume_line()
+        m = re.match('Frame ([0-9]+)', line)
         if not m:
-            raise Exception('Bad frame: {}'.format(self.get_line()))
+            raise Exception('Bad frame: {}'.format(line))
 
         frame = {}
         frame_num = int(m.group(1))
 
-        self.consume_line()
         self.parse_prop_list(frame)
         self.patch.frames[frame_num] = frame
+
+    def parse_pointer(self):
+        line = self.consume_line()
+        m = re.match(r'Pointer ([0-9]+) \(Frame ([0-9]+)\)', line)
+        if not m:
+            raise Exception('Bad pointer: {}'.format(line))
+
+        src_frame_index = int(m.group(2))
+
+        line = self.consume_line()
+        m = re.match(r'Codep Frame = ([0-9]+)', line)
+        if not m:
+            raise Exception('Bad pointer: {}'.format(line))
+
+        dst_frame_index = int(m.group(1))
+
+        self.patch.pointers.append((src_frame_index, dst_frame_index))
 
     def parse_codeptr(self):
         self.consume_line()
@@ -64,13 +81,12 @@ class DehackedParser:
             else:
                 self.patch.codeptrs[frame_num] = prop[1]
 
-
     def parse(self):
         parsers = {
-            # 'Patch File for DeHackEd'	: self.parse_header,
-            'Thing'                     : self.parse_thing,
-            'Frame'                     : self.parse_frame,
-            '[CODEPTR]'                 : self.parse_codeptr,
+            'Thing'     : self.parse_thing,
+            'Frame'     : self.parse_frame,
+            'Pointer'   : self.parse_pointer,
+            '[CODEPTR]' : self.parse_codeptr,
         }
 
         while len(self.lines):

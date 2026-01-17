@@ -18,6 +18,8 @@ if __name__ == '__main__':
                     help='Source info.c file (use chocolate-doom')
     ap.add_argument('-d', '--deh',
                     help='Dehacked patch file to apply')
+    ap.add_argument('-D', '--debug-deh-patch', action='store_true',
+                    help='Debug logs for applying dehacked patches')
     ap.add_argument('-t', '--things', nargs='*', default=[],
                     help='Names of things to output')
     ap.add_argument('-n', '--no-decohack', action='store_true',
@@ -31,7 +33,7 @@ if __name__ == '__main__':
 
     # Optionally apply a dehacked patch
     if args.deh:
-        deh_patch = DehackedPatch(info)
+        deh_patch = DehackedPatch(info, args)
         deh_parser = DehackedParser(open(args.deh, 'r').readlines(), deh_patch)
         deh_parser.parse()
         deh_patch.patch()

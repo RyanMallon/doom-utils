@@ -3,15 +3,18 @@ class DehackedPatch:
     DEH_FIXED  = 'deh_fixed'
     DEH_STRING = 'deh_string'
 
-    def __init__(self, info):
+    def __init__(self, info, args):
         self.info = info
+        self.args = args
 
         self.things = {}
         self.frames = {}
+        self.pointers = []
         self.codeptrs = {}
 
     def log_patch(self, obj, obj_name, obj_prop, old_value, new_value):
-        print('Patched {} {}.{}: {} -> {}'.format(obj, obj_name, obj_prop, old_value, new_value))
+        if self.args.debug_deh_patch:
+            print('Patched {} {}.{}: {} -> {}'.format(obj, obj_name, obj_prop, old_value, new_value))
 
     def fixed_to_int(self, fixed):
         return int(fixed) >> 16
@@ -66,10 +69,10 @@ class DehackedPatch:
 
     def patch_thing_flags_int(self, deh_thing, thing, flag_bits):
         flags = []
-        for i in range(0, 32):
+        for i in range(0, 31):
             flag_val = (1 << i)
             if flag_bits & flag_val:
-                flag_name = self.info.constants.mobj_flags[flag_val]
+                flag_name = self.info.constants.mobj_flags.get(flag_val)
                 if not flag_name:
                     print('Unknown flag {:x} for thing {}'.format(flag_val, thing.name))
                 else:
@@ -174,6 +177,21 @@ class DehackedPatch:
             if tics:
                 state.tics = int(tics)
 
+    def patch_pointers(self):
+        # Old style code pointers
+        actions = []
+
+        # Build a list first since source actions may get overwritten
+        for src_frame_index, dst_frame_index in self.pointers:
+            src_state = self.dehacked_frame_num_to_state(src_frame_index)
+            dst_state = self.dehacked_frame_num_to_state(dst_frame_index)
+            actions.append((dst_state, src_state.action))
+
+        # Apply them
+        for state, action in actions:
+            self.log_patch('state', state.name, 'action', state.action, action)
+            state.action = action
+
     def patch_codeptrs(self):
         for deh_frame_num, deh_codeptr in self.codeptrs.items():
             state = self.dehacked_frame_num_to_state(deh_frame_num)
@@ -189,4 +207,5 @@ class DehackedPatch:
     def patch(self):
         self.patch_things()
         self.patch_frames()
+        self.patch_pointers()
         self.patch_codeptrs()

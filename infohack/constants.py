@@ -178,5 +178,6 @@ class DoomConstants:
          0x800000: 'COUNTITEM',
         0x1000000: 'SKULLFLY',
         0x2000000: 'NOTDMATCH',
-        0xc000000: 'TRANSLATION',
+        0x4000000: 'TRANSLATION1',
+        0x8000000: 'TRANSLATION2',
     }
