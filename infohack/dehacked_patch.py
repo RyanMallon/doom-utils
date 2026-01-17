@@ -16,6 +16,19 @@ class DehackedPatch:
         if self.args.debug_deh_patch:
             print('Patched {} {}.{}: {} -> {}'.format(obj, obj_name, obj_prop, old_value, new_value))
 
+    def log_patch_thing(self, thing, prop_name, old_value, new_value):
+        if self.args.debug_deh_patch:
+            print('Patched thing [{:4d}] {}.{}: {} -> {}'.format(self.info.mobjs.index(thing) + 1,
+                                                                 thing.name, prop_name,
+                                                                 old_value, new_value))
+
+    def log_patch_state(self, state, prop_name, old_value, new_value):
+        if self.args.debug_deh_patch:
+            print('Patched state [{:4d}] {}.{}: {} -> {}'.format(self.info.states.index(state),
+                                                                 state.name, prop_name,
+                                                                 old_value, new_value))
+
+
     def fixed_to_int(self, fixed):
         return int(fixed) >> 16
 
@@ -43,7 +56,7 @@ class DehackedPatch:
                 if deh_prop_type == DehackedPatch.DEH_FIXED:
                     prop_value = self.fixed_to_int(prop_value)
 
-                self.log_patch('thing', thing.name, prop_name, thing.props[prop_name], prop_value)
+                self.log_patch_thing(thing, prop_name, thing.props[prop_name], prop_value)
 
                 thing.props[prop_name] = prop_value
                 thing.modified = True
@@ -63,7 +76,7 @@ class DehackedPatch:
                 # TODO: handle extended sounds
                 sound_name = self.info.constants.sound_names[int(sound_index)]
 
-                self.log_patch('thing', thing.name, sound_prop, thing.props[sound_prop], sound_name)
+                self.log_patch_thing(thing, sound_prop, thing.props[sound_prop], sound_name)
                 thing.props[sound_prop] = sound_name
                 thing.modified = True
 
@@ -92,7 +105,7 @@ class DehackedPatch:
             except:
                 new_flags = flag_bits.replace('+', '|')
 
-            self.log_patch('thing', thing.name, 'flags', thing.props['flags'], new_flags)
+            self.log_patch_thing(thing, 'flags', thing.props['flags'], new_flags)
             thing.props['flags'] = new_flags
             thing.modified = True
 
@@ -119,7 +132,7 @@ class DehackedPatch:
                     old_state_name = 'None'
 
                 new_state_name = self.info.states[int(deh_state_index)].name
-                self.log_patch('thing', thing.name, state_name, old_state_name, new_state_name)
+                self.log_patch_thing(thing, state_name, old_state_name, new_state_name)
 
                 thing.props[state_name] = new_state_name
                 thing.modified = True
@@ -169,7 +182,7 @@ class DehackedPatch:
 
                 new_nextstate_name = self.info.states[int(nextframe_index)].name
 
-                self.log_patch('state', state.name, 'nextstate', state.nextstate, new_nextstate_name)
+                self.log_patch_state(state, 'nextstate', state.nextstate, new_nextstate_name)
 
                 state.nextstate = new_nextstate_name
 
@@ -189,7 +202,7 @@ class DehackedPatch:
 
         # Apply them
         for state, action in actions:
-            self.log_patch('state', state.name, 'action', state.action, action)
+            self.log_patch_state(state, 'action', state.action, action)
             state.action = action
 
     def patch_codeptrs(self):
@@ -198,7 +211,7 @@ class DehackedPatch:
             if state is None:
                 continue
 
-            self.log_patch('state', state.name, 'action', state.action, deh_codeptr)
+            self.log_patch_state(state, 'action', state.action, deh_codeptr)
             if deh_codeptr:
                 state.action = 'A_{}'.format(deh_codeptr)
             else:

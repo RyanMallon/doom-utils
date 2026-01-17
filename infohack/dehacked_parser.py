@@ -54,14 +54,14 @@ class DehackedParser:
         if not m:
             raise Exception('Bad pointer: {}'.format(line))
 
-        src_frame_index = int(m.group(2))
+        dst_frame_index = int(m.group(2))
 
         line = self.consume_line()
         m = re.match(r'Codep Frame = ([0-9]+)', line)
         if not m:
             raise Exception('Bad pointer: {}'.format(line))
 
-        dst_frame_index = int(m.group(1))
+        src_frame_index = int(m.group(1))
 
         self.patch.pointers.append((src_frame_index, dst_frame_index))
 

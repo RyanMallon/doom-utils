@@ -1,10 +1,11 @@
 import re
+import os
 
 from info import Info, State, MobjInfo
 
 class InfoParser:
-    def __init__(self, info_filename):
-        self.lines = open(info_filename, 'r').readlines()
+    def __init__(self, src_dir):
+        self.lines = open(os.path.join(src_dir, 'info.c'), 'r').readlines()
 
     def parse(self, info):
         info.states = self.parse_states()

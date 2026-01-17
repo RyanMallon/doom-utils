@@ -14,8 +14,8 @@ if __name__ == '__main__':
 
     ap = argparse.ArgumentParser(prog='infohack',
                                  description='Tool for generating Decohack from info.c/dehacked')
-    ap.add_argument('info_filename',
-                    help='Source info.c file (use chocolate-doom')
+    ap.add_argument('src_dir',
+                    help='Doom source directory (use chocolate-doom/src/doom')
     ap.add_argument('-d', '--deh',
                     help='Dehacked patch file to apply')
     ap.add_argument('-D', '--debug-deh-patch', action='store_true',
@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     # Parse the info.c to build the initial states, mobjs, etc
     info = Info(DoomConstants)
-    info_parser = InfoParser(args.info_filename)
+    info_parser = InfoParser(args.src_dir)
     info_parser.parse(info)
 
     # Optionally apply a dehacked patch
