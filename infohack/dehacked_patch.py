@@ -131,11 +131,12 @@ class DehackedPatch:
                 except:
                     old_state_name = 'None'
 
-                new_state_name = self.info.states[int(deh_state_index)].name
-                self.log_patch_thing(thing, state_name, old_state_name, new_state_name)
+                new_state = self.dehacked_frame_num_to_state(int(deh_state_index))
+                if new_state:
+                    self.log_patch_thing(thing, state_name, old_state_name, new_state.name)
 
-                thing.props[state_name] = new_state_name
-                thing.modified = True
+                    thing.props[state_name] = new_state.name
+                    thing.modified = True
 
     def patch_things(self):
         for deh_thing_num, deh_thing in self.things.items():
