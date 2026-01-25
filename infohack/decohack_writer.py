@@ -2,6 +2,70 @@ import re
 
 from info import Info, State, MobjInfo
 
+class StateMachine:
+    def __init__(self, info, initial_labels):
+        self.info = info
+        self.first_states = {**initial_labels}
+
+        # Build the state machine for each label
+        self.state_machines = {}
+        for label in DecohackWriter.state_names:
+            self.build_state_machine_for_label(label)
+
+    def get_first_state(self, label):
+        state_name = self.first_states.get(label)
+        if not state_name:
+            return None
+
+        return self.info.get_state_by_name(state_name)
+
+    def build_state_machine_for_label(self, label):
+        retrigger_labels = {
+            # Things
+            'missile' : 'refire',
+            'see'     : 'run',
+        }
+
+        goto = None
+        states = []
+
+        state = self.get_first_state(label)
+        while state is not None:
+            states.append(state)
+            next_state = self.info.get_state_by_name(state.nextstate)
+
+            # Has this state looped/jumped to the start of another state
+            if next_state is not None:
+                for other_label in self.first_states.keys():
+                    if next_state == self.get_first_state(other_label):
+                        if label == other_label and label not in retrigger_labels.values():
+                            goto = 'loop'
+                        else:
+                            goto = 'goto {}'.format(other_label)
+                        next_state = None
+                        break
+
+            # Check for loop back to non-starting state
+            if next_state is not None and len(states) > 1:
+                for i, other_state in enumerate(states[1:]):
+                    if next_state == other_state:
+                        # Create a new label
+                        # This will need to be parsed to build its state machine
+                        new_label = retrigger_labels.get(label)
+                        if not new_label:
+                            new_label = '{}_2'.format(state_name)
+
+                        states = states[0:i + 1]
+                        self.first_states[new_label] = state.nextstate
+                        goto = 'continue'
+                        next_state = None
+                        break
+
+            state = next_state
+
+        if len(states) > 0:
+            self.state_machines[label] = (states, goto)
+
 class DecohackWriter:
     state_names = [
         'spawn',
@@ -28,8 +92,11 @@ class DecohackWriter:
         self.spacer = False
 
     def output(self, fmt):
-        line  = '\t' * self.indent_level
-        line += fmt
+        if fmt:
+            line  = '\t' * self.indent_level
+            line += fmt
+        else:
+            line = ''
 
         print(line)
         self.spacer = True
@@ -121,58 +188,13 @@ class DecohackWriter:
 
         self.output_spacer()
 
-    def build_mobj_state_machine(self, mobj, state_name):
-        goto = None
-
-        items = []
-
-        state = self.info.get_mobj_first_state(mobj, state_name)
-
-        while state is not None:
-            items.append(state)
-            try:
-                next_state = self.info.get_state_by_name(state.nextstate)
-            except:
-                next_state = None
-
-            # Has this state looped/jumped to the start of another state
-            if next_state is not None:
-                for other_state_name in DecohackWriter.state_names:
-                    if next_state == self.info.get_mobj_first_state(mobj, other_state_name):
-                        goto = other_state_name
-                        next_state = None
-                        break
-
-            # Check for loop back to non-starting state
-            if next_state is not None and len(items) > 1:
-                for i, other_state in enumerate(items[1:]):
-                    if next_state == other_state:
-                        # Create a new state
-                        if state_name == 'missile':
-                            new_state_name = 'refire'
-                        elif state_name == 'see':
-                            new_state_name = 'run'
-                        else:
-                            new_state_name = '{}_2'.format(state_name)
-
-                        items = items[0:i + 1]
-                        mobj.props['{}state'.format(new_state_name)] = state.nextstate
-
-                        goto = 'continue'
-                        next_state = None
-                        break
-
-            state = next_state
-
-        return items, goto
-
-    def merge_mobj_states(self, states):
+    def merge_states(self, states):
         prev_state = None
         new_states = []
         merged = []
 
         for state in states:
-            if not prev_state or not self.info.mobj_states_are_mergable(state, prev_state):
+            if not prev_state or not self.info.states_are_mergable(state, prev_state):
                 if len(merged) > 0:
                     new_states.append(merged)
 
@@ -186,7 +208,7 @@ class DecohackWriter:
 
         return new_states
 
-    def merged_mobj_state_to_decohack(self, merged):
+    def merged_state_to_decohack(self, merged):
         state = merged[0]
         string = ''
 
@@ -205,39 +227,39 @@ class DecohackWriter:
 
         return string
 
+    def make_mobj_state_machine(self, mobj):
+        # Collect the state labels this mobj has
+        labels = {}
+        for label in DecohackWriter.state_names:
+            prop_name = '{}state'.format(label)
+            state = mobj.props.get(prop_name)
+            if state:
+                labels[label] = state
+
+        return StateMachine(self.info, labels)
+
     def output_mobj_states(self, mobj):
         self.output('states')
         self.indent('{')
 
-        for state_name in DecohackWriter.state_names:
-            state_steps = []
-            state_loop  = False
+        sm = self.make_mobj_state_machine(mobj)
+        for label, (states, goto) in sm.state_machines.items():
+            prev_state = None
 
-            items, goto = self.build_mobj_state_machine(mobj, state_name)
-            if len(items) == 0:
-                continue
-
-            prev_item = None
-
-            self.output('{}:'.format(state_name))
+            self.output('{}:'.format(label))
             self.indent(None)
 
-            # Many mobjs have combined melee/missile states
-            if state_name == 'melee' and self.info.get_mobj_first_state(mobj, 'melee') == self.info.get_mobj_first_state(mobj, 'missile'):
+            # Many mobjs have combined melee/missile labels
+            if label == 'melee' and self.info.get_mobj_first_state(mobj, 'melee') == self.info.get_mobj_first_state(mobj, 'missile'):
                 self.unindent(None)
                 continue
 
-            for m in self.merge_mobj_states(items):
-                self.output(self.merged_mobj_state_to_decohack(m))
+            for m in self.merge_states(states):
+                self.output(self.merged_state_to_decohack(m))
 
             if goto is not None:
-                if goto == state_name:
-                    if state_name == 'refire' or state_name == 'run':
-                        self.output('goto {}'.format(goto))
-                    else:
-                        self.output('loop')
-                elif goto == 'continue':
-                    pass
+                if goto != 'continue':
+                    self.output(goto)
             else:
                 self.output('stop')
 
@@ -260,4 +282,23 @@ class DecohackWriter:
         self.output_mobj_flags(mobj)
         self.output_mobj_states(mobj)
 
+        self.unindent('}')
+
+    def build_weapon_states(self, weapon):
+        state_names = [
+            'select',
+            'deselect',
+            'ready',
+            'fire',
+            'flash',
+        ]
+
+
+
+    def output_weapon(self, index, weapon_name, weapon):
+        self.output_spacer()
+
+        self.output('weapon {} : "{}"'.format(index, weapon_name))
+        self.indent('{')
+        self.output('ammotype: {}'.format(weapon['ammotype']))
         self.unindent('}')

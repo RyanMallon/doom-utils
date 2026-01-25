@@ -27,6 +27,7 @@ class Info:
 
         self.states = []
         self.mobjs  = []
+        self.weapons = self.constants.weapons
 
     def get_state_by_name(self, name):
         states = [s for s in self.states if s.name == name]
@@ -53,7 +54,14 @@ class Info:
 
         return self.get_state_by_name(prop)
 
-    def mobj_states_are_mergable(self, state_a, state_b):
+    def weapon_get_first_state(self, weapon, state_name):
+        prop = weapon.get(state_name)
+        if prop is None:
+            return None
+
+        return self.get_state_by_name(prop)
+
+    def states_are_mergable(self, state_a, state_b):
         if state_a.sprite != state_b.sprite:
             return False
 

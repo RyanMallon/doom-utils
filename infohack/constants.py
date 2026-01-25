@@ -2,6 +2,25 @@ from dataclasses import dataclass
 
 @dataclass
 class DoomConstants:
+    weapons = {
+        'fist' : {
+            'ammotype' : 0,
+            'select'   : 'S_PUNCHUP',
+            'deselect' : 'S_PUNCHDOWN',
+            'ready'    : 'S_PUNCH',
+            'fire'     : 'S_PUNCH1',
+            'flash'    : None,
+        },
+        'pistol' : {
+            'ammotype' : 1,
+            'select'   : 'PISTOLUP',
+            'deselect' : 'PISTOLDOWN',
+            'ready'    : 'PISTOL1',
+            'fire'     : 'PISTOL2',
+            'flash'    : 'PISTOLFLASH',
+        }
+    }
+
     sprite_names = [
         'TROO','SHTG','PUNG','PISG','PISF','SHTF','SHT2','CHGG','CHGF','MISG',
         'MISF','SAWG','PLSG','PLSF','BFGG','BFGF','BLUD','PUFF','BAL1','BAL2',
