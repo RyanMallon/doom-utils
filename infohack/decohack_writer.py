@@ -66,6 +66,19 @@ class StateMachine:
         if len(states) > 0:
             self.state_machines[label] = (states, goto)
 
+    def get_duplicate_labels(self, label):
+        (states, _) = self.state_machines[label]
+
+        # Note that the returned list includes the current label so will always
+        # have a length of at least 1. This is done so that the caller can check
+        # if the label is the last in the list of duplicates.
+        duplicates = []
+        for other_label, (other_states, _) in self.state_machines.items():
+            if states[0] == other_states[0]:
+                duplicates.append(other_label)
+
+        return duplicates
+
 class DecohackWriter:
     state_names = [
         'spawn',
@@ -83,6 +96,14 @@ class DecohackWriter:
         'xdeath',
 
         'raise',
+    ]
+
+    weapon_state_names = [
+        'select',
+        'deselect',
+        'ready',
+        'fire',
+        'flash',
     ]
 
     def __init__(self, info):
@@ -227,6 +248,31 @@ class DecohackWriter:
 
         return string
 
+    def output_state_machine(self, sm):
+        for label, (states, goto) in sm.state_machines.items():
+            prev_state = None
+
+            self.output('{}:'.format(label))
+            self.indent(None)
+
+            # If two labels point to the same start state don't duplicate the printed states
+            # Skip all duplicate states except for the last
+            duplicates = sm.get_duplicate_labels(label)
+            if len(duplicates) > 1 and label != duplicates[-1]:
+                self.unindent(None)
+                continue
+
+            for m in self.merge_states(states):
+                self.output(self.merged_state_to_decohack(m))
+
+            if goto is not None:
+                if goto != 'continue':
+                    self.output(goto)
+            else:
+                self.output('stop')
+
+            self.unindent(None)
+
     def make_mobj_state_machine(self, mobj):
         # Collect the state labels this mobj has
         labels = {}
@@ -243,27 +289,7 @@ class DecohackWriter:
         self.indent('{')
 
         sm = self.make_mobj_state_machine(mobj)
-        for label, (states, goto) in sm.state_machines.items():
-            prev_state = None
-
-            self.output('{}:'.format(label))
-            self.indent(None)
-
-            # Many mobjs have combined melee/missile labels
-            if label == 'melee' and self.info.get_mobj_first_state(mobj, 'melee') == self.info.get_mobj_first_state(mobj, 'missile'):
-                self.unindent(None)
-                continue
-
-            for m in self.merge_states(states):
-                self.output(self.merged_state_to_decohack(m))
-
-            if goto is not None:
-                if goto != 'continue':
-                    self.output(goto)
-            else:
-                self.output('stop')
-
-            self.unindent(None)
+        self.output_state_machine(sm)
 
         self.unindent('}')
 
@@ -284,16 +310,29 @@ class DecohackWriter:
 
         self.unindent('}')
 
-    def build_weapon_states(self, weapon):
-        state_names = [
-            'select',
-            'deselect',
-            'ready',
-            'fire',
-            'flash',
-        ]
+    def make_weapon_state_machine(self, weapon):
+        labels = {}
+        for label in DecohackWriter.weapon_state_names:
+            state = weapon.get(label)
+            if state:
+                labels[label] = state
+
+        return StateMachine(self.info, labels)
+
+    def output_weapon(self, weapon, name, index):
+        self.output_spacer()
+
+        self.output('weapon {} "{}"'.format(index, name))
+        self.indent('{')
+
+        sm = self.make_weapon_state_machine(weapon)
+        self.output('states')
+        self.indent('{')
 
 
+        self.unindent('}')
+
+        self.unindent('}')
 
     def output_weapon(self, index, weapon_name, weapon):
         self.output_spacer()
