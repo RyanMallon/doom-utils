@@ -3,13 +3,13 @@ import re
 from info import Info, State, MobjInfo
 
 class StateMachine:
-    def __init__(self, info, initial_labels):
+    def __init__(self, info, state_names, initial_labels):
         self.info = info
         self.first_states = {**initial_labels}
 
         # Build the state machine for each label
         self.state_machines = {}
-        for label in DecohackWriter.state_names:
+        for label in state_names:
             self.build_state_machine_for_label(label)
 
     def get_first_state(self, label):
@@ -53,7 +53,7 @@ class StateMachine:
                         # This will need to be parsed to build its state machine
                         new_label = retrigger_labels.get(label)
                         if not new_label:
-                            new_label = '{}_2'.format(state_name)
+                            new_label = '{}_2'.format(label)
 
                         states = states[0:i + 1]
                         self.first_states[new_label] = state.nextstate
@@ -80,7 +80,7 @@ class StateMachine:
         return duplicates
 
 class DecohackWriter:
-    state_names = [
+    mobj_state_labels = [
         'spawn',
         'see',
         'run',
@@ -98,7 +98,7 @@ class DecohackWriter:
         'raise',
     ]
 
-    weapon_state_names = [
+    weapon_state_labels = [
         'select',
         'deselect',
         'ready',
@@ -276,13 +276,13 @@ class DecohackWriter:
     def make_mobj_state_machine(self, mobj):
         # Collect the state labels this mobj has
         labels = {}
-        for label in DecohackWriter.state_names:
+        for label in DecohackWriter.mobj_state_labels:
             prop_name = '{}state'.format(label)
             state = mobj.props.get(prop_name)
             if state:
                 labels[label] = state
 
-        return StateMachine(self.info, labels)
+        return StateMachine(self.info, DecohackWriter.mobj_state_labels, labels)
 
     def output_mobj_states(self, mobj):
         self.output('states')
@@ -312,12 +312,13 @@ class DecohackWriter:
 
     def make_weapon_state_machine(self, weapon):
         labels = {}
-        for label in DecohackWriter.weapon_state_names:
+
+        for label in DecohackWriter.weapon_state_labels:
             state = weapon.get(label)
             if state:
                 labels[label] = state
 
-        return StateMachine(self.info, labels)
+        return StateMachine(self.info, DecohackWriter.weapon_state_labels, labels)
 
     def output_weapon(self, weapon, name, index):
         self.output_spacer()
@@ -328,16 +329,7 @@ class DecohackWriter:
         sm = self.make_weapon_state_machine(weapon)
         self.output('states')
         self.indent('{')
-
-
+        self.output_state_machine(sm)
         self.unindent('}')
 
-        self.unindent('}')
-
-    def output_weapon(self, index, weapon_name, weapon):
-        self.output_spacer()
-
-        self.output('weapon {} : "{}"'.format(index, weapon_name))
-        self.indent('{')
-        self.output('ammotype: {}'.format(weapon['ammotype']))
         self.unindent('}')

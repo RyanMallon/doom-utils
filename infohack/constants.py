@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 @dataclass
 class DoomConstants:
+    # Small enough to hardcode instead of writing another parser
     weapons = {
         'fist' : {
             'ammotype' : 0,
@@ -9,16 +10,70 @@ class DoomConstants:
             'deselect' : 'S_PUNCHDOWN',
             'ready'    : 'S_PUNCH',
             'fire'     : 'S_PUNCH1',
-            'flash'    : None,
         },
         'pistol' : {
             'ammotype' : 1,
-            'select'   : 'PISTOLUP',
-            'deselect' : 'PISTOLDOWN',
-            'ready'    : 'PISTOL1',
-            'fire'     : 'PISTOL2',
-            'flash'    : 'PISTOLFLASH',
-        }
+            'select'   : 'S_PISTOLUP',
+            'deselect' : 'S_PISTOLDOWN',
+            'ready'    : 'S_PISTOL',
+            'fire'     : 'S_PISTOL1',
+            'flash'    : 'S_PISTOLFLASH',
+        },
+        'shotgun' : {
+            'ammotype' : 2,
+            'select'   : 'S_SGUNUP',
+            'deselect' : 'S_SGUNDOWN',
+            'ready'    : 'S_SGUN',
+            'fire'     : 'S_SGUN1',
+            'flash'    : 'S_SGUNFLASH1',
+        },
+        'chaingun' : {
+            'ammotype' : 1,
+            'select'   : 'S_CHAINUP',
+            'deselect' : 'S_CHAINDOWN',
+            'ready'    : 'S_CHAIN',
+            'fire'     : 'S_CHAIN1',
+            'flash'    : 'S_CHAINFLASH1',
+        },
+        'rocket launcher' : {
+            'ammotype' : 4,
+            'select'   : 'S_MISSILEUP',
+            'deselect' : 'S_MISSILEDOWN',
+            'ready'    : 'S_MISSILE',
+            'fire'     : 'S_MISSILE1',
+            'flash'    : 'S_MISSILEFLASH1',
+        },
+        'plasma rifle' : {
+            'ammotype' : 3,
+            'select'   : 'S_PLASMAUP',
+            'deselect' : 'S_PLASMADOWN',
+            'ready'    : 'S_PLASMA',
+            'fire'     : 'S_PLASMA1',
+            'flash'    : 'S_PLASMAFLASH1',
+        },
+        'bfg 9000' : {
+            'ammotype' : 3,
+            'select'   : 'S_BFGUP',
+            'deselect' : 'S_BFGDOWN',
+            'ready'    : 'S_BFG',
+            'fire'     : 'S_BFG1',
+            'flash'    : 'S_BFGFLASH1',
+        },
+        'chainsaw' : {
+            'ammotype' : 0,
+            'select'   : 'S_SAWUP',
+            'deselect' : 'S_SAWDOWN',
+            'ready'    : 'S_SAW',
+            'fire'     : 'S_SAW1',
+        },
+        'super shotgun' : {
+            'ammotype' : 2,
+            'select'   : 'S_DSGUNUP',
+            'deselect' : 'S_DSGUNDOWN',
+            'ready'    : 'S_DSGUN',
+            'fire'     : 'S_DSGUN1',
+            'flash'    : 'S_DSGUNFLASH1',
+        },
     }
 
     sprite_names = [

@@ -48,3 +48,7 @@ if __name__ == '__main__':
 
         for mobj in mobj_list:
             writer.output_mobj(mobj)
+
+
+    for i, (weapon_name, weapon) in enumerate(info.constants.weapons.items()):
+        writer.output_weapon(weapon, weapon_name, i)
