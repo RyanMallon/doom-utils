@@ -27,11 +27,17 @@ class DehackedParser:
         line = self.consume_line()
         m = re.match(r'Thing ([0-9]+) \(([^)]+)\)', line)
         if not m:
-            raise Exception('Bad thing: {}'.format(line))
+            # Unaliased thing
+            m = re.match(r'Thing ([0-9]+)', line)
+            if not m:
+                raise Exception('Bad thing: {}'.format(line))
 
         thing = {}
         thing_num = int(m.group(1))
-        thing['alias'] = m.group(2)
+        try:
+            thing['alias'] = m.group(2)
+        except:
+            thing['alias'] = 'Thing {}'.format(thing_num)
 
         self.parse_prop_list(thing)
         self.patch.things[thing_num] = thing
